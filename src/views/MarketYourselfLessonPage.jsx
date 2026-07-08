@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
@@ -39,6 +40,19 @@ const STEPS = [
 ];
 
 export default function MarketYourselfLessonPage({ onBack }) {
+
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(LESSON_ID, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
+
   const { showToast } = useToast();
   const [email, setEmail] = useState('');
 
@@ -58,9 +72,6 @@ export default function MarketYourselfLessonPage({ onBack }) {
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [lessonProgress, setLessonProgress] = useState(0);
-  const [showCelebrate, setShowCelebrate] = useState(false);
-  
   const fileInputRef = useRef(null);
 
   const handleDragOver = (e) => {
@@ -118,12 +129,6 @@ export default function MarketYourselfLessonPage({ onBack }) {
       setLessonProgress(100);
       setTimeout(() => setShowCelebrate(true), 800);
     }, 1200);
-  };
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(LESSON_ID);
-    goToDashboard();
   };
 
   return (

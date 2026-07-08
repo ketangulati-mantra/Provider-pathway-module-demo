@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
@@ -58,9 +59,20 @@ const QUIZ_QUESTIONS = [
 ];
 
 export default function EarnPointsLessonPage({ onBack }) {
+
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(LESSON_ID, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
+
   const { showToast } = useToast();
-  const [lessonProgress, setLessonProgress] = useState(0);
-  const [showCelebrate, setShowCelebrate] = useState(false);
   const [quizCompleted, setQuizCompleted] = useState(false);
 
   useEffect(() => {
@@ -72,28 +84,8 @@ export default function EarnPointsLessonPage({ onBack }) {
     }
   }, [lessonProgress, quizCompleted]);
 
-  const handleMarkComplete = () => {
-    try {
-      const saved = localStorage.getItem(`lesson_progress_${LESSON_ID}`);
-      if (saved && JSON.parse(saved).celebrationShown) {
-        showToast("You've already completed this activity.", "success", 3000);
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-        return;
-      }
-    } catch(e) {}
-    setLessonProgress(100);
-  };
-
   const handleQuizComplete = () => {
     setQuizCompleted(true);
-  };
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(LESSON_ID);
-    goToDashboard();
   };
 
   return (
@@ -226,7 +218,7 @@ export default function EarnPointsLessonPage({ onBack }) {
         {/* Application Form */}
         <section>
           <SubmissionForm 
-            onSuccess={handleMarkComplete} 
+            onSuccess={handleActionComplete} 
             title="Activity Submission"
             successTitle="Proof Submitted Successfully"
             successMessage="Your submission is being reviewed. Points will be awarded upon verification."

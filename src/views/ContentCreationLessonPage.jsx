@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
@@ -33,39 +34,20 @@ const BENEFITS = [
 ];
 
 export default function ContentCreationLessonPage({ onBack }) {
+
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(LESSON_ID, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
+
   const { showToast } = useToast();
-  const [lessonProgress, setLessonProgress] = useState(0);
-  const [showCelebrate, setShowCelebrate] = useState(false);
-
-  useEffect(() => {
-    if (lessonProgress === 100) {
-      const timer = setTimeout(() => {
-        setShowCelebrate(true);
-      }, 800);
-      return () => clearTimeout(timer);
-    }
-  }, [lessonProgress]);
-
-  const handleMarkComplete = () => {
-    try {
-      const saved = localStorage.getItem(`lesson_progress_${LESSON_ID}`);
-      if (saved && JSON.parse(saved).celebrationShown) {
-        showToast("You've already completed this activity.", "success", 3000);
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-        return;
-      }
-    } catch(e) {}
-    setLessonProgress(100);
-  };
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(LESSON_ID);
-    goToDashboard();
-  };
-
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: 'var(--bg-app)' }} className="animate-fade-in">
       <Header title={LESSON_TITLE} onBack={onBack} progress={lessonProgress} points={REWARD_POINTS} />
@@ -105,7 +87,7 @@ export default function ContentCreationLessonPage({ onBack }) {
         </section>
 
         <section>
-          <SubmissionForm onSuccess={handleMarkComplete} />
+          <SubmissionForm onSuccess={handleActionComplete} />
         </section>
 
       </main>

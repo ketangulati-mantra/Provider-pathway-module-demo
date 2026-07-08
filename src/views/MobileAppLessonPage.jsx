@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   Button,
@@ -13,10 +14,20 @@ import './MobileAppLessonPage.css';
 
 export default function MobileAppLessonPage({ onBack }) {
   const lessonId = 'mobile-app';
-  const rewardPoints = 5;
 
-  const [showCelebrate, setShowCelebrate] = useState(false);
-  const [progress, setProgress] = useState(0);
+  
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(lessonId, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
+const rewardPoints = 5;
 
   // Factual product overview steps using MantraPartner App branding
   const steps = [
@@ -38,24 +49,13 @@ export default function MobileAppLessonPage({ onBack }) {
   ];
 
   // Triggers completion celebration overlay
-  const handleMarkAsComplete = () => {
-    setProgress(100);
-    setShowCelebrate(true);
-  };
-
   // Triggers actual database updates and navigation through integration layer
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(lessonId);
-    goToDashboard();
-  };
-
   return (
     <div className="mobile-app-lesson-container animate-fade-in">
       <Header 
         title="Download & Review MantraPartner App"
         onBack={onBack}
-        progress={progress}
+        progress={lessonProgress}
         points={rewardPoints}
       />
 
@@ -202,7 +202,7 @@ export default function MobileAppLessonPage({ onBack }) {
 
             <Button 
               variant="primary" 
-              onClick={handleMarkAsComplete}
+              onClick={handleActionComplete}
               style={{ 
                 display: 'inline-flex', 
                 alignItems: 'center', 

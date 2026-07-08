@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
@@ -106,27 +107,26 @@ const STAGES = [
 ];
 
 export default function PremiumProviderLessonPage({ onBack }) {
-  const [completedSteps, setCompletedSteps] = useState({ lessonRead: false });
-  const [lessonProgress, setLessonProgress]  = useState(0);
-  const [showCelebrate,  setShowCelebrate]   = useState(false);
+
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(LESSON_ID, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
 
   useEffect(() => {
     const pct = completedSteps.lessonRead ? 100 : 0;
-    setLessonProgress(pct);
     if (pct === 100) {
       const t = setTimeout(() => setShowCelebrate(true), 800);
       return () => clearTimeout(t);
     }
   }, [completedSteps]);
-
-  const handleMarkComplete = () =>
-    setCompletedSteps(prev => ({ ...prev, lessonRead: true }));
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(LESSON_ID);
-    goToDashboard();
-  };
 
   return (
     <div
@@ -328,7 +328,7 @@ export default function PremiumProviderLessonPage({ onBack }) {
           </div>
           <Button
             variant="primary"
-            onClick={handleMarkComplete}
+            onClick={handleActionComplete}
             disabled={completedSteps.lessonRead}
             style={{
               display: 'inline-flex',

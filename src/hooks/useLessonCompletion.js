@@ -15,7 +15,8 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     hasVideo = true,
     hasQuiz = true,
     hasChecklist = false,
-    hasScenario = false
+    hasScenario = false,
+    hasAction = false
   } = features;
 
   const { showToast } = useToast();
@@ -36,6 +37,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
       quizDone: false,
       checklistDone: false,
       scenarioAttempted: false,
+      actionDone: false,
       celebrationShown: false
     };
   });
@@ -80,6 +82,10 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
       totalSteps += 1;
       if (completedSteps.quizDone) completedCount += 1;
     }
+    if (hasAction) {
+      totalSteps += 1;
+      if (completedSteps.actionDone) completedCount += 1;
+    }
 
     const percentage = totalSteps > 0 ? (completedCount / totalSteps) * 100 : 100;
     setLessonProgress(percentage);
@@ -90,7 +96,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
       }, 800);
       return () => clearTimeout(timer);
     }
-  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz]);
+  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz, hasAction]);
 
   const handleVideoComplete = () => {
     setCompletedSteps((prev) => ({ ...prev, videoWatched: true }));
@@ -117,6 +123,19 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     setCompletedSteps((prev) => ({ ...prev, scenarioAttempted: true }));
   };
 
+  const handleActionComplete = () => {
+    if (completedSteps.celebrationShown) {
+      showToast("You've already completed this activity.", "success", 3000);
+      if (onBack) {
+        setTimeout(() => {
+          goToDashboard();
+        }, 1800);
+      }
+      return;
+    }
+    setCompletedSteps((prev) => ({ ...prev, actionDone: true }));
+  };
+
   const handleCloseCelebration = async () => {
     setShowCelebrate(false);
     setCompletedSteps((prev) => ({ ...prev, celebrationShown: true }));
@@ -131,12 +150,14 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
     quizDone: completedSteps.quizDone,
     checklistDone: completedSteps.checklistDone,
     scenarioAttempted: completedSteps.scenarioAttempted,
+    actionDone: completedSteps.actionDone,
     lessonProgress,
     showCelebrate,
     handleVideoComplete,
     handleQuizComplete,
     handleChecklistComplete,
     handleScenarioComplete,
+    handleActionComplete,
     handleCloseCelebration
   };
 }

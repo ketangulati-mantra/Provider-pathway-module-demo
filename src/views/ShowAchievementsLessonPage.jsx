@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
@@ -31,6 +32,19 @@ const GUIDELINES = [
 ];
 
 export default function ShowAchievementsLessonPage({ onBack }) {
+
+
+  const { 
+    lessonProgress, 
+    showCelebrate, 
+    handleCloseCelebration, 
+    handleActionComplete 
+  } = useLessonCompletion(LESSON_ID, onBack, {
+    hasVideo: false,
+    hasQuiz: false,
+    hasAction: true
+  });
+
   const { showToast } = useToast();
   const [email, setEmail] = useState('');
 
@@ -52,21 +66,9 @@ export default function ShowAchievementsLessonPage({ onBack }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
-  const [lessonProgress, setLessonProgress] = useState(0);
-  const [showCelebrate, setShowCelebrate] = useState(false);
-  
   const fileInputRef = useRef(null);
 
   // Use a useEffect for the completion progress trigger
-  useEffect(() => {
-    if (lessonProgress === 100) {
-      const timer = setTimeout(() => {
-        setShowCelebrate(true);
-      }, 800);
-      return () => clearTimeout(timer);
-    }
-  }, [lessonProgress]);
-
   const handleDragOver = (e) => {
     e.preventDefault();
     setIsDragging(true);
@@ -120,26 +122,6 @@ export default function ShowAchievementsLessonPage({ onBack }) {
       setIsSubmitting(false);
       setIsSuccess(true);
     }, 1200);
-  };
-
-  const handleMarkComplete = () => {
-    try {
-      const saved = localStorage.getItem(`lesson_progress_${LESSON_ID}`);
-      if (saved && JSON.parse(saved).celebrationShown) {
-        showToast("You've already completed this activity.", "success", 3000);
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-        return;
-      }
-    } catch(e) {}
-    setLessonProgress(100);
-  };
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(LESSON_ID);
-    goToDashboard();
   };
 
   return (
@@ -389,7 +371,7 @@ export default function ShowAchievementsLessonPage({ onBack }) {
                 <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: '0 0 24px', maxWidth: '400px', lineHeight: '1.5' }}>
                   Provider Engagement Points will be awarded after approval.
                 </p>
-                <Button className="academy-btn-full" variant="primary" onClick={handleMarkComplete} style={{ padding: '12px 24px', fontSize: '0.9rem' }}>
+                <Button className="academy-btn-full" variant="primary" onClick={handleActionComplete} style={{ padding: '12px 24px', fontSize: '0.9rem' }}>
                   Mark Lesson as Complete
                 </Button>
               </div>
