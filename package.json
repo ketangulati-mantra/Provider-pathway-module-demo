@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vimeo/player": "^2.30.4",
+    "html-to-image": "^1.11.13",
+    "libphonenumber-js": "^1.13.8",
     "lucide-react": "^1.23.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"

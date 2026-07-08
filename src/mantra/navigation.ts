@@ -32,14 +32,5 @@ export const goToLesson = (route: string) => {
  * or returning to home depending on configuration.
  */
 export const redirectAfterCompletion = (lessonId: string, onBackCallback?: () => void) => {
-  const lesson = getLesson(lessonId);
-  const points = lesson ? lesson.rewardPoints : 0;
-
-  if (MANTRA_CONFIG.redirectAfterCompletion) {
-    const targetUrl = `${MANTRA_CONFIG.dashboardUrl}?completed=${lessonId}&points=${points}`;
-    window.location.href = targetUrl;
-  } else {
-    // If not redirecting externally, return back locally
-    goBack(onBackCallback);
-  }
+  goToDashboard();
 };

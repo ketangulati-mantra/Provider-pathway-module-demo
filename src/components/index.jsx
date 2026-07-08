@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { useToast } from './Toast';
 import { 
   ArrowLeft, 
   BookOpen, 
@@ -155,13 +156,17 @@ export const VideoSection = ({
   duration, 
   posterUrl = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
   videoUrl = null,
-  onPlay 
+  onPlay,
+  onCompleted,
+  isCompleted
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const iframeRef = useRef(null);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
     if (onPlay) onPlay();
+    if (onCompleted && !isCompleted) onCompleted();
   };
 
   const isYouTube = videoUrl && (videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be'));
@@ -203,6 +208,7 @@ export const VideoSection = ({
           {videoUrl ? (
             (isYouTube || isVimeo) ? (
               <iframe
+                ref={isVimeo ? iframeRef : null}
                 width="100%"
                 height="100%"
                 src={getEmbedUrl()}
@@ -444,8 +450,12 @@ export const QuizCard = ({
   question, 
   options = [], 
   questions = [],
-  onSubmitQuiz 
+  onSubmitQuiz,
+  onComplete,
+  hasVideo = false,
+  videoWatched = false
 }) => {
+  const { showToast } = useToast();
   const isMulti = questions && questions.length > 0;
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [selectedIndices, setSelectedIndices] = useState({});
@@ -476,9 +486,13 @@ export const QuizCard = ({
   };
 
   const handleSubmitDone = () => {
-    if (onSubmitQuiz) {
-      onSubmitQuiz(true);
+    if (hasVideo && !videoWatched) {
+      showToast('Please watch the lesson video to complete this lesson.', 'warning', 3000);
+      setIsSubmitted(false);
+      return;
     }
+    if (onSubmitQuiz) onSubmitQuiz(true);
+    if (onComplete) onComplete(true);
   };
 
   const handleReset = () => {
@@ -592,28 +606,33 @@ export const QuizCard = ({
             </div>
 
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center', marginTop: '10px' }}>
-              <Button
-                variant="primary"
-                onClick={handleSubmitDone}
-                style={{ padding: '12px 32px' }}
-              >
-                Done
-              </Button>
-              <Button
-                variant="secondary"
-                onClick={handleReset}
-                style={{ 
-                  padding: '8px 16px', 
-                  border: 'none', 
-                  background: 'none', 
-                  color: 'var(--text-muted)', 
-                  fontSize: '0.85rem', 
-                  fontWeight: 500,
-                  cursor: 'pointer' 
-                }}
-              >
-                Try Again
-              </Button>
+              {getScore() === questions.length ? (
+                <Button
+                  variant="primary"
+                  onClick={handleSubmitDone}
+                  style={{ padding: '12px 32px' }}
+                >
+                  Done
+                </Button>
+              ) : null}
+
+              {getScore() !== questions.length && (
+                <Button
+                  variant="secondary"
+                  onClick={handleReset}
+                  style={{ 
+                    padding: '8px 16px', 
+                    border: 'none', 
+                    background: 'none', 
+                    color: 'var(--text-muted)', 
+                    fontSize: '0.85rem', 
+                    fontWeight: 500,
+                    cursor: 'pointer' 
+                  }}
+                >
+                  Try Again
+                </Button>
+              )}
             </div>
           </div>
         )}
@@ -688,28 +707,33 @@ export const QuizCard = ({
           </div>
           
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-            <Button
-              variant="primary"
-              onClick={handleSubmitDone}
-              style={{ padding: '10px 24px' }}
-            >
-              Done
-            </Button>
-            <Button
-              variant="secondary"
-              onClick={handleReset}
-              style={{ 
-                padding: '8px 16px', 
-                border: 'none', 
-                background: 'none', 
-                color: 'var(--text-muted)', 
-                fontSize: '0.85rem', 
-                fontWeight: 500,
-                cursor: 'pointer'
-              }}
-            >
-              Try Again
-            </Button>
+            {selectedOption?.isCorrect ? (
+              <Button
+                variant="primary"
+                onClick={handleSubmitDone}
+                style={{ padding: '10px 24px' }}
+              >
+                Done
+              </Button>
+            ) : null}
+            
+            {!selectedOption?.isCorrect && (
+              <Button
+                variant="secondary"
+                onClick={handleReset}
+                style={{ 
+                  padding: '8px 16px', 
+                  border: 'none', 
+                  background: 'none', 
+                  color: 'var(--text-muted)', 
+                  fontSize: '0.85rem', 
+                  fontWeight: 500,
+                  cursor: 'pointer'
+                }}
+              >
+                Try Again
+              </Button>
+            )}
           </div>
         </div>
       )}
@@ -878,3 +902,130 @@ export const FeedbackStates = ({
 
   return null;
 };
+
+/* ==========================================================================
+   ACADEMY TEMPLATE COMPONENTS
+   ========================================================================== */
+
+import ErrorBoundary from './ErrorBoundary';
+
+export { ErrorBoundary };
+
+export const LessonHero = ({ theme = 'primary', icon: Icon, category, title, description, duration, points }) => {
+  return (
+    <div className={`academy-hero-card theme-${theme}`}>
+      <div className="hero-icon-wrapper">
+        {Icon && <Icon size={24} />}
+      </div>
+      <div className="hero-category">{category}</div>
+      <h1 className="hero-title">{title}</h1>
+      {description && <p className="hero-desc">{description}</p>}
+      
+      {(duration || points !== undefined) && (
+        <div className="hero-meta-chips">
+          {category && (
+            <span className="hero-chip">
+              <ClipboardList size={14} /> {category}
+            </span>
+          )}
+          {duration && (
+            <span className="hero-chip">
+              <Clock size={14} /> {duration}
+            </span>
+          )}
+          {points !== undefined && (
+            <span className="hero-chip points">
+              <Trophy size={14} /> +{points} Points
+            </span>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export const StepTimeline = ({ steps = [] }) => {
+  return (
+    <div className="academy-timeline">
+      {steps.map((step, idx) => (
+        <div key={idx} className="timeline-item">
+          <div className="timeline-marker">{idx + 1}</div>
+          <div className="timeline-content">
+            <h4 className="timeline-title">{step.title}</h4>
+            {step.description && <p className="timeline-desc">{step.description}</p>}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export const FeatureGrid = ({ features = [] }) => {
+  return (
+    <div className="academy-feature-grid">
+      {features.map((feat, idx) => (
+        <div key={idx} className="feature-card">
+          <div className="feature-icon">{feat.icon && <feat.icon size={24} />}</div>
+          <h4 className="feature-title">{feat.title}</h4>
+          {feat.description && <p className="feature-desc">{feat.description}</p>}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export const BenefitCard = ({ icon: Icon, title, description }) => {
+  return (
+    <div className="academy-benefit-card">
+      <div className="benefit-icon">{Icon && <Icon size={24} />}</div>
+      <div className="benefit-content">
+        <h4 className="benefit-title">{title}</h4>
+        {description && <p className="benefit-desc">{description}</p>}
+      </div>
+    </div>
+  );
+};
+
+
+export const InfoCallout = ({ type = 'info', title, text }) => {
+  const Icon = type === 'warning' ? AlertCircle : (type === 'tip' ? Sparkles : HelpCircle);
+  return (
+    <div className={`academy-callout callout-${type}`}>
+      <Icon size={24} className="callout-icon" />
+      <div className="callout-content">
+        {title && <h4 className="callout-title">{title}</h4>}
+        {text && <p className="callout-text">{text}</p>}
+      </div>
+    </div>
+  );
+};
+
+export const CompletionCard = ({ onComplete, points = 5, buttonText = "✓ Mark Lesson as Complete", isComplete = false }) => {
+  if (isComplete) return null;
+  return (
+    <div className="academy-completion-card">
+      <div className="completion-card-inner">
+        <h3 className="completion-title">Ready to complete this lesson?</h3>
+        <p className="completion-desc">Click below to mark this activity as completed and earn your points.</p>
+        <Button 
+          variant="primary" 
+          onClick={onComplete}
+          className="completion-btn"
+          style={{ width: '100%', marginBottom: '12px' }}
+        >
+          {buttonText}
+        </Button>
+        <div className="completion-points-badge">
+          <Award size={16} />
+          <span>+{points} Points</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { ToastProvider, useToast } from './Toast';
+
+export { default as SubmissionForm } from './forms/SubmissionForm';
+export { default as InterestForm } from './forms/InterestForm';
+export { default as SalesPartnerApplicationForm } from './forms/SalesPartnerApplicationForm';

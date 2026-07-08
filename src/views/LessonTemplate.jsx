@@ -12,7 +12,7 @@ import {
   CompletionScreen,
   Button
 } from '../components';
-import { completeLesson, redirectAfterCompletion } from '../mantra';
+import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import { 
   Award, 
   Sparkles, 
@@ -29,79 +29,32 @@ export default function LessonTemplate({
   lesson, 
   onBack 
 }) {
-  const [completedSteps, setCompletedSteps] = useState({
-    videoWatched: false,
-    checklistDone: false,
-    scenarioAttempted: false,
-    quizDone: false
-  });
-
-  const [lessonProgress, setLessonProgress] = useState(0);
-  const [showCelebrate, setShowCelebrate] = useState(false);
-
-
-  // Determine active components to calculate progress weight
   const hasVideo = !!lesson.video;
   const hasChecklist = !!lesson.checklist && lesson.checklist.length > 0;
   const hasScenario = !!lesson.scenario;
   const hasQuiz = !!lesson.quiz;
 
-  useEffect(() => {
-    let totalSteps = 0;
-    let completedCount = 0;
-
-    if (hasVideo) {
-      totalSteps += 1;
-      if (completedSteps.videoWatched) completedCount += 1;
-    }
-    if (hasChecklist) {
-      totalSteps += 1;
-      if (completedSteps.checklistDone) completedCount += 1;
-    }
-    if (hasScenario) {
-      totalSteps += 1;
-      if (completedSteps.scenarioAttempted) completedCount += 1;
-    }
-    if (hasQuiz) {
-      totalSteps += 1;
-      if (completedSteps.quizDone) completedCount += 1;
-    }
-
-    const percentage = totalSteps > 0 ? (completedCount / totalSteps) * 100 : 100;
-    setLessonProgress(percentage);
-
-    if (percentage === 100 && totalSteps > 0) {
-      // Delay celebration slightly for micro-interactions
-      const timer = setTimeout(() => {
-        setShowCelebrate(true);
-      }, 800);
-      return () => clearTimeout(timer);
-    }
-  }, [completedSteps, hasVideo, hasChecklist, hasScenario, hasQuiz]);
-
-  const handleVideoPlay = () => {
-    setCompletedSteps(prev => ({ ...prev, videoWatched: true }));
-  };
+  const {
+    videoWatched,
+    quizDone,
+    checklistDone,
+    lessonProgress,
+    showCelebrate,
+    handleVideoComplete,
+    handleQuizComplete,
+    handleChecklistComplete,
+    handleScenarioComplete,
+    handleCloseCelebration
+  } = useLessonCompletion(lesson.id, onBack, {
+    hasVideo,
+    hasQuiz,
+    hasChecklist,
+    hasScenario
+  });
 
   const handleChecklistChange = (checkedIds, totalItems) => {
     const allChecked = checkedIds.length === totalItems;
-    setCompletedSteps(prev => ({ ...prev, checklistDone: allChecked }));
-  };
-
-  const handleScenarioSelect = (option) => {
-    setCompletedSteps(prev => ({ ...prev, scenarioAttempted: true }));
-  };
-
-  const handleQuizSubmit = (isCorrect) => {
-    if (isCorrect) {
-      setCompletedSteps(prev => ({ ...prev, quizDone: true }));
-    }
-  };
-
-  const handleCloseCelebration = async () => {
-    setShowCelebrate(false);
-    await completeLesson(lesson.id);
-    redirectAfterCompletion(lesson.id, onBack);
+    handleChecklistComplete(allChecked);
   };
 
   return (
@@ -115,7 +68,16 @@ export default function LessonTemplate({
       />
 
       {/* Lesson Content Container */}
-      <main style={{ flex: '1', padding: '24px 20px 80px 20px', maxWidth: '800px', margin: '0 auto', width: '100%', display: 'flex', flexDirection: 'column', gap: '28px' }}>
+      <main className="academy-main-container" style={{
+        flex: 1,
+        padding: '28px 24px 60px',
+        maxWidth: '800px',
+        margin: '0 auto',
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '24px'
+      }}>
         
         {/* Lesson Description Card */}
         <OverviewCard 
@@ -133,9 +95,10 @@ export default function LessonTemplate({
             <VideoSection 
               title={lesson.video.title}
               duration={lesson.video.duration}
-              posterUrl={lesson.video.poster}
-              videoUrl={lesson.video.src}
-              onPlay={handleVideoPlay}
+              posterUrl={lesson.video.posterUrl}
+              videoUrl={lesson.video.videoUrl}
+              onCompleted={handleVideoComplete}
+              isCompleted={videoWatched}
             />
           </section>
         )}
@@ -149,7 +112,7 @@ export default function LessonTemplate({
             <div className="academy-card">
               <Timeline 
                 steps={lesson.timelineSteps}
-                currentStepIndex={completedSteps.videoWatched ? 1 : 0}
+                currentStepIndex={videoWatched ? 1 : 0}
               />
             </div>
           </section>
@@ -194,19 +157,31 @@ export default function LessonTemplate({
           </section>
         )}
 
-        {/* Interactive Checklist Component */}
-        {hasChecklist && (
-          <section style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>✅</span> Actionable Checklist
-            </h3>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>
-              Check all items below to complete this section of the lesson.
-            </p>
-            <Checklist 
-              items={lesson.checklist}
-              onChange={handleChecklistChange}
-            />
+        {/* Horizontal split layout for Checklist + Timeline if both exist */}
+        {hasChecklist && hasScenario === false && hasQuiz === false && (
+          <section className="academy-flex-row" style={{ display: 'flex', gap: '24px' }}>
+            <div style={{ flex: 2 }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span>✅</span> Actionable Checklist
+              </h3>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                Check all items below to complete this section of the lesson.
+              </p>
+              <Checklist 
+                items={lesson.checklist}
+                onChange={handleChecklistChange}
+              />
+            </div>
+            
+            <div style={{ flex: 1 }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                <span>📍</span> Lesson Progress
+              </h3>
+              <Timeline 
+                steps={lesson.timelineSteps}
+                currentStepIndex={videoWatched ? 1 : 0}
+              />
+            </div>
           </section>
         )}
 
@@ -219,7 +194,7 @@ export default function LessonTemplate({
             <ScenarioCard 
               scenario={lesson.scenario.prompt}
               options={lesson.scenario.options}
-              onSelectOption={handleScenarioSelect}
+              onSelect={handleScenarioComplete}
             />
           </section>
         )}
@@ -238,7 +213,10 @@ export default function LessonTemplate({
               question={lesson.quiz.question}
               options={lesson.quiz.options}
               questions={lesson.quiz.questions}
-              onSubmitQuiz={handleQuizSubmit}
+              onSubmitQuiz={handleQuizComplete}
+              onComplete={handleQuizComplete}
+              hasVideo={hasVideo}
+              videoWatched={videoWatched}
             />
           </section>
         )}
