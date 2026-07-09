@@ -27,9 +27,9 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
   }
 
   const { upaId, uid } = getWebhookContext();
-  alert("===== WEBHOOK CONTEXT =====");
-  alert(upaId);
-  alert(uid);
+  // alert("===== WEBHOOK CONTEXT =====");
+  // alert(upaId);
+  // alert(uid);
 
   if (!upaId) {
     console.error('[Mantra API] Missing upa_id in URL.');

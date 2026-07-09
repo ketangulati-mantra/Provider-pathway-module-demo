@@ -804,21 +804,14 @@ export const CompletionScreen = ({
 
 
 
-        {/* <Button
+        <Button
           variant="primary"
           onClick={onClose}
           style={{ width: '100%', marginTop: '8px' }}
         >
           Take to portal
-        </Button> */}
+        </Button>
 
-        <Button
-          variant="primary"
-          onClick={() => {
-            alert("BUTTON CLICKED");
-            onClose?.();
-          }}
-        ></Button>
       </div>
     </div>,
     document.body

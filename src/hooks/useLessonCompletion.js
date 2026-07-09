@@ -11,7 +11,6 @@ import { useToast } from '../components';
  * - Video completion is triggered via `onCompleted` (reaching 90%).
  */
 export function useLessonCompletion(lessonId, onBack, features = {}) {
-  alert("handleCloseCelebration");
   const {
     hasVideo = true,
     hasQuiz = true,
@@ -154,7 +153,6 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   }; */
 
   const handleCloseCelebration = async () => {
-    alert("handleCloseCelebration fired");
 
     setShowCelebrate(false);
 
@@ -163,11 +161,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
       celebrationShown: true
     }));
 
-    alert("About to call completeLesson");
-
     await completeLesson(lessonId);
-
-    alert("Returned from completeLesson");
 
     if (onBack) {
       goToDashboard();
