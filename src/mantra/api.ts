@@ -1,7 +1,7 @@
 import { MANTRA_CONFIG } from './config';
 import { activities } from './activities';
 
-console.log("CONFIG WEBHOOK:", MANTRA_CONFIG.webhookUrl);
+// console.log("CONFIG WEBHOOK:", MANTRA_CONFIG.webhookUrl);
 
 /**
  * Returns URL parameters required by the pathway webhook.
