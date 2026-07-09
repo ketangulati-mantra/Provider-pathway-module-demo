@@ -1,40 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { useToast } from './Toast';
-import { 
-  ArrowLeft, 
-  BookOpen, 
-  Award, 
-  Clock, 
-  Play, 
-  ChevronDown, 
-  Check, 
-  CheckCircle2, 
-  HelpCircle, 
-  AlertCircle, 
-  Sparkles, 
-  X, 
-  ChevronRight, 
-  Trophy, 
-  TrendingUp, 
-  Video as VideoIcon, 
-  ClipboardList, 
-  ShieldAlert, 
-  Smartphone, 
-  Loader2 
+import {
+  ArrowLeft,
+  BookOpen,
+  Award,
+  Clock,
+  Play,
+  ChevronDown,
+  Check,
+  CheckCircle2,
+  HelpCircle,
+  AlertCircle,
+  Sparkles,
+  X,
+  ChevronRight,
+  Trophy,
+  TrendingUp,
+  Video as VideoIcon,
+  ClipboardList,
+  ShieldAlert,
+  Smartphone,
+  Loader2
 } from 'lucide-react';
 
 /* ==========================================================================
    1. BUTTON COMPONENT
    ========================================================================== */
-export const Button = ({ 
-  children, 
-  variant = 'primary', 
-  onClick, 
-  disabled = false, 
-  className = '', 
+export const Button = ({
+  children,
+  variant = 'primary',
+  onClick,
+  disabled = false,
+  className = '',
   icon: Icon = null,
-  ...props 
+  ...props
 }) => {
   return (
     <button
@@ -52,23 +52,23 @@ export const Button = ({
 /* ==========================================================================
    2. LESSON HEADER COMPONENT
    ========================================================================== */
-export const Header = ({ 
-  title, 
-  onBack, 
-  progress = null, 
-  points = null 
+export const Header = ({
+  title,
+  onBack,
+  progress = null,
+  points = null
 }) => {
   return (
     <header className="academy-header">
       <div className="academy-header-top">
-        <button 
-          className="academy-header-back-btn" 
+        <button
+          className="academy-header-back-btn"
           onClick={onBack}
           aria-label="Go back to dashboard"
         >
           <ArrowLeft size={20} />
         </button>
-        
+
         <div className="academy-header-logo">
           <img src="/logo.svg" alt="Mantra Logo" style={{ height: '24px', display: 'block' }} />
         </div>
@@ -98,12 +98,12 @@ export const Header = ({
    ========================================================================== */
 export const Progress = ({ value = 0 }) => {
   const roundedValue = Math.min(Math.max(Math.round(value), 0), 100);
-  
+
   return (
     <div className="academy-progress-container">
       <div className="academy-progress-bar-bg">
-        <div 
-          className="academy-progress-bar-fill" 
+        <div
+          className="academy-progress-bar-fill"
           style={{ width: `${roundedValue}%` }}
         />
       </div>
@@ -118,18 +118,18 @@ export const Progress = ({ value = 0 }) => {
 /* ==========================================================================
    4. LESSON OVERVIEW CARD
    ========================================================================== */
-export const OverviewCard = ({ 
-  title = "About this Lesson", 
-  description, 
-  duration, 
-  points, 
-  className = "" 
+export const OverviewCard = ({
+  title = "About this Lesson",
+  description,
+  duration,
+  points,
+  className = ""
 }) => {
   return (
     <div className={`academy-card academy-overview-card ${className}`}>
       <h3 className="overview-title">{title}</h3>
       <p className="overview-desc">{description}</p>
-      
+
       <div className="overview-meta-grid">
         {duration && (
           <div className="overview-meta-badge">
@@ -151,9 +151,9 @@ export const OverviewCard = ({
 /* ==========================================================================
    5. VIDEO SECTION
    ========================================================================== */
-export const VideoSection = ({ 
-  title, 
-  duration, 
+export const VideoSection = ({
+  title,
+  duration,
   posterUrl = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80",
   videoUrl = null,
   onPlay,
@@ -190,14 +190,14 @@ export const VideoSection = ({
         <>
           <img src={posterUrl} alt="Video thumbnail" className="academy-video-poster" />
           <div className="academy-video-gradient-overlay" />
-          <button 
-            className="academy-video-play-btn" 
+          <button
+            className="academy-video-play-btn"
             onClick={handlePlayClick}
             aria-label="Play Lesson Video"
           >
             <Play size={32} fill="currentColor" />
           </button>
-          
+
           <div className="academy-video-overlay-info">
             <h4>{title}</h4>
             <p>Video Lesson • {duration}</p>
@@ -227,12 +227,12 @@ export const VideoSection = ({
               />
             )
           ) : (
-            <div style={{ 
-              width: '100%', 
-              height: '100%', 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
+            <div style={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
               justifyContent: 'center',
               background: 'linear-gradient(135deg, #1e293b, #0f172a)',
               color: '#fff',
@@ -241,9 +241,9 @@ export const VideoSection = ({
               <Loader2 className="spinner" size={40} style={{ color: 'var(--color-primary-light)', marginBottom: '16px' }} />
               <h4 style={{ fontSize: '1.2rem', fontWeight: 600 }}>Streaming Video...</h4>
               <p style={{ fontSize: '0.85rem', opacity: 0.7, marginTop: '8px' }}>Simulation is playing. Click reset to watch again.</p>
-              <Button 
-                variant="secondary" 
-                size="sm" 
+              <Button
+                variant="secondary"
+                size="sm"
                 onClick={() => setIsPlaying(false)}
                 style={{ marginTop: '16px', padding: '6px 12px', fontSize: '0.8rem' }}
               >
@@ -260,11 +260,11 @@ export const VideoSection = ({
 /* ==========================================================================
    6. INFORMATION CARDS
    ========================================================================== */
-export const InfoCard = ({ 
-  title, 
-  description, 
+export const InfoCard = ({
+  title,
+  description,
   icon: Icon = BookOpen,
-  className = "" 
+  className = ""
 }) => {
   return (
     <div className={`academy-card academy-info-card ${className}`}>
@@ -282,16 +282,16 @@ export const InfoCard = ({
 /* ==========================================================================
    7. EXPANDABLE CARDS (ACCORDION)
    ========================================================================== */
-export const ExpandableCard = ({ 
-  title, 
-  children, 
-  isOpenDefault = false 
+export const ExpandableCard = ({
+  title,
+  children,
+  isOpenDefault = false
 }) => {
   const [isOpen, setIsOpen] = useState(isOpenDefault);
 
   return (
     <div className={`academy-accordion-item ${isOpen ? 'active' : ''}`}>
-      <button 
+      <button
         className="academy-accordion-header"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
@@ -299,7 +299,7 @@ export const ExpandableCard = ({
         <span>{title}</span>
         <ChevronDown size={20} className="academy-accordion-icon" />
       </button>
-      
+
       <div className="academy-accordion-content">
         <div className="academy-accordion-body">
           {children}
@@ -312,9 +312,9 @@ export const ExpandableCard = ({
 /* ==========================================================================
    8. INTERACTIVE CHECKLIST
    ========================================================================== */
-export const Checklist = ({ 
-  items = [], 
-  onChange 
+export const Checklist = ({
+  items = [],
+  onChange
 }) => {
   const [checkedIds, setCheckedIds] = useState([]);
 
@@ -336,15 +336,15 @@ export const Checklist = ({
       {items.map((item) => {
         const isChecked = checkedIds.includes(item.id);
         return (
-          <div 
-            key={item.id} 
+          <div
+            key={item.id}
             className={`checklist-item ${isChecked ? 'checked' : ''}`}
             onClick={() => handleToggle(item.id)}
           >
             <div className="checklist-checkbox" aria-hidden="true">
               <Check size={16} strokeWidth={3} />
             </div>
-            
+
             <div className="checklist-content text-left">
               <span className="checklist-label">{item.label}</span>
               {item.helpText && <span className="checklist-help">{item.helpText}</span>}
@@ -359,16 +359,16 @@ export const Checklist = ({
 /* ==========================================================================
    9. TIMELINE COMPONENT
    ========================================================================== */
-export const Timeline = ({ 
-  steps = [], 
-  currentStepIndex = 0 
+export const Timeline = ({
+  steps = [],
+  currentStepIndex = 0
 }) => {
   return (
     <div className="academy-timeline">
       {steps.map((step, idx) => {
         const isActive = idx === currentStepIndex;
         const isCompleted = idx < currentStepIndex;
-        
+
         let statusClass = '';
         if (isActive) statusClass = 'active';
         else if (isCompleted) statusClass = 'completed';
@@ -382,7 +382,7 @@ export const Timeline = ({
                 <span style={{ fontSize: '0.75rem', fontWeight: 700 }}>{idx + 1}</span>
               )}
             </div>
-            
+
             <div className="timeline-step-content">
               <span className="timeline-step-title">{step.title}</span>
               {step.description && <span className="timeline-step-desc">{step.description}</span>}
@@ -397,10 +397,10 @@ export const Timeline = ({
 /* ==========================================================================
    10. SCENARIO CARD
    ========================================================================== */
-export const ScenarioCard = ({ 
-  scenario, 
-  options = [], 
-  onSelectOption 
+export const ScenarioCard = ({
+  scenario,
+  options = [],
+  onSelectOption
 }) => {
   const [selectedId, setSelectedId] = useState(null);
 
@@ -415,7 +415,7 @@ export const ScenarioCard = ({
     <div className="academy-card academy-scenario-card text-left">
       <span className="scenario-badge">Client Scenario</span>
       <p className="scenario-prompt">{scenario}</p>
-      
+
       <div className="scenario-options">
         {options.map((option) => {
           const isSelected = selectedId === option.id;
@@ -445,10 +445,10 @@ export const ScenarioCard = ({
 /* ==========================================================================
    11. QUIZ COMPONENT
    ========================================================================== */
-export const QuizCard = ({ 
+export const QuizCard = ({
   id,
-  question, 
-  options = [], 
+  question,
+  options = [],
   questions = [],
   onSubmitQuiz,
   onComplete,
@@ -531,26 +531,26 @@ export const QuizCard = ({
                   {q.options.map((option, optIdx) => {
                     const isSelected = selectedIndices[qIdx] === optIdx;
                     return (
-                      <label 
-                        key={optIdx} 
-                        style={{ 
-                          display: 'flex', 
-                          alignItems: 'center', 
-                          gap: '12px', 
-                          fontSize: '0.95rem', 
+                      <label
+                        key={optIdx}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '12px',
+                          fontSize: '0.95rem',
                           color: 'var(--text-secondary)',
                           cursor: 'pointer',
                           userSelect: 'none'
                         }}
                       >
-                        <input 
-                          type="radio" 
+                        <input
+                          type="radio"
                           name={`question_${id}_${qIdx}`}
                           checked={isSelected}
                           onChange={() => handleSelectMulti(qIdx, optIdx)}
-                          style={{ 
-                            width: '18px', 
-                            height: '18px', 
+                          style={{
+                            width: '18px',
+                            height: '18px',
                             accentColor: 'var(--color-primary)',
                             cursor: 'pointer'
                           }}
@@ -620,14 +620,14 @@ export const QuizCard = ({
                 <Button
                   variant="secondary"
                   onClick={handleReset}
-                  style={{ 
-                    padding: '8px 16px', 
-                    border: 'none', 
-                    background: 'none', 
-                    color: 'var(--text-muted)', 
-                    fontSize: '0.85rem', 
+                  style={{
+                    padding: '8px 16px',
+                    border: 'none',
+                    background: 'none',
+                    color: 'var(--text-muted)',
+                    fontSize: '0.85rem',
                     fontWeight: 500,
-                    cursor: 'pointer' 
+                    cursor: 'pointer'
                   }}
                 >
                   Try Again
@@ -647,7 +647,7 @@ export const QuizCard = ({
     <div className="academy-card academy-quiz-card text-left animate-fade-in">
       <span className="quiz-question-number">Practice Question</span>
       <h3 className="quiz-question-text">{question}</h3>
-      
+
       <div className="quiz-options">
         {options.map((option, idx) => {
           let optionClass = '';
@@ -705,7 +705,7 @@ export const QuizCard = ({
               </>
             )}
           </div>
-          
+
           <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
             {selectedOption?.isCorrect ? (
               <Button
@@ -716,17 +716,17 @@ export const QuizCard = ({
                 Done
               </Button>
             ) : null}
-            
+
             {!selectedOption?.isCorrect && (
               <Button
                 variant="secondary"
                 onClick={handleReset}
-                style={{ 
-                  padding: '8px 16px', 
-                  border: 'none', 
-                  background: 'none', 
-                  color: 'var(--text-muted)', 
-                  fontSize: '0.85rem', 
+                style={{
+                  padding: '8px 16px',
+                  border: 'none',
+                  background: 'none',
+                  color: 'var(--text-muted)',
+                  fontSize: '0.85rem',
                   fontWeight: 500,
                   cursor: 'pointer'
                 }}
@@ -744,11 +744,11 @@ export const QuizCard = ({
 /* ==========================================================================
    12. ACHIEVEMENT / COMPLETION SCREEN
    ========================================================================== */
-export const CompletionScreen = ({ 
-  points = 50, 
-  title = "Congratulations!", 
+export const CompletionScreen = ({
+  points = 50,
+  title = "Congratulations!",
   subtitle = "You completed the lesson and boosted your provider score.",
-  onClose 
+  onClose
 }) => {
   // Generate random confetti pieces positions
   const confettiCount = 30;
@@ -770,9 +770,9 @@ export const CompletionScreen = ({
         const delay = Math.random() * 3;
         const color = ['#ff9e00', '#009fe3', '#7f22d0', '#10b981', '#ef4444'][Math.floor(Math.random() * 5)];
         const size = Math.random() * 8 + 4;
-        
+
         return (
-          <div 
+          <div
             key={idx}
             className="confetti-piece"
             style={{
@@ -791,7 +791,7 @@ export const CompletionScreen = ({
         <div className="completion-icon-wrapper">
           <Trophy size={28} />
         </div>
-        
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <h2 className="completion-title">{title}</h2>
           <p className="completion-desc">{subtitle}</p>
@@ -804,13 +804,21 @@ export const CompletionScreen = ({
 
 
 
-        <Button
+        {/* <Button
           variant="primary"
           onClick={onClose}
           style={{ width: '100%', marginTop: '8px' }}
         >
           Take to portal
-        </Button>
+        </Button> */}
+
+        <Button
+          variant="primary"
+          onClick={() => {
+            alert("BUTTON CLICKED");
+            onClose?.();
+          }}
+        ></Button>
       </div>
     </div>,
     document.body
@@ -820,9 +828,9 @@ export const CompletionScreen = ({
 /* ==========================================================================
    13. BOTTOM NAVIGATION
    ========================================================================== */
-export const BottomNav = ({ 
-  activeTab = 'academy', 
-  onTabChange 
+export const BottomNav = ({
+  activeTab = 'academy',
+  onTabChange
 }) => {
   const tabs = [
     { id: 'dashboard', label: 'Dashboard', icon: ClipboardList },
@@ -853,11 +861,11 @@ export const BottomNav = ({
 /* ==========================================================================
    14. SYSTEM FEEDBACK STATES
    ========================================================================== */
-export const FeedbackStates = ({ 
-  type = 'loading', 
-  title, 
-  description, 
-  onRetry 
+export const FeedbackStates = ({
+  type = 'loading',
+  title,
+  description,
+  onRetry
 }) => {
   if (type === 'loading') {
     return (
@@ -920,7 +928,7 @@ export const LessonHero = ({ theme = 'primary', icon: Icon, category, title, des
       <div className="hero-category">{category}</div>
       <h1 className="hero-title">{title}</h1>
       {description && <p className="hero-desc">{description}</p>}
-      
+
       {(duration || points !== undefined) && (
         <div className="hero-meta-chips">
           {category && (
@@ -1007,8 +1015,8 @@ export const CompletionCard = ({ onComplete, points = 5, buttonText = "✓ Mark 
       <div className="completion-card-inner">
         <h3 className="completion-title">Ready to complete this lesson?</h3>
         <p className="completion-desc">Click below to mark this activity as completed and earn your points.</p>
-        <Button 
-          variant="primary" 
+        <Button
+          variant="primary"
           onClick={onComplete}
           className="completion-btn"
           style={{ width: '100%', marginBottom: '12px' }}

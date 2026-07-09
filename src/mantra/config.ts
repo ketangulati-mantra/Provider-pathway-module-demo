@@ -1,20 +1,22 @@
 /**
  * Mantra Care Platform Configuration
- * Single source of truth for configurable backend URLs, redirect behaviors, and flags.
  */
 export const MANTRA_CONFIG = {
-  // Base dashboard URL for Mantra Care
   dashboardUrl: 'https://provider.mantracare.com/pathway',
 
-  // Backend API Base URL (empty for local relative paths)
-  backendBaseUrl: '',
+  webhookUrl: 'https://api.mantracare.org/webhook/pathway',
 
-  // Endpoint to send webhook notifications when a lesson is marked done
-  webhookUrl: 'https://api.mantracare.org/webhook/assessment',
+  /**
+   * Default webhook intent.
+   * Supported values:
+   * - complete_activity
+   * - assign_activity
+   * - assign_pathway
+   * - assign_and_complete_activity
+   */
+  defaultWebhookIntent: 'complete_activity',
 
-  // Flag to control redirection back to Laravel vs returning to local homepage
   redirectAfterCompletion: false,
 
-  // Enable/disable development log widgets and controls
   devMode: true
-};
+} as const;

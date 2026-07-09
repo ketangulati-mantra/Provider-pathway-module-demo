@@ -1,39 +1,81 @@
 import { MANTRA_CONFIG } from './config';
 import { activities } from './activities';
 
+console.log("CONFIG WEBHOOK:", MANTRA_CONFIG.webhookUrl);
+
 /**
- * Sends a completion payload to Laravel API to mark a lesson completed.
+ * Returns URL parameters required by the pathway webhook.
+ */
+const getWebhookContext = () => {
+  const params = new URLSearchParams(window.location.search);
+
+  return {
+    upaId: params.get('upa_id'),
+    uid: params.get('uid')
+  };
+};
+
+/**
+ * Marks a lesson/activity as completed in Laravel.
  */
 export const completeLesson = async (lessonId: string): Promise<boolean> => {
   const activity = activities.find(a => a.lessonId === lessonId);
+
   if (!activity) {
-    console.error(`[Mantra API] Activity details not found for ID: ${lessonId}`);
+    console.error(`[Mantra API] Activity not found: ${lessonId}`);
     return false;
   }
 
-  const endpoint = activity.completionEndpoint || MANTRA_CONFIG.webhookUrl;
-  const targetUrl = MANTRA_CONFIG.backendBaseUrl 
-    ? `${MANTRA_CONFIG.backendBaseUrl}${endpoint}`
-    : endpoint;
+  const { upaId, uid } = getWebhookContext();
+  alert("===== WEBHOOK CONTEXT =====");
+  alert(upaId);
+  alert(uid);
 
-  console.log(`[Mantra API] Posting complete signal for lesson: ${lessonId} to ${targetUrl}`);
+  if (!upaId) {
+    console.error('[Mantra API] Missing upa_id in URL.');
+    return false;
+  }
+
+  if (MANTRA_CONFIG.devMode) {
+    console.log('[Mantra API] Completing activity', {
+      lessonId,
+      upaId,
+      uid,
+      endpoint: MANTRA_CONFIG.webhookUrl
+    });
+  }
 
   try {
-    const response = await fetch(targetUrl, {
+    const response = await fetch(MANTRA_CONFIG.webhookUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        lesson_id: lessonId,
-        activity_id: activity.activityId || null,
-        points: activity.rewardPoints,
-        timestamp: new Date().toISOString()
+        intent: 'complete_activity',
+        upa_id: Number(upaId),
+        uid: uid || undefined
       })
     });
-    return response.ok;
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      console.error(
+        '[Mantra API] Webhook failed:',
+        result?.message || result
+      );
+      return false;
+    }
+
+    if (MANTRA_CONFIG.devMode) {
+      console.log('[Mantra API] Activity completed successfully.', result);
+    }
+
+    return true;
+
   } catch (error) {
-    console.warn(`[Mantra API Webhook] Communication captured in sandbox/local environment for lesson: ${lessonId}`);
+    console.error('[Mantra API] Network/Webhook Error:', error);
     return false;
   }
 };
