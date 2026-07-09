@@ -37,12 +37,12 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
   }
 
   if (MANTRA_CONFIG.devMode) {
-    console.log('[Mantra API] Completing activity', {
+    /* console.log('[Mantra API] Completing activity', {
       lessonId,
       upaId,
       uid,
       endpoint: MANTRA_CONFIG.webhookUrl
-    });
+    }); */
   }
 
   try {
