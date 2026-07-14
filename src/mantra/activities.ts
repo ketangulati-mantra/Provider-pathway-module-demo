@@ -311,6 +311,68 @@ export const activities: Activity[] = [
     rewardPoints: 0,
     estimatedDuration: '1 min',
     route: '/task/listener-certificate'
+  },
+  {
+    lessonId: 'yoga-pathway',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Creating a Yoga Pathway for Your Client',
+    rewardPoints: 5,
+    estimatedDuration: '2-3 min',
+    route: '/task/yoga-pathway'
+  },
+  {
+    lessonId: 'yoga-routine',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Create a Personalized Yoga Routine for Different Client Needs',
+    rewardPoints: 5,
+    estimatedDuration: '3-5 min',
+    route: '/task/yoga-routine'
+  },
+  {
+    lessonId: 'yoga-mindfulness',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Sharing In-Session Mindfulness or Breathing Exercises to Boost Engagement',
+    rewardPoints: 5,
+    estimatedDuration: '2-3 min',
+    route: '/task/yoga-mindfulness'
+  },
+  {
+    lessonId: 'yoga-nudging',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Nudging Clients to Practice Daily',
+    rewardPoints: 5,
+    estimatedDuration: '2-3 min',
+    route: '/task/yoga-nudging'
+  },
+  {
+    lessonId: 'yoga-refer-services',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Refer Other Services like Fit, Diet, Physio etc.',
+    rewardPoints: 5,
+    estimatedDuration: '2-3 min',
+    route: '/task/yoga-refer-services'
+  },
+  {
+    lessonId: 'yoga-market-profile',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Market Your Profile – Yoga Experts',
+    rewardPoints: 5,
+    estimatedDuration: '5 min',
+    route: '/task/yoga-market-profile'
+  },
+  {
+    lessonId: 'yoga-certificate',
+    activityId: '',
+    service: 'Yoga',
+    title: 'Download Your Yoga Provider Pathway Certificate',
+    rewardPoints: 20,
+    estimatedDuration: '2 min',
+    route: '/task/yoga-certificate'
   }
 ];
-

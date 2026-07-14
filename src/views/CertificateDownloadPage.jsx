@@ -295,7 +295,7 @@ const DEFAULT_CONFIG = {
   congratsDescription: null
 };
 
-export default function CertificateDownloadPage({ onBack, certificateConfig }) {
+export default function CertificateDownloadPage({ onBack, certificateConfig, onDownload }) {
   const config = certificateConfig || DEFAULT_CONFIG;
   const { showToast } = useToast();
   const [step, setStep] = useState('form'); // 'form' | 'preview'
@@ -344,6 +344,10 @@ export default function CertificateDownloadPage({ onBack, certificateConfig }) {
       link.click();
 
       showToast('Certificate downloaded successfully!', 'success');
+      
+      if (onDownload) {
+        onDownload();
+      }
     } catch (err) {
       console.error('Error generating certificate image:', err);
       showToast('Unable to download certificate. Please try again.', 'error');

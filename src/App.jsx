@@ -33,6 +33,13 @@ import CertificateDownloadPage from './views/CertificateDownloadPage';
 import TherapyProviderCertificatePage from './views/TherapyProviderCertificatePage';
 import TopListenerLessonPage from './views/TopListenerLessonPage';
 import ListenerCertificatePage from './views/ListenerCertificatePage';
+import YogaPathwayLessonPage from './views/YogaPathwayLessonPage';
+import YogaRoutineLessonPage from './views/YogaRoutineLessonPage';
+import YogaMindfulnessLessonPage from './views/YogaMindfulnessLessonPage';
+import YogaNudgingLessonPage from './views/YogaNudgingLessonPage';
+import YogaReferServicesLessonPage from './views/YogaReferServicesLessonPage';
+import YogaMarketProfileLessonPage from './views/YogaMarketProfileLessonPage';
+import YogaCertificatePage from './views/YogaCertificatePage';
 import {
   BookOpen,
   Award,
@@ -344,6 +351,62 @@ function App() {
     if (currentPath === '/task/listener-certificate') {
       return (
         <ListenerCertificatePage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-pathway') {
+      return (
+        <YogaPathwayLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-routine') {
+      return (
+        <YogaRoutineLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-mindfulness') {
+      return (
+        <YogaMindfulnessLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-nudging') {
+      return (
+        <YogaNudgingLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-refer-services') {
+      return (
+        <YogaReferServicesLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-market-profile') {
+      return (
+        <YogaMarketProfileLessonPage
+          onBack={() => navigate('/dev')}
+        />
+      );
+    }
+
+    if (currentPath === '/task/yoga-certificate') {
+      return (
+        <YogaCertificatePage
           onBack={() => navigate('/dev')}
         />
       );
