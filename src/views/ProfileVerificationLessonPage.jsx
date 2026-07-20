@@ -15,23 +15,23 @@ const REWARD_POINTS = 10;
 const STEPS = [
   {
     step: 'Step 1',
-    title: 'Open Provider Dashboard',
-    content: 'Log in to your MantraCare Provider portal.'
+    title: 'Open Profile Verification',
+    content: 'Click the "Open Profile Verification" button above to access your profile verification page.'
   },
   {
     step: 'Step 2',
-    title: 'Go to Settings',
-    content: 'Navigate to Settings and select the Profile section.'
+    title: 'Complete Your Profile',
+    content: 'Fill in all the required profile information, including your personal details, qualifications, bio, and profile photo.'
   },
   {
     step: 'Step 3',
-    title: 'Complete Profile Details',
-    content: 'Fill in all the required information, including your qualifications, bio, and photo.'
+    title: 'Submit for Verification',
+    content: 'Submit your profile for verification. Our verification team will review your profile and verify your details.'
   },
   {
     step: 'Step 4',
-    title: 'Submit for Verification',
-    content: 'Submit your profile for review. Once verified, take a screenshot of your verified profile.'
+    title: 'Upload Screenshot',
+    content: 'After submitting your profile for verification, return to this page and upload a screenshot of your Profile page as proof of submission.'
   }
 ];
 
