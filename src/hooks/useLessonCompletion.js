@@ -105,11 +105,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   const handleQuizComplete = () => {
     if (completedSteps.celebrationShown) {
       showToast("You've already completed this activity.", "success", 3000);
-      if (onBack) {
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-      }
+      setTimeout(() => { goToDashboard(); }, 1800);
       return;
     }
     setCompletedSteps((prev) => ({ ...prev, quizDone: true }));
@@ -126,11 +122,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
   const handleActionComplete = () => {
     if (completedSteps.celebrationShown) {
       showToast("You've already completed this activity.", "success", 3000);
-      if (onBack) {
-        setTimeout(() => {
-          goToDashboard();
-        }, 1800);
-      }
+      setTimeout(() => { goToDashboard(); }, 1800);
       return;
     }
     setCompletedSteps((prev) => ({ ...prev, actionDone: true }));
@@ -163,9 +155,7 @@ export function useLessonCompletion(lessonId, onBack, features = {}) {
 
     await completeLesson(lessonId);
 
-    if (onBack) {
-      goToDashboard();
-    }
+    goToDashboard();
   };
 
   return {

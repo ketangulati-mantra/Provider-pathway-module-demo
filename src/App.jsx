@@ -64,9 +64,12 @@ function App() {
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
-
   const navigate = (path) => {
-    window.history.pushState(null, '', path);
+    // Every internal SPA route change replaces the current entry rather
+    // than pushing a new one. The SPA must never accumulate its own
+    // back-stack (fallback page, /dev, lessons, etc.) — the only valid
+    // Back target is whatever real external page led into the SPA.
+    window.history.replaceState(null, '', path);
     setCurrentPath(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -87,6 +90,10 @@ function App() {
   // Render view based on route path
   const renderView = () => {
     if (currentPath === '/dev') {
+      if (!MANTRA_CONFIG.devMode) {
+        window.location.replace(MANTRA_CONFIG.dashboardUrl);
+        return null;
+      }
       return (
         <DeveloperLessonsPage
           tasks={dashboardTasks}
@@ -98,7 +105,7 @@ function App() {
     if (currentPath === '/task/introduction') {
       return (
         <IntroductionLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -106,7 +113,7 @@ function App() {
     if (currentPath === '/task/mobile-app') {
       return (
         <MobileAppLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -114,7 +121,7 @@ function App() {
     if (currentPath === '/task/using-mantra') {
       return (
         <UsingMantraLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -122,7 +129,7 @@ function App() {
     if (currentPath === '/task/profile-verification') {
       return (
         <ProfileVerificationLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -130,7 +137,7 @@ function App() {
     if (currentPath === '/task/premium-provider') {
       return (
         <PremiumProviderLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -138,7 +145,7 @@ function App() {
     if (currentPath === '/task/getting-clients') {
       return (
         <GettingClientsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -146,7 +153,7 @@ function App() {
     if (currentPath === '/task/market-yourself') {
       return (
         <MarketYourselfLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -154,7 +161,7 @@ function App() {
     if (currentPath === '/task/share-linkedin') {
       return (
         <ShareLinkedinLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -162,7 +169,7 @@ function App() {
     if (currentPath === '/task/show-achievements') {
       return (
         <ShowAchievementsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -170,7 +177,7 @@ function App() {
     if (currentPath === '/task/getting-paid') {
       return (
         <GettingPaidLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -178,7 +185,7 @@ function App() {
     if (currentPath === '/task/intern-program') {
       return (
         <TherapyInternProgramLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -186,7 +193,7 @@ function App() {
     if (currentPath === '/task/therapy-notes') {
       return (
         <TherapyNotesLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -194,7 +201,7 @@ function App() {
     if (currentPath === '/task/couple-therapy') {
       return (
         <CoupleTherapyLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -202,7 +209,7 @@ function App() {
     if (currentPath === '/task/creating-pathway') {
       return (
         <CreatingPathwayLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -210,7 +217,7 @@ function App() {
     if (currentPath === '/task/canned-responses') {
       return (
         <CannedResponsesLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -218,7 +225,7 @@ function App() {
     if (currentPath === '/task/mantra-assessments') {
       return (
         <MantraAssessmentsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -226,7 +233,7 @@ function App() {
     if (currentPath === '/task/support-hotline') {
       return (
         <SupportHotlineLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -234,7 +241,7 @@ function App() {
     if (currentPath === '/task/corporate-eap') {
       return (
         <CorporateEapLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -242,7 +249,7 @@ function App() {
     if (currentPath === '/task/community-management') {
       return (
         <CommunityManagementLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -250,7 +257,7 @@ function App() {
     if (currentPath === '/task/content-creation') {
       return (
         <ContentCreationLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -258,7 +265,7 @@ function App() {
     if (currentPath === '/task/campus-awareness') {
       return (
         <CampusAwarenessLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -266,7 +273,7 @@ function App() {
     if (currentPath === '/task/fundraising') {
       return (
         <FundRaisingLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -274,7 +281,7 @@ function App() {
     if (currentPath === '/task/recruit-interns') {
       return (
         <RecruitInternsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -282,7 +289,7 @@ function App() {
     if (currentPath === '/task/refer-services') {
       return (
         <ReferServicesLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -290,7 +297,7 @@ function App() {
     if (currentPath === '/task/converting-clients') {
       return (
         <ConvertingClientsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -298,7 +305,7 @@ function App() {
     if (currentPath === '/task/insurance') {
       return (
         <InsuranceLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -306,7 +313,7 @@ function App() {
     if (currentPath === '/task/earn-points') {
       return (
         <EarnPointsLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -314,7 +321,7 @@ function App() {
     if (currentPath === '/task/refer-provider') {
       return (
         <ReferProviderLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -322,7 +329,7 @@ function App() {
     if (currentPath === '/task/sales-partner') {
       return (
         <SalesPartnerLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -330,7 +337,7 @@ function App() {
     if (currentPath === '/task/download-certificate') {
       return (
         <CertificateDownloadPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -338,7 +345,7 @@ function App() {
     if (currentPath === '/task/provider-certificate') {
       return (
         <TherapyProviderCertificatePage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -346,7 +353,7 @@ function App() {
     if (currentPath === '/task/top-listener-recognition') {
       return (
         <TopListenerLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -354,7 +361,7 @@ function App() {
     if (currentPath === '/task/listener-certificate') {
       return (
         <ListenerCertificatePage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -362,7 +369,7 @@ function App() {
     if (currentPath === '/task/yoga-pathway') {
       return (
         <YogaPathwayLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -370,7 +377,7 @@ function App() {
     if (currentPath === '/task/yoga-routine') {
       return (
         <YogaRoutineLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -378,7 +385,7 @@ function App() {
     if (currentPath === '/task/yoga-mindfulness') {
       return (
         <YogaMindfulnessLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -386,7 +393,7 @@ function App() {
     if (currentPath === '/task/yoga-nudging') {
       return (
         <YogaNudgingLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -394,7 +401,7 @@ function App() {
     if (currentPath === '/task/yoga-refer-services') {
       return (
         <YogaReferServicesLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -402,7 +409,7 @@ function App() {
     if (currentPath === '/task/yoga-market-profile') {
       return (
         <YogaMarketProfileLessonPage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -410,7 +417,7 @@ function App() {
     if (currentPath === '/task/yoga-certificate') {
       return (
         <YogaCertificatePage
-          onBack={() => navigate('/dev')}
+          onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
         />
       );
     }
@@ -422,7 +429,7 @@ function App() {
         return (
           <LessonTemplate
             lesson={activeLesson}
-            onBack={() => navigate('/dev')}
+            onBack={MANTRA_CONFIG.devMode ? () => navigate('/dev') : undefined}
           />
         );
       }

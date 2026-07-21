@@ -8,7 +8,7 @@ export const goBack = (onBackCallback?: () => void) => {
   if (onBackCallback) {
     onBackCallback();
   } else {
-    window.location.href = MANTRA_CONFIG.dashboardUrl;
+    window.location.replace(MANTRA_CONFIG.dashboardUrl);
   }
 };
 
@@ -16,7 +16,11 @@ export const goBack = (onBackCallback?: () => void) => {
  * Redirects the browser directly to the Laravel dashboard workspace.
  */
 export const goToDashboard = () => {
-  window.location.href = MANTRA_CONFIG.dashboardUrl;
+  // Replace the current entry (the lesson) instead of pushing a new one.
+  // The lesson must not remain reachable via Back once the provider is
+  // returned to the dashboard — replace() collapses that entry in place
+  // rather than stacking the dashboard on top of it.
+  window.location.replace(MANTRA_CONFIG.dashboardUrl);
 };
 
 /**
