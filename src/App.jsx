@@ -54,12 +54,22 @@ import { activities } from './mantra/activities';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+    const basePath = '/provider_pathways';
+
+  const getPath = () => {
+    let p = window.location.pathname;
+    if (p.startsWith(basePath)) {
+      p = p.slice(basePath.length) || '/';
+    }
+    return p;
+  };
+
+  const [currentPath, setCurrentPath] = useState(getPath());
 
   // Custom router state listener
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname);
+      setCurrentPath(getPath());
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -69,7 +79,8 @@ function App() {
     // than pushing a new one. The SPA must never accumulate its own
     // back-stack (fallback page, /dev, lessons, etc.) — the only valid
     // Back target is whatever real external page led into the SPA.
-    window.history.replaceState(null, '', path);
+    const fullPath = path === '/' ? basePath : (basePath + path).replace('//', '/');
+    window.history.replaceState(null, '', fullPath);
     setCurrentPath(path);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
