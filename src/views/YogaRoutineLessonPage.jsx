@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
   Button,
-  useToast
 } from '../components';
-import { completeLesson, goToDashboard } from '../mantra';
-import { CheckCircle2, Clock, Award, ClipboardList, PenTool, Sliders, Send, TrendingUp } from 'lucide-react';
+import { CheckCircle2, Clock, Award, ClipboardList, PenTool, Sliders, Send, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 
 const LESSON_ID     = 'yoga-routine';
 const LESSON_TITLE  = 'Create a Personalized Yoga Routine for Different Client Needs';
@@ -17,39 +15,34 @@ const STEPS = [
   {
     icon: ClipboardList,
     title: 'Assess Client Needs',
-    description: (
+    content: (
       <>
-        Understand the client's goals and current condition before creating a routine.
-        <br/><br/>
-        Common objectives include:
-        <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
-          <li>Stress management</li>
-          <li>Flexibility</li>
-          <li>Back pain relief</li>
-          <li>Weight management</li>
-          <li>Strength building</li>
-          <li>Better posture</li>
-          <li>Improved mobility</li>
-        </ul>
-        <br/>
-        Also consider injuries, medical conditions, age, and physical limitations.
+        <p style={{ margin: '0 0 12px' }}>Understand the client's goals and current condition before creating a routine.</p>
+        <p style={{ margin: '0 0 8px', fontWeight: 600, color: '#475569' }}>Common objectives include:</p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+          {['Stress management', 'Flexibility', 'Back pain relief', 'Weight management', 'Strength building', 'Better posture', 'Improved mobility'].map((tag, i) => (
+            <span key={i} style={{ background: '#f1f5f9', color: '#475569', padding: '4px 10px', borderRadius: '16px', fontSize: '0.8rem', fontWeight: 500 }}>{tag}</span>
+          ))}
+        </div>
+        <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+          * Also consider injuries, medical conditions, age, and physical limitations.
+        </p>
       </>
     )
   },
   {
     icon: PenTool,
     title: 'Plan the Yoga Routine',
-    description: (
+    content: (
       <>
-        Create a structured routine that includes:
-        <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
+        <p style={{ margin: '0 0 12px' }}>Create a structured routine that includes the following core elements:</p>
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: '1.8', color: '#475569', fontSize: '0.9rem' }}>
           <li>Routine name and objective</li>
           <li>Warm-up sequence</li>
-          <li>Main yoga poses</li>
-          <li>Pose duration or repetitions</li>
+          <li>Main yoga poses with duration/repetitions</li>
           <li>Modifications for beginners or limitations</li>
-          <li>Breathing exercises</li>
-          <li>Relaxation / cool-down</li>
+          <li>Breathing exercises (Pranayama)</li>
+          <li>Relaxation / cool-down (Savasana)</li>
           <li>Weekly practice frequency</li>
         </ul>
       </>
@@ -58,10 +51,10 @@ const STEPS = [
   {
     icon: Sliders,
     title: 'Personalize for the Client',
-    description: (
+    content: (
       <>
-        Adjust the routine based on:
-        <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
+        <p style={{ margin: '0 0 12px' }}>Adjust the routine based on individual client factors to ensure safety and effectiveness:</p>
+        <ul style={{ margin: '0 0 16px', paddingLeft: '20px', lineHeight: '1.8', color: '#475569', fontSize: '0.9rem' }}>
           <li>Experience level</li>
           <li>Fitness level</li>
           <li>Existing injuries</li>
@@ -69,22 +62,22 @@ const STEPS = [
           <li>Lifestyle</li>
           <li>Time available each day</li>
         </ul>
-        <br/>
-        The more personalized the routine, the better the client's adherence and outcomes.
+        <div style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', padding: '12px 16px', borderRadius: '8px', fontSize: '0.85rem', color: '#166534' }}>
+          <strong>Pro Tip:</strong> The more personalized the routine, the better the client's adherence and outcomes.
+        </div>
       </>
     )
   },
   {
     icon: Send,
     title: 'Share with the Client',
-    description: (
+    content: (
       <>
-        Send the completed yoga routine through the MantraCare chat.
-        <br/><br/>
-        Clients can:
-        <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
-          <li>View the routine anytime</li>
-          <li>Follow each session</li>
+        <p style={{ margin: '0 0 12px' }}>Send the completed yoga routine through the MantraCare chat.</p>
+        <p style={{ margin: '0 0 8px', fontWeight: 600, color: '#475569' }}>This allows clients to:</p>
+        <ul style={{ margin: 0, paddingLeft: '20px', lineHeight: '1.8', color: '#475569', fontSize: '0.9rem' }}>
+          <li>View the routine anytime from their device</li>
+          <li>Follow each session sequentially</li>
           <li>Save it for future practice</li>
           <li>Refer back whenever needed</li>
         </ul>
@@ -94,18 +87,18 @@ const STEPS = [
   {
     icon: TrendingUp,
     title: 'Monitor Progress',
-    description: (
+    content: (
       <>
-        Encourage clients to regularly share:
-        <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
-          <li>Progress updates</li>
-          <li>Feedback</li>
-          <li>Pain or discomfort</li>
-          <li>Photos or videos (when appropriate)</li>
-          <li>Questions about specific poses</li>
-        </ul>
-        <br/>
-        Update the routine whenever their goals or condition changes.
+        <p style={{ margin: '0 0 12px' }}>Encourage clients to regularly share feedback to keep the routine optimal:</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+          <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ Progress updates</div>
+          <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ General feedback</div>
+          <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ Pain or discomfort</div>
+          <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ Pose questions</div>
+        </div>
+        <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+          Update the routine whenever their goals or condition changes.
+        </p>
       </>
     )
   }
@@ -125,154 +118,92 @@ export default function YogaRoutineLessonPage({ onBack }) {
     hasAction: true
   });
 
+  const [activeAccordion, setActiveAccordion] = useState(0);
+
   return (
-    <div
-      style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#f8fafc' }}
-      className="animate-fade-in"
-    >
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#f8fafc' }} className="animate-fade-in">
       <Header title={LESSON_TITLE} onBack={onBack} progress={lessonProgress} points={REWARD_POINTS} />
 
       <main className="academy-main-container" style={{
-        flex: 1,
-        padding: '28px 24px 48px',
-        maxWidth: '800px',
-        margin: '0 auto',
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '12px'
+        flex: 1, padding: '24px', maxWidth: '800px', margin: '0 auto', width: '100%',
+        display: 'flex', flexDirection: 'column', gap: '24px'
       }}>
 
-        {/* ── Hero ───────────────────────────────────────────────── */}
-        <div style={{ marginBottom: '8px' }}>
-          <span style={{
-            display: 'inline-block',
-            fontSize: '0.62rem',
-            fontWeight: 700,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: 'var(--color-primary)',
-            background: '#f0f9ff',
-            borderRadius: '4px',
-            padding: '3px 8px',
-            marginBottom: '10px'
-          }}>
+        {/* Hero */}
+        <div style={{ textAlign: 'center', marginBottom: '8px' }}>
+          <span style={{ display: 'inline-block', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-primary)', background: '#f0f9ff', borderRadius: '4px', padding: '4px 10px', marginBottom: '12px' }}>
             CARE PLANNING
           </span>
-          <h1 style={{
-            fontFamily: 'var(--font-heading)',
-            fontWeight: 800,
-            fontSize: '1.25rem',
-            color: 'var(--text-main)',
-            margin: '0 0 6px'
-          }}>
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '2rem', color: 'var(--text-main)', margin: '0 0 12px' }}>
             {LESSON_TITLE}
           </h1>
-          <p style={{
-            fontSize: '0.85rem',
-            color: 'var(--text-secondary)',
-            margin: '0 0 10px',
-            lineHeight: '1.6',
-            maxWidth: '540px'
-          }}>
+          <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', margin: '0 auto 16px', lineHeight: '1.5', maxWidth: '650px' }}>
             Learn how to design personalized yoga routines tailored to each client's goals, physical condition, and wellness journey. Well-structured routines improve client engagement and long-term outcomes.
           </p>
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <span className="overview-meta-badge"><Clock size={11} /><span>3-5 min read</span></span>
-            <span className="overview-meta-badge points"><Award size={11} /><span>+{REWARD_POINTS} Points</span></span>
+          <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+            <span className="overview-meta-badge"><Clock size={12} /><span>3-5 min read</span></span>
+            <span className="overview-meta-badge points"><Award size={12} /><span>+{REWARD_POINTS} Points</span></span>
           </div>
         </div>
 
-        {/* ── Steps Section Header ───────────────────────────────── */}
-        <h2 style={{
-          fontFamily: 'var(--font-heading)',
-          fontWeight: 700,
-          fontSize: '1.1rem',
-          color: 'var(--text-main)',
-          margin: '12px 0 0'
-        }}>
-          Here's how it works
-        </h2>
-
-        {/* ── Steps Cards ───────────────────────────────────────── */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {STEPS.map((step, idx) => (
-            <div key={idx} style={{
-              background: '#ffffff',
-              borderRadius: '14px',
-              border: '1px solid #eef0f3',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04)',
-              padding: '20px',
-              display: 'flex',
-              alignItems: 'flex-start',
-              gap: '16px'
-            }}>
-              <div style={{
-                width: 36, height: 36, borderRadius: '8px',
-                background: '#f0f9ff', color: 'var(--color-primary)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexShrink: 0
-              }}>
-                <step.icon size={18} />
-              </div>
-              <div>
-                <h3 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontWeight: 700,
-                  fontSize: '0.95rem',
-                  color: 'var(--text-main)',
-                  margin: '0 0 4px'
-                }}>
-                  {step.title}
-                </h3>
-                <div style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-secondary)',
-                  margin: 0,
-                  lineHeight: '1.6'
-                }}>
-                  {step.description}
+        {/* Steps Accordion */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {STEPS.map((step, idx) => {
+            const isActive = activeAccordion === idx;
+            return (
+              <div 
+                key={idx}
+                style={{ 
+                  background: '#fff', 
+                  borderRadius: '16px', 
+                  border: isActive ? '1px solid var(--color-primary)' : '1px solid #eef0f3', 
+                  boxShadow: isActive ? '0 4px 12px rgba(0,0,0,0.05)' : 'none', 
+                  overflow: 'hidden', 
+                  transition: 'all 0.2s', 
+                  cursor: 'pointer' 
+                }}
+                onClick={() => setActiveAccordion(isActive ? -1 : idx)}
+              >
+                <div style={{ padding: '20px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: isActive ? '#f0f9ff' : '#fff' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                    <div style={{ 
+                      width: '40px', height: '40px', borderRadius: '12px', 
+                      background: isActive ? 'var(--color-primary)' : '#f8fafc', 
+                      color: isActive ? '#fff' : 'var(--color-primary)', 
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      transition: 'all 0.2s'
+                    }}>
+                      <step.icon size={20} />
+                    </div>
+                    <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', fontWeight: 700, margin: 0, color: isActive ? 'var(--color-primary)' : '#334155' }}>
+                      Step {idx + 1}: {step.title}
+                    </h3>
+                  </div>
+                  {isActive ? <ChevronUp size={20} color="var(--color-primary)" /> : <ChevronDown size={20} color="#9ca3af" />}
                 </div>
+                
+                {isActive && (
+                  <div style={{ padding: '0 24px 24px 80px', background: '#fff' }}>
+                    <div style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                      {step.content}
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* ── Completion card ─────────────────────────────────────── */}
-        <div style={{
-          background: '#ffffff',
-          borderRadius: '14px',
-          border: '1px solid #eef0f3',
-          boxShadow: '0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04)',
-          padding: '18px 24px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '14px',
-          marginTop: '12px'
-        }}>
-          <div style={{
-            width: 34, height: 34, borderRadius: '50%', flexShrink: 0,
-            background: 'var(--gradient-primary)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>
-            <CheckCircle2 size={16} color="#fff" />
+        {/* Completion card */}
+        <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #eef0f3', boxShadow: '0 4px 12px rgba(0,0,0,0.04)', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: '16px', marginTop: '16px' }}>
+          <div style={{ width: 40, height: 40, borderRadius: '50%', flexShrink: 0, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <CheckCircle2 size={20} color="#fff" />
           </div>
           <div style={{ flex: 1 }}>
-            <p style={{
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 700,
-              fontSize: '0.92rem',
-              color: 'var(--text-main)',
-              margin: '0 0 2px'
-            }}>
+            <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--text-main)', margin: '0 0 4px' }}>
               You're all set!
             </p>
-            <p style={{
-              fontSize: '0.78rem',
-              color: 'var(--text-secondary)',
-              margin: 0,
-              lineHeight: '1.5'
-            }}>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.5' }}>
               You now know how to design personalized yoga routines tailored to each client's goals.
             </p>
           </div>
@@ -281,18 +212,9 @@ export default function YogaRoutineLessonPage({ onBack }) {
             variant="primary"
             onClick={handleActionComplete}
             disabled={actionDone}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '5px',
-              padding: '8px 18px',
-              fontSize: '0.82rem',
-              whiteSpace: 'nowrap',
-              flexShrink: 0
-            }}
+            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '10px 20px', fontSize: '0.9rem', whiteSpace: 'nowrap', flexShrink: 0 }}
           >
-            <CheckCircle2 size={13} />
+            <CheckCircle2 size={16} />
             <span>{actionDone ? 'Complete' : 'Mark Lesson as Complete'}</span>
           </Button>
         </div>
@@ -300,12 +222,7 @@ export default function YogaRoutineLessonPage({ onBack }) {
       </main>
 
       {showCelebrate && (
-        <CompletionScreen
-          points={REWARD_POINTS}
-          title="Lesson Complete!"
-          subtitle="You have successfully finished this lesson and boosted your provider score."
-          onClose={handleCloseCelebration}
-        />
+        <CompletionScreen points={REWARD_POINTS} title="Lesson Complete!" subtitle="You have successfully finished this lesson and boosted your provider score." onClose={handleCloseCelebration} />
       )}
     </div>
   );
