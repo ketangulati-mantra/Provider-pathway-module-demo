@@ -1,0 +1,61 @@
+{
+  "title": "Stát se Mantra Sales Partnerem",
+  "description": "Pomozte představit organizace, které mohou těžit z programů podpory zaměstnanců Mantra a zároveň získávat odměny za úspěšná doporučení.",
+  "badges": {
+    "business_dev": "Rozvoj podnikání",
+    "earn_commission": "Získejte provizi + Mantra body"
+  },
+  "info": {
+    "not_sell_title": "NEOČEKÁVÁ se, že budete prodávat.",
+    "not_sell_desc": "Vaší rolí je jednoduše představit potenciální firmy, které by mohly mít prospěch ze služeb Mantry. Jakmile je představení provedeno, tým Business Development zajišťuje: schůzky, produktové ukázky, vyjednávání, uzavření obchodu. Jednoduše pomáháte začít konverzaci."
+  },
+  "sections": {
+    "ways_to_help": "Jak můžete pomoci",
+    "why_join": "Proč se přidat?",
+    "ways_to_participate": "Způsoby, jak se můžete zapojit",
+    "participate_subtitle": "Teď se nemusíte k ničemu zavazovat. Zde je několik příkladů, jak nám naši partneři pomáhají:",
+    "how_it_works": "Jak to funguje"
+  },
+  "help_items": {
+    "intro_companies": "Představte společnosti",
+    "intro_companies_desc": "Doporučujte organizace, kterým by EAP mohl prospět.",
+    "make_intros": "Představte se",
+    "make_intros_desc": "Stačí e-mail, LinkedIn nebo osobní představení.",
+    "share_opps": "Příležitosti ke sdílení",
+    "share_opps_desc": "Zmiňujte Mantru, když je to ve vaší síti vhodné.",
+    "connect_dm": "Spojte rozhodovací osoby",
+    "connect_dm_desc": "Představte HR týmy, zakladatele, manažery nebo wellness lídry."
+  },
+  "benefits": {
+    "commission": "Komise za úspěšné obchody",
+    "points": "Získávejte Mantra body",
+    "no_targets": "Žádné prodejní cíle",
+    "expand": "Pomozte rozšířit duševní péči"
+  },
+  "timeline": {
+    "identify": "Identifikujte firmu",
+    "identify_desc": "Představte si organizace ve své síti.",
+    "intro": "Představte Mantru",
+    "intro_desc": "Začněte konverzaci e-mailem nebo LinkedInem.",
+    "biz_team": "Obchodní tým přebírá vedení",
+    "biz_team_desc": "Zajišťujeme ukázky, vyjednávání a uzavření obchodů.",
+    "signup": "Společnost se přihlašuje",
+    "signup_desc": "Organizace oficiálně spolupracuje s Mantrou.",
+    "earn": "Získejte provizi a odměny",
+    "earn_desc": "Získejte svou finanční provizi a Mantra body."
+  },
+  "participate_items": {
+    "intro_client": "Představte klienta",
+    "intro_client_desc": "Představte MantraCare klientovi nebo profesionálovi ve vaší síti.",
+    "rec_companies": "Doporučujte společnosti",
+    "rec_companies_desc": "Sdílejte organizace, kde by programy pomoci zaměstnancům (EAP) mohly být užitečné.",
+    "make_intro": "Udělejte úvod",
+    "make_intro_desc": "Spojte náš tým s HR lídrem nebo rozhodovatelem přes LinkedIn nebo e-mail.",
+    "learn_more": "Zjistěte více",
+    "learn_more_desc": "Dnes nejsi připravený? To je v pořádku – můžete program prozkoumat a zapojit se, kdykoli se budete cítit pohodlně."
+  },
+  "celebration": {
+    "title": "Přihláška přijata!",
+    "subtitle": "Náš tým pro rozvoj podnikání se brzy ozve."
+  }
+}

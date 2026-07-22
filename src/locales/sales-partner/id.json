@@ -1,0 +1,61 @@
+{
+  "title": "Menjadi Mitra Penjualan Mantra",
+  "description": "Membantu memperkenalkan organisasi yang mungkin mendapat manfaat dari Program Bantuan Karyawan Mantra sambil mendapatkan hadiah untuk rujukan yang berhasil.",
+  "badges": {
+    "business_dev": "Pengembangan Bisnis",
+    "earn_commission": "Dapatkan komisi + Poin Mantra"
+  },
+  "info": {
+    "not_sell_title": "Anda TIDAK diharapkan untuk menjual.",
+    "not_sell_desc": "Peran Anda hanyalah untuk memperkenalkan perusahaan potensial yang dapat memperoleh manfaat dari layanan Mantra. Setelah pengenalan dibuat, tim Pengembangan Bisnis menangani: Rapat, Demo produk, Negosiasi, Penutupan. Anda cukup membantu memulai percakapan."
+  },
+  "sections": {
+    "ways_to_help": "Cara Anda Dapat Membantu",
+    "why_join": "Mengapa Bergabung?",
+    "ways_to_participate": "Cara Anda Dapat Berpartisipasi",
+    "participate_subtitle": "Anda tidak perlu berkomitmen pada apa pun saat ini. Berikut adalah beberapa contoh cara mitra kami membantu:",
+    "how_it_works": "Cara Kerjanya"
+  },
+  "help_items": {
+    "intro_companies": "Perkenalkan Perusahaan",
+    "intro_companies_desc": "Merekomendasikan organisasi yang mungkin mendapat manfaat dari EAP.",
+    "make_intros": "Membuat Perkenalan",
+    "make_intros_desc": "Email, LinkedIn, atau perkenalan pribadi sudah cukup.",
+    "share_opps": "Bagikan Peluang",
+    "share_opps_desc": "Sebutkan Mantra jika sesuai di jaringan Anda.",
+    "connect_dm": "Hubungkan Pengambil Keputusan",
+    "connect_dm_desc": "Perkenalkan tim SDM, pendiri, manajer, atau pemimpin kesehatan."
+  },
+  "benefits": {
+    "commission": "Komisi untuk kesepakatan yang berhasil",
+    "points": "Dapatkan Poin Mantra",
+    "no_targets": "Tidak ada target penjualan",
+    "expand": "Membantu memperluas perawatan kesehatan mental"
+  },
+  "timeline": {
+    "identify": "Identifikasi perusahaan",
+    "identify_desc": "Pikirkan organisasi di jaringan Anda.",
+    "intro": "Perkenalkan Mantra",
+    "intro_desc": "Mulai percakapan melalui email atau LinkedIn.",
+    "biz_team": "Tim bisnis mengambil alih",
+    "biz_team_desc": "Kami menangani demo, negosiasi, dan penutupan.",
+    "signup": "Perusahaan mendaftar",
+    "signup_desc": "Organisasi ini secara resmi bermitra dengan Mantra.",
+    "earn": "Dapatkan komisi & hadiah",
+    "earn_desc": "Terima komisi keuangan dan Poin Mantra Anda."
+  },
+  "participate_items": {
+    "intro_client": "Perkenalkan Klien",
+    "intro_client_desc": "Perkenalkan MantraCare kepada klien atau profesional di jaringan Anda.",
+    "rec_companies": "Merekomendasikan Perusahaan",
+    "rec_companies_desc": "Berbagi organisasi di mana Program Bantuan Karyawan (EAP) bisa berharga.",
+    "make_intro": "Buat Pengenalan",
+    "make_intro_desc": "Hubungkan tim kami dengan pemimpin SDM atau pembuat keputusan melalui LinkedIn atau email.",
+    "learn_more": "Pelajari Lebih Lanjut",
+    "learn_more_desc": "Belum siap hari ini? Tidak apa-apa—Anda dapat menjelajahi program dan berpartisipasi kapan pun Anda nyaman."
+  },
+  "celebration": {
+    "title": "Aplikasi Diterima!",
+    "subtitle": "Tim Pengembangan Bisnis kami akan segera menghubungi Anda."
+  }
+}

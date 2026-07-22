@@ -1,0 +1,61 @@
+{
+  "title": "Mantra-Vertriebspartner werden",
+  "description": "Helfen Sie dabei, Organisationen vorzustellen, die von Mantras Employee Assistance Programs profitieren können, während Sie Belohnungen für erfolgreiche Empfehlungen erhalten.",
+  "badges": {
+    "business_dev": "Geschäftsentwicklung",
+    "earn_commission": "Provision verdienen + Mantra-Punkte"
+  },
+  "info": {
+    "not_sell_title": "Von dir wird NICHT erwartet, dass du verkaufst.",
+    "not_sell_desc": "Ihre Aufgabe besteht lediglich darin, potenzielle Unternehmen vorzustellen, die von Mantras Dienstleistungen profitieren könnten. Sobald eine Einführung erfolgt, übernimmt das Business Development Team: Meetings, Produktdemonstrationen, Verhandlungen, Abschluss. Du hilfst einfach, das Gespräch zu beginnen."
+  },
+  "sections": {
+    "ways_to_help": "Möglichkeiten, wie Sie helfen können",
+    "why_join": "Warum beitreten?",
+    "ways_to_participate": "Möglichkeiten, wie Sie teilnehmen können",
+    "participate_subtitle": "Du musst dich jetzt auf nichts festlegen. Hier sind einige Beispiele, wie unsere Partner helfen:",
+    "how_it_works": "Wie es funktioniert"
+  },
+  "help_items": {
+    "intro_companies": "Unternehmen vorstellen",
+    "intro_companies_desc": "Empfehlen Sie Organisationen, die von EAP profitieren könnten.",
+    "make_intros": "Vorstellungen machen",
+    "make_intros_desc": "E-Mail, LinkedIn oder persönliche Vorstellungen reichen aus.",
+    "share_opps": "Chancen teilen",
+    "share_opps_desc": "Erwähne Mantra, wenn es in deinem Netzwerk angebracht ist.",
+    "connect_dm": "Verbinden Sie Entscheidungsträger",
+    "connect_dm_desc": "Stellen Sie HR-Teams, Gründer, Manager oder Wellness-Führungskräfte vor."
+  },
+  "benefits": {
+    "commission": "Kommission für erfolgreiche Geschäfte",
+    "points": "Mantra-Punkte verdienen",
+    "no_targets": "Keine Verkaufsziele",
+    "expand": "Helfen Sie, die psychische Gesundheitsversorgung auszubauen"
+  },
+  "timeline": {
+    "identify": "Identifizieren Sie ein Unternehmen",
+    "identify_desc": "Denken Sie an Organisationen in Ihrem Netzwerk.",
+    "intro": "Introduce Mantra",
+    "intro_desc": "Beginnen Sie das Gespräch per E-Mail oder LinkedIn.",
+    "biz_team": "Das Geschäftsteam übernimmt",
+    "biz_team_desc": "Wir übernehmen Demos, Verhandlungen und Abschluss.",
+    "signup": "Das Unternehmen meldet sich an",
+    "signup_desc": "Die Organisation arbeitet offiziell mit Mantra zusammen.",
+    "earn": "Provision und Belohnungen verdienen",
+    "earn_desc": "Erhalten Sie Ihre finanzielle Provision und Mantra-Punkte."
+  },
+  "participate_items": {
+    "intro_client": "Stellen Sie einen Kunden vor",
+    "intro_client_desc": "Stellen Sie MantraCare einem Kunden oder Fachmann in Ihrem Netzwerk vor.",
+    "rec_companies": "Empfohlene Unternehmen",
+    "rec_companies_desc": "Share-Organisationen, bei denen Employee Assistance Programs (EAPs) wertvoll sein könnten.",
+    "make_intro": "Mach eine Vorstellung",
+    "make_intro_desc": "Vernetzen Sie unser Team über LinkedIn oder E-Mail mit einer HR-Führungskraft oder Entscheidungsträgerin.",
+    "learn_more": "Mehr erfahren",
+    "learn_more_desc": "Nicht bereit heute? Das ist in Ordnung – du kannst das Programm erkunden und teilnehmen, wann immer du dich wohlfühlst."
+  },
+  "celebration": {
+    "title": "Bewerbung erhalten!",
+    "subtitle": "Unser Business Development Team wird sich in Kürze mit Ihnen in Verbindung setzen."
+  }
+}

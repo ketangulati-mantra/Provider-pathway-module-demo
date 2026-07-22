@@ -1,0 +1,61 @@
+{
+  "title": "Mantra értékesítési partnerré válás",
+  "description": "Segíts bemutatni azokat a szervezeteket, amelyek profitálhatnak a Mantra Munkavállalói Segítő Programjaiból, miközben sikeres ajánlásokért jutalmat kapnak.",
+  "badges": {
+    "business_dev": "Üzletfejlesztés",
+    "earn_commission": "Jutalék + Mantra pontok"
+  },
+  "info": {
+    "not_sell_title": "NEM várják el, hogy eladj.",
+    "not_sell_desc": "A feladatod egyszerűen az, hogy bemutassuk azokat a potenciális cégeket, amelyek profitálhatnak a Mantra szolgáltatásaiból. Miután bemutatkozott, az üzleti fejlesztési csapat intézi: megbeszéléseket, termékbemutatásokat, tárgyalásokat, zárást. Egyszerűen segítesz elindítani a beszélgetést."
+  },
+  "sections": {
+    "ways_to_help": "Módok, ahogyan segíthetsz",
+    "why_join": "Miért csatlakozz?",
+    "ways_to_participate": "Módok, amelyekkel részt vehetsz",
+    "participate_subtitle": "Most nem kell semmi mellett elköteleződnöd lenne. Íme néhány példa arra, hogyan segítenek partnereink:",
+    "how_it_works": "Hogyan működik"
+  },
+  "help_items": {
+    "intro_companies": "Cégek bevezetése",
+    "intro_companies_desc": "Ajánljon olyan szervezeteket, amelyek profitálhatnak az EAP-ből.",
+    "make_intros": "Bevezetések",
+    "make_intros_desc": "E-mail, LinkedIn vagy személyes bemutatkozás elegendő.",
+    "share_opps": "Megosztás lehetőségei",
+    "share_opps_desc": "Említsd a Mantrát, amikor a hálózatodban megfelelő.",
+    "connect_dm": "Kapcsolódj döntéshozókhoz",
+    "connect_dm_desc": "Mutassuk be HR csapatokat, alapítókat, vezetőket vagy wellness vezetőket."
+  },
+  "benefits": {
+    "commission": "Sikeres üzletek jutaléka",
+    "points": "Mantra pontok gyűjtése",
+    "no_targets": "Nincs értékesítési cél",
+    "expand": "Segítsünk bővíteni a mentális egészségügyet"
+  },
+  "timeline": {
+    "identify": "Azonosítsd a céget",
+    "identify_desc": "Gondolj a hálózatodban lévő szervezetekre.",
+    "intro": "Mutassuk be a mantrát",
+    "intro_desc": "Kezdje el a beszélgetést e-mailen vagy LinkedInen.",
+    "biz_team": "Az üzleti csapat átveszi az irányítást",
+    "biz_team_desc": "Mi intézzük a bemutatásokat, tárgyalásokat és zárásokat.",
+    "signup": "Társaság beiratkozása",
+    "signup_desc": "A szervezet hivatalosan együttműködik a Mantrával.",
+    "earn": "Jutalékot és jutalmakat szerezz",
+    "earn_desc": "Szerezd meg pénzügyi jutalékodat és Mantra pontokat."
+  },
+  "participate_items": {
+    "intro_client": "Mutasson be egy klienst",
+    "intro_client_desc": "Mutassuk be a MantraCare-t egy ügyfélnek vagy szakembernek a hálózatodban.",
+    "rec_companies": "Ajánlson cégeket",
+    "rec_companies_desc": "Osszuk meg azokat a szervezeteket, ahol a Munkavállalói Segélyprogramok (EAP-k) értékesek lehetnek.",
+    "make_intro": "Legyen egy bemutatkozás",
+    "make_intro_desc": "Kapcsold össze csapatunkat egy HR vezetővel vagy döntéshozóval LinkedInen vagy e-mailen keresztül.",
+    "learn_more": "További információk",
+    "learn_more_desc": "Nem vagy ma kész? Ez rendben van – felfedezheted a programot, és részt vehetsz, amikor kényelmesnek érzed."
+  },
+  "celebration": {
+    "title": "Kérelmet megkapva!",
+    "subtitle": "Üzleti fejlesztési csapatunk hamarosan jelentkezik velünk."
+  }
+}

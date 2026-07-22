@@ -1,0 +1,61 @@
+{
+  "title": "Becoming a Mantra Sales Partner",
+  "description": "Help introduce organizations that may benefit from Mantra's Employee Assistance Programs while earning rewards for successful referrals.",
+  "badges": {
+    "business_dev": "Business Development",
+    "earn_commission": "Earn commission + Mantra Points"
+  },
+  "info": {
+    "not_sell_title": "You are NOT expected to sell.",
+    "not_sell_desc": "Your role is simply to introduce potential companies that could benefit from Mantra's services. Once an introduction is made, the Business Development team handles: Meetings, Product demos, Negotiations, Closing. You simply help start the conversation."
+  },
+  "sections": {
+    "ways_to_help": "Ways You Can Help",
+    "why_join": "Why Join?",
+    "ways_to_participate": "Ways You Can Participate",
+    "participate_subtitle": "You don't need to commit to anything right now. Here are some examples of how our partners help:",
+    "how_it_works": "How It Works"
+  },
+  "help_items": {
+    "intro_companies": "Introduce Companies",
+    "intro_companies_desc": "Recommend organizations that may benefit from EAP.",
+    "make_intros": "Make Introductions",
+    "make_intros_desc": "Email, LinkedIn or personal introductions are enough.",
+    "share_opps": "Share Opportunities",
+    "share_opps_desc": "Mention Mantra when appropriate in your network.",
+    "connect_dm": "Connect Decision Makers",
+    "connect_dm_desc": "Introduce HR teams, founders, managers or wellness leaders."
+  },
+  "benefits": {
+    "commission": "Commission on successful deals",
+    "points": "Earn Mantra Points",
+    "no_targets": "No sales targets",
+    "expand": "Help expand mental healthcare"
+  },
+  "timeline": {
+    "identify": "Identify a company",
+    "identify_desc": "Think of organizations in your network.",
+    "intro": "Introduce Mantra",
+    "intro_desc": "Start the conversation via email or LinkedIn.",
+    "biz_team": "Business team takes over",
+    "biz_team_desc": "We handle demos, negotiations, and closing.",
+    "signup": "Company signs up",
+    "signup_desc": "The organization officially partners with Mantra.",
+    "earn": "Earn commission & rewards",
+    "earn_desc": "Receive your financial commission and Mantra Points."
+  },
+  "participate_items": {
+    "intro_client": "Introduce a Client",
+    "intro_client_desc": "Introduce MantraCare to a client or professional in your network.",
+    "rec_companies": "Recommend Companies",
+    "rec_companies_desc": "Share organizations where Employee Assistance Programs (EAPs) could be valuable.",
+    "make_intro": "Make an Introduction",
+    "make_intro_desc": "Connect our team with an HR leader or decision-maker through LinkedIn or email.",
+    "learn_more": "Learn More",
+    "learn_more_desc": "Not ready today? That's okay—you can explore the program and participate whenever you're comfortable."
+  },
+  "celebration": {
+    "title": "Application Received!",
+    "subtitle": "Our Business Development team will be in touch shortly."
+  }
+}

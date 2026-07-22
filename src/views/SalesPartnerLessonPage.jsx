@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
@@ -16,39 +17,40 @@ import {
 } from 'lucide-react';
 
 const LESSON_ID = 'sales-partner';
-const LESSON_TITLE = 'Becoming a Mantra Sales Partner';
 const REWARD_POINTS = 50;
 
-const WAYS_TO_HELP = [
-  { icon: Building2, title: 'Introduce Companies', description: 'Recommend organizations that may benefit from EAP.' },
-  { icon: MessageSquare, title: 'Make Introductions', description: 'Email, LinkedIn or personal introductions are enough.' },
-  { icon: Share2, title: 'Share Opportunities', description: 'Mention Mantra when appropriate in your network.' },
-  { icon: Users, title: 'Connect Decision Makers', description: 'Introduce HR teams, founders, managers or wellness leaders.' }
-];
-
-const BENEFITS = [
-  { icon: Coins, title: 'Commission on successful deals' },
-  { icon: Trophy, title: 'Earn Mantra Points' },
-  { icon: Rocket, title: 'No sales targets' },
-  { icon: Heart, title: 'Help expand mental healthcare' }
-];
-
-const TIMELINE = [
-  { icon: Search, title: 'Identify a company', description: 'Think of organizations in your network.' },
-  { icon: MessageSquare, title: 'Introduce Mantra', description: 'Start the conversation via email or LinkedIn.' },
-  { icon: ArrowRight, title: 'Business team takes over', description: 'We handle demos, negotiations, and closing.' },
-  { icon: PenTool, title: 'Company signs up', description: 'The organization officially partners with Mantra.' },
-  { icon: Award, title: 'Earn commission & rewards', description: 'Receive your financial commission and Mantra Points.' }
-];
-
-const WAYS_TO_PARTICIPATE = [
-  { icon: Users, title: 'Introduce a Client', description: 'Introduce MantraCare to a client or professional in your network.' },
-  { icon: Building2, title: 'Recommend Companies', description: 'Share organizations where Employee Assistance Programs (EAPs) could be valuable.' },
-  { icon: Share2, title: 'Make an Introduction', description: 'Connect our team with an HR leader or decision-maker through LinkedIn or email.' },
-  { icon: BookOpen, title: 'Learn More', description: 'Not ready today? That\'s okay—you can explore the program and participate whenever you\'re comfortable.' }
-];
-
 export default function SalesPartnerLessonPage({ onBack }) {
+  const { t } = useTranslation('sales-partner');
+  const LESSON_TITLE = t('title');
+
+  const WAYS_TO_HELP = [
+    { icon: Building2, title: t('help_items.intro_companies'), description: t('help_items.intro_companies_desc') },
+    { icon: MessageSquare, title: t('help_items.make_intros'), description: t('help_items.make_intros_desc') },
+    { icon: Share2, title: t('help_items.share_opps'), description: t('help_items.share_opps_desc') },
+    { icon: Users, title: t('help_items.connect_dm'), description: t('help_items.connect_dm_desc') }
+  ];
+
+  const BENEFITS = [
+    { icon: Coins, title: t('benefits.commission') },
+    { icon: Trophy, title: t('benefits.points') },
+    { icon: Rocket, title: t('benefits.no_targets') },
+    { icon: Heart, title: t('benefits.expand') }
+  ];
+
+  const TIMELINE = [
+    { icon: Search, title: t('timeline.identify'), description: t('timeline.identify_desc') },
+    { icon: MessageSquare, title: t('timeline.intro'), description: t('timeline.intro_desc') },
+    { icon: ArrowRight, title: t('timeline.biz_team'), description: t('timeline.biz_team_desc') },
+    { icon: PenTool, title: t('timeline.signup'), description: t('timeline.signup_desc') },
+    { icon: Award, title: t('timeline.earn'), description: t('timeline.earn_desc') }
+  ];
+
+  const WAYS_TO_PARTICIPATE = [
+    { icon: Users, title: t('participate_items.intro_client'), description: t('participate_items.intro_client_desc') },
+    { icon: Building2, title: t('participate_items.rec_companies'), description: t('participate_items.rec_companies_desc') },
+    { icon: Share2, title: t('participate_items.make_intro'), description: t('participate_items.make_intro_desc') },
+    { icon: BookOpen, title: t('participate_items.learn_more'), description: t('participate_items.learn_more_desc') }
+  ];
 
 
   const { 
@@ -78,13 +80,13 @@ export default function SalesPartnerLessonPage({ onBack }) {
             color: '#4338ca', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 600,
             marginBottom: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px'
           }}>
-            <Building2 size={14} /> Business Development
+            <Building2 size={14} /> {t('badges.business_dev')}
           </div>
           <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', fontWeight: 800, margin: '0 0 16px', color: '#0f172a' }}>
             {LESSON_TITLE}
           </h1>
           <p style={{ fontSize: '1.1rem', color: '#64748b', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6' }}>
-            Help introduce organizations that may benefit from Mantra's Employee Assistance Programs while earning rewards for successful referrals.
+            {t('description')}
           </p>
           
           <div style={{
@@ -93,14 +95,14 @@ export default function SalesPartnerLessonPage({ onBack }) {
             borderRadius: '12px', fontSize: '0.95rem', fontWeight: 600, marginTop: '24px',
             border: '1px solid #bbf7d0'
           }}>
-            <Coins size={18} fill="currentColor" /> Earn commission + Mantra Points
+            <Coins size={18} fill="currentColor" /> {t('badges.earn_commission')}
           </div>
         </header>
 
         {/* Video Section */}
         <section>
           <VideoSection 
-            title="Becoming a Mantra Sales Partner"
+            title={LESSON_TITLE}
             duration="3 min"
             posterUrl="/using-mantra-thumbnail.png"
             videoUrl="https://vimeo.com/1132020422?fl=pl&fe=cm"
@@ -111,15 +113,15 @@ export default function SalesPartnerLessonPage({ onBack }) {
         <section>
           <InfoCallout 
             type="info" 
-            title="You are NOT expected to sell."
-            text="Your role is simply to introduce potential companies that could benefit from Mantra's services. Once an introduction is made, the Business Development team handles: Meetings, Product demos, Negotiations, Closing. You simply help start the conversation."
+            title={t('info.not_sell_title')}
+            text={t('info.not_sell_desc')}
           />
         </section>
 
         {/* Ways You Can Help */}
         <section>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-            Ways You Can Help
+            {t('sections.ways_to_help')}
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
             {WAYS_TO_HELP.map((item, idx) => (
@@ -144,7 +146,7 @@ export default function SalesPartnerLessonPage({ onBack }) {
           {/* Why Join? */}
           <section>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-              Why Join?
+              {t('sections.why_join')}
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {BENEFITS.map((cat, idx) => (
@@ -170,10 +172,10 @@ export default function SalesPartnerLessonPage({ onBack }) {
         {/* Ways to Participate */}
         <section>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.75rem', fontWeight: 800, margin: '0 0 16px', color: '#0f172a' }}>
-            Ways You Can Participate
+            {t('sections.ways_to_participate')}
           </h2>
           <p style={{ margin: '0 0 40px', fontSize: '1.05rem', color: '#64748b' }}>
-            You don't need to commit to anything right now. Here are some examples of how our partners help:
+            {t('sections.participate_subtitle')}
           </p>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
@@ -211,7 +213,7 @@ export default function SalesPartnerLessonPage({ onBack }) {
         {/* How It Works */}
         <section>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-            How It Works
+            {t('sections.how_it_works')}
           </h2>
           <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
             <StepTimeline steps={TIMELINE} />
@@ -228,7 +230,7 @@ export default function SalesPartnerLessonPage({ onBack }) {
       </main>
 
       {showCelebrate && (
-        <CompletionScreen points={REWARD_POINTS} title="Application Received!" subtitle="Our Business Development team will be in touch shortly." onClose={handleCloseCelebration} />
+        <CompletionScreen points={REWARD_POINTS} title={t('celebration.title')} subtitle={t('celebration.subtitle')} onClose={handleCloseCelebration} />
       )}
     </div>
   );

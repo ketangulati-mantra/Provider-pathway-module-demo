@@ -1,0 +1,61 @@
+{
+  "title": "Devenirea unui partener de vânzări Mantra",
+  "description": "Ajută la introducerea organizațiilor care pot beneficia de Programele de Asistență pentru Angajați ale Mantra, câștigând în același timp recompense pentru recomandări reușite.",
+  "badges": {
+    "business_dev": "Dezvoltarea afacerilor",
+    "earn_commission": "Câștigă comision + Puncte Mantra"
+  },
+  "info": {
+    "not_sell_title": "NU se așteaptă să vinzi.",
+    "not_sell_desc": "Rolul tău este pur și simplu să prezinți companii potențiale care ar putea beneficia de serviciile Mantra. Odată ce se face prezentarea, echipa de Dezvoltare a Afacerilor se ocupă: de întâlniri, demonstrații de produse, negocieri, închidere. Pur și simplu ajuți la începerea conversației."
+  },
+  "sections": {
+    "ways_to_help": "Moduri în care poți ajuta",
+    "why_join": "De ce să te alături?",
+    "ways_to_participate": "Modalități prin care poți participa",
+    "participate_subtitle": "Nu trebuie să te angajezi la nimic acum. Iată câteva exemple despre cum partenerii noștri ajută:",
+    "how_it_works": "Cum funcționează"
+  },
+  "help_items": {
+    "intro_companies": "Introduceți companii",
+    "intro_companies_desc": "Recomandați organizații care ar putea beneficia de EAP.",
+    "make_intros": "Fă prezentări",
+    "make_intros_desc": "Emailul, LinkedIn sau prezentările personale sunt suficiente.",
+    "share_opps": "Împărtășește oportunități",
+    "share_opps_desc": "Menționează Mantra când este potrivit în rețeaua ta.",
+    "connect_dm": "Conectează factorii de decizie",
+    "connect_dm_desc": "Prezintă echipele de HR, fondatorii, managerii sau liderii de wellness."
+  },
+  "benefits": {
+    "commission": "Comision pentru tranzacții de succes",
+    "points": "Câștigă Puncte Mantra",
+    "no_targets": "Fără ținte de vânzări",
+    "expand": "Ajută la extinderea sănătății mintale"
+  },
+  "timeline": {
+    "identify": "Identifică o companie",
+    "identify_desc": "Gândește-te la organizațiile din rețeaua ta.",
+    "intro": "Introduceți Mantra",
+    "intro_desc": "Începe conversația prin email sau LinkedIn.",
+    "biz_team": "Echipa de afaceri preia conducerea",
+    "biz_team_desc": "Ne ocupăm de demonstrații, negocieri și închideri.",
+    "signup": "Compania se înscrie",
+    "signup_desc": "Organizația colaborează oficial cu Mantra.",
+    "earn": "Câștigă comisioane și recompense",
+    "earn_desc": "Primește comisionul financiar și Punctele Mantra."
+  },
+  "participate_items": {
+    "intro_client": "Introduce un client",
+    "intro_client_desc": "Prezintă MantraCare unui client sau profesionist din rețeaua ta.",
+    "rec_companies": "Recomandă companii",
+    "rec_companies_desc": "Împărtășiți organizațiile unde Programele de Asistență pentru Angajați (EAP) ar putea fi valoroase.",
+    "make_intro": "Fă o introducere",
+    "make_intro_desc": "Conectează echipa noastră cu un lider HR sau un decident prin LinkedIn sau email.",
+    "learn_more": "Află mai multe",
+    "learn_more_desc": "Nu ești gata azi? Este în regulă — poți explora programul și participa oricând te simți confortabil."
+  },
+  "celebration": {
+    "title": "Cererea primită!",
+    "subtitle": "Echipa noastră de Dezvoltare a Afacerilor va lua legătura în curând."
+  }
+}

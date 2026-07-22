@@ -1,0 +1,61 @@
+{
+  "title": "Mantra-myyntikumppaniksi ryhtyminen",
+  "description": "Auta esittelemään organisaatioita, jotka voivat hyötyä Mantran työntekijöiden tukiohjelmista ja ansaita palkintoja onnistuneista suositteluista.",
+  "badges": {
+    "business_dev": "Liiketoiminnan kehitys",
+    "earn_commission": "Ansaitse komissio + Mantra-pisteet"
+  },
+  "info": {
+    "not_sell_title": "Sinulta EI odoteta myyvän.",
+    "not_sell_desc": "Tehtäväsi on yksinkertaisesti esitellä potentiaalisia yrityksiä, jotka voisivat hyötyä Mantran palveluista. Kun esittely on tehty, liiketoiminnan kehitystiimi hoitaa: kokoukset, tuoteesittelyt, neuvottelut, kaupan päättäminen. Autat vain aloittamaan keskustelun."
+  },
+  "sections": {
+    "ways_to_help": "Tapoja auttaa",
+    "why_join": "Miksi liittyä?",
+    "ways_to_participate": "Tapoja osallistua",
+    "participate_subtitle": "Sinun ei tarvitse sitoutua mihinkään juuri nyt. Tässä muutamia esimerkkejä siitä, miten kumppanimme auttavat:",
+    "how_it_works": "Miten se toimii"
+  },
+  "help_items": {
+    "intro_companies": "Esittele yritykset",
+    "intro_companies_desc": "Suosittele organisaatioita, jotka voisivat hyötyä EAP:sta.",
+    "make_intros": "Tee esittelyjä",
+    "make_intros_desc": "Sähköposti, LinkedIn tai henkilökohtaiset esittelyt riittävät.",
+    "share_opps": "Jaa mahdollisuuksia",
+    "share_opps_desc": "Mainitse Mantra, kun verkostossasi on sopivaa.",
+    "connect_dm": "Yhdistä päätöksentekijät",
+    "connect_dm_desc": "Esittele HR-tiimit, perustajat, johtajat tai hyvinvointijohtajat."
+  },
+  "benefits": {
+    "commission": "Komissio onnistuneista kaupoista",
+    "points": "Ansaitse mantrapisteitä",
+    "no_targets": "Ei myyntitavoitteita",
+    "expand": "Auta mielenterveyden laajentamisessa"
+  },
+  "timeline": {
+    "identify": "Tunnista yritys",
+    "identify_desc": "Ajattele verkostosi organisaatioita.",
+    "intro": "Esittele mantra",
+    "intro_desc": "Aloita keskustelu sähköpostitse tai LinkedInissä.",
+    "biz_team": "Liiketoimintatiimi ottaa ohjat",
+    "biz_team_desc": "Me hoidamme demot, neuvottelut ja päättämisen.",
+    "signup": "Yhtiö ilmoittautuu",
+    "signup_desc": "Järjestö tekee virallisesti yhteistyötä Mantran kanssa.",
+    "earn": "Ansaitse komissioita ja palkintoja",
+    "earn_desc": "Saat taloudellisen provisiosi ja Mantra-pisteesi."
+  },
+  "participate_items": {
+    "intro_client": "Esittele asiakas",
+    "intro_client_desc": "Esittele MantraCare asiakkaalle tai ammattilaiselle verkostossasi.",
+    "rec_companies": "Suosittele yrityksiä",
+    "rec_companies_desc": "Jaa organisaatioita, joissa työntekijöiden tukiohjelmat (EAP) voivat olla arvokkaita.",
+    "make_intro": "Tee esittely",
+    "make_intro_desc": "Yhdistä tiimimme HR-johtajaan tai päätöksentekijään LinkedInin tai sähköpostin kautta.",
+    "learn_more": "Opi lisää",
+    "learn_more_desc": "Et ole valmis tänään? Se on ihan ok—voit tutustua ohjelmaan ja osallistua milloin tahansa tunnet olosi mukavaksi."
+  },
+  "celebration": {
+    "title": "Hakemus vastaanotettu!",
+    "subtitle": "Liiketoiminnan kehitystiimimme ottaa pian yhteyttä."
+  }
+}

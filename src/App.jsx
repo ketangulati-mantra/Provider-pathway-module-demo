@@ -461,7 +461,7 @@ function App() {
         textAlign: 'center'
       }}>
         <div className="academy-card glass-panel text-center animate-scale-in" style={{ maxWidth: '440px', padding: '40px 30px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-          <img src="/logo.svg" alt="Mantra Logo" style={{ height: '36px', display: 'block', marginBottom: '8px' }} />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Mantra Logo" style={{ height: '36px', display: 'block', marginBottom: '8px' }} />
 
           <div>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--text-main)', fontSize: '1.35rem', marginBottom: '8px' }}>

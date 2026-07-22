@@ -1,0 +1,61 @@
+{
+  "title": "At blive Mantra Sales Partner",
+  "description": "Hjælp med at introducere organisationer, der kan have gavn af Mantras medarbejderhjælpsprogrammer, samtidig med at de optjener belønninger for succesfulde henvisninger.",
+  "badges": {
+    "business_dev": "Forretningsudvikling",
+    "earn_commission": "Tjen kommission + Mantra-point"
+  },
+  "info": {
+    "not_sell_title": "Du forventes IKKE at sælge.",
+    "not_sell_desc": "Din rolle er blot at introducere potentielle virksomheder, der kunne have gavn af Mantras tjenester. Når en introduktion er lavet, håndterer forretningsudviklingsteamet : møder, produktdemonstrationer, forhandlinger, afslutning. Du hjælper blot med at starte samtalen."
+  },
+  "sections": {
+    "ways_to_help": "Måder du kan hjælpe på",
+    "why_join": "Hvorfor melde sig ind?",
+    "ways_to_participate": "Måder du kan deltage på",
+    "participate_subtitle": "Du behøver ikke forpligte dig til noget lige nu. Her er nogle eksempler på, hvordan vores partnere hjælper:",
+    "how_it_works": "Sådan fungerer det"
+  },
+  "help_items": {
+    "intro_companies": "Introducer virksomheder",
+    "intro_companies_desc": "Anbefaler organisationer, der kan have gavn af EAP.",
+    "make_intros": "Lav introduktioner",
+    "make_intros_desc": "E-mail, LinkedIn eller personlige introduktioner er nok.",
+    "share_opps": "Del muligheder",
+    "share_opps_desc": "Nævn Mantra, når det er passende i dit netværk.",
+    "connect_dm": "Forbind beslutningstagere",
+    "connect_dm_desc": "Introducer HR-teams, stiftere, ledere eller wellness-ledere."
+  },
+  "benefits": {
+    "commission": "Kommission for succesfulde handler",
+    "points": "Optjen Mantra-point",
+    "no_targets": "Ingen salgsmål",
+    "expand": "Hjælp med at udvide mental sundhedspleje"
+  },
+  "timeline": {
+    "identify": "Identificer et firma",
+    "identify_desc": "Tænk på organisationer i dit netværk.",
+    "intro": "Introducer Mantra",
+    "intro_desc": "Start samtalen via e-mail eller LinkedIn.",
+    "biz_team": "Forretningsteamet overtager",
+    "biz_team_desc": "Vi håndterer demoer, forhandlinger og afslutning.",
+    "signup": "Virksomheden tilmelder sig",
+    "signup_desc": "Organisationen samarbejder officielt med Mantra.",
+    "earn": "Tjen kommission og belønninger",
+    "earn_desc": "Modtag din økonomiske kommission og Mantra Points."
+  },
+  "participate_items": {
+    "intro_client": "Prænumerer en klient",
+    "intro_client_desc": "Introducer MantraCare for en klient eller professionel i dit netværk.",
+    "rec_companies": "Anbefaling af virksomheder",
+    "rec_companies_desc": "Del-organisationer, hvor medarbejderhjælpsprogrammer (EAP'er) kan være værdifulde.",
+    "make_intro": "Lav en introduktion",
+    "make_intro_desc": "Forbind vores team med en HR-leder eller beslutningtager via LinkedIn eller e-mail.",
+    "learn_more": "Læs mere",
+    "learn_more_desc": "Ikke klar i dag? Det er helt i orden—du kan udforske programmet og deltage, når du føler dig tryg."
+  },
+  "celebration": {
+    "title": "Ansøgning modtaget!",
+    "subtitle": "Vores Business Development-team vil kontakte os snart."
+  }
+}

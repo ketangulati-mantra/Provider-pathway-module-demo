@@ -1,0 +1,61 @@
+{
+  "title": "Mantra Satış Ortağı Olmak",
+  "description": "Mantra'nın Çalışan Yardım Programlarından faydalanabilecek ve başarılı yönlendirmeler için ödüller kazanabilecek kuruluşları tanıtmaya yardımcı olmak.",
+  "badges": {
+    "business_dev": "İş Geliştirme",
+    "earn_commission": "Komisyon + Mantra Puanları Kazanın"
+  },
+  "info": {
+    "not_sell_title": "Satman beklenmiyor.",
+    "not_sell_desc": "Rolünüz, Mantra'nın hizmetlerinden faydalanabilecek potansiyel şirketleri tanıtmaktır. Tanıtım yapıldıktan sonra, İş Geliştirme ekibi şunları yönetir: Toplantılar, Ürün tanıtımları, Müzakereler, Kapanış. Sadece sohbeti başlatmaya yardımcı oluyorsun."
+  },
+  "sections": {
+    "ways_to_help": "Yardımcı Olabileceğiniz Yollar",
+    "why_join": "Neden katılıyorsun?",
+    "ways_to_participate": "Katılabileceğiniz Yöntemler",
+    "participate_subtitle": "Şu anda hiçbir şeye bağlı kalmanıza gerek yok. İşte ortaklarımızın nasıl yardımcı olduğuna dair bazı örnekler:",
+    "how_it_works": "Nasıl İşler Kurulu"
+  },
+  "help_items": {
+    "intro_companies": "Şirketleri Tanıtın",
+    "intro_companies_desc": "EAP'den fayda görebilecek kuruluşları önerin.",
+    "make_intros": "Tanıtım Yapın",
+    "make_intros_desc": "E-posta, LinkedIn veya kişisel tanışmalar yeterlidir.",
+    "share_opps": "Fırsatları Paylaşın",
+    "share_opps_desc": "Ağınızda uygun olduğunda Mantra'yı belirtin.",
+    "connect_dm": "Karar Vericileri Birleştirin",
+    "connect_dm_desc": "İK ekiplerini, kurucuları, yöneticileri veya sağlık liderlerini tanıtın."
+  },
+  "benefits": {
+    "commission": "Başarılı anlaşmalar için komisyon",
+    "points": "Mantra Puanları Kazan",
+    "no_targets": "Satış hedefi yok",
+    "expand": "Ruh sağlığını genişletmeye yardımcı olun"
+  },
+  "timeline": {
+    "identify": "Bir şirket tanımlayın",
+    "identify_desc": "Ağınızdaki organizasyonları düşünün.",
+    "intro": "Mantra'yı Tanıtın",
+    "intro_desc": "Sohbeti e-posta veya LinkedIn üzerinden başlatın.",
+    "biz_team": "İş ekibi devralır",
+    "biz_team_desc": "Demolar, müzakereler ve kapanış işlemlerini biz hallediyoruz.",
+    "signup": "Şirket kayıtlara geçti",
+    "signup_desc": "Organizasyon resmi olarak Mantra ile ortaklık kurmaktadır.",
+    "earn": "Komisyon ve ödüller kazanın",
+    "earn_desc": "Mali komisyonunuzu ve Mantra Puanlarınızı alın."
+  },
+  "participate_items": {
+    "intro_client": "Bir Müşteri Tanıtın",
+    "intro_client_desc": "MantraCare'i ağınızdaki bir müşteriye veya profesyonele tanıtın.",
+    "rec_companies": "Şirketleri Tavsiye Edin",
+    "rec_companies_desc": "Çalışan Yardım Programlarının (EAP) değerli olabileceği organizasyonları paylaşın.",
+    "make_intro": "Bir Giriş Yapın",
+    "make_intro_desc": "Ekibimizi LinkedIn veya e-posta yoluyla bir İK lideri veya karar vericiyle buluşturun.",
+    "learn_more": "Daha Fazla Bilgi Edinin",
+    "learn_more_desc": "Bugün hazır değil misin? Sorun değil—programı keşfedebilir ve ne zaman rahat hissediyorsanız katılabilirsiniz."
+  },
+  "celebration": {
+    "title": "Başvuru Alındı!",
+    "subtitle": "İş Geliştirme ekibimiz yakında iletişime geçecek."
+  }
+}

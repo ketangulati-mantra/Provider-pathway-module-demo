@@ -1,0 +1,61 @@
+{
+  "title": "Een Mantra Sales Partner worden",
+  "description": "Help organisaties introduceren die kunnen profiteren van Mantra's Employee Assistance Programs en tegelijkertijd beloningen verdienen voor succesvolle verwijzingen.",
+  "badges": {
+    "business_dev": "Bedrijfsontwikkeling",
+    "earn_commission": "Verdien commissie + Mantra-punten"
+  },
+  "info": {
+    "not_sell_title": "Er wordt NIET van je verwacht dat je verkoopt.",
+    "not_sell_desc": "Jouw rol is simpelweg om potentiële bedrijven voor te stellen die baat kunnen hebben bij de diensten van Mantra. Zodra een introductie is gemaakt, verzorgt het Business Development-team: vergaderingen, productdemo's, onderhandelingen, afsluiting. Je helpt simpelweg het gesprek te starten."
+  },
+  "sections": {
+    "ways_to_help": "Manieren waarop je kunt helpen",
+    "why_join": "Waarom lid worden?",
+    "ways_to_participate": "Manieren waarop je kunt deelnemen",
+    "participate_subtitle": "Je hoeft je nu nergens aan vast te leggen. Hier zijn enkele voorbeelden van hoe onze partners helpen:",
+    "how_it_works": "Hoe het werkt"
+  },
+  "help_items": {
+    "intro_companies": "Introduceer bedrijven",
+    "intro_companies_desc": "Beveel organisaties aan die mogelijk baat hebben bij EAP.",
+    "make_intros": "Maak Inleidingen",
+    "make_intros_desc": "E-mail, LinkedIn of persoonlijke introducties zijn voldoende.",
+    "share_opps": "Kansen delen",
+    "share_opps_desc": "Noem Mantra wanneer dat gepast is in je netwerk.",
+    "connect_dm": "Verbind Besluitvormers",
+    "connect_dm_desc": "Introduceer HR-teams, oprichters, managers of leiders op het gebied van welzijn."
+  },
+  "benefits": {
+    "commission": "Commissie voor succesvolle deals",
+    "points": "Verdien Mantra-punten",
+    "no_targets": "Geen verkoopdoelstellingen",
+    "expand": "Help bij het uitbreiden van de geestelijke gezondheidszorg"
+  },
+  "timeline": {
+    "identify": "Identificeer een bedrijf",
+    "identify_desc": "Denk aan organisaties in je netwerk.",
+    "intro": "Introduceer Mantra",
+    "intro_desc": "Begin het gesprek via e-mail of LinkedIn.",
+    "biz_team": "Het bedrijfsteam neemt het over",
+    "biz_team_desc": "Wij verzorgen demo's, onderhandelingen en afsluiting.",
+    "signup": "Bedrijf meldt zich aan",
+    "signup_desc": "De organisatie werkt officieel samen met Mantra.",
+    "earn": "Verdien commissie en beloningen",
+    "earn_desc": "Ontvang je financiële commissie en Mantra-punten."
+  },
+  "participate_items": {
+    "intro_client": "Stel een klant voor",
+    "intro_client_desc": "Introduceer MantraCare bij een cliënt of professional in je netwerk.",
+    "rec_companies": "Aanbevolen bedrijven",
+    "rec_companies_desc": "Deelorganisaties waar Employee Assistance Programs (EAP's) waardevol kunnen zijn.",
+    "make_intro": "Maak een introductie",
+    "make_intro_desc": "Verbind ons team met een HR-leider of beslisser via LinkedIn of e-mail.",
+    "learn_more": "Lees meer",
+    "learn_more_desc": "Nog niet klaar vandaag? Dat is prima—je kunt het programma verkennen en meedoen wanneer je je daar prettig bij voelt."
+  },
+  "celebration": {
+    "title": "Aanmelding ontvangen!",
+    "subtitle": "Ons Business Development-team neemt binnenkort contact op."
+  }
+}

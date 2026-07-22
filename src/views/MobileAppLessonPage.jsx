@@ -82,7 +82,7 @@ const rewardPoints = 5;
           <div className="abstract-phone-visual">
             <div className="glow-backdrop" />
             <div className="abstract-phone-container">
-              <img src="/logo.svg" alt="Mantra Partner Logo" className="phone-brand-logo" />
+              <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Mantra Partner Logo" className="phone-brand-logo" />
             </div>
           </div>
         </section>

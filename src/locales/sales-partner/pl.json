@@ -1,0 +1,61 @@
+{
+  "title": "Zostań partnerem sprzedażowym Mantra",
+  "description": "Pomóż przedstawić organizacje, które mogą skorzystać z programów wsparcia pracowników Mantry, zdobywając jednocześnie nagrody za udane polecenia.",
+  "badges": {
+    "business_dev": "Rozwój biznesu",
+    "earn_commission": "Zdobądź prowizję + Punkty Mantry"
+  },
+  "info": {
+    "not_sell_title": "NIE oczekuje się od ciebie sprzedaży.",
+    "not_sell_desc": "Twoim zadaniem jest po prostu przedstawienie potencjalnych firm, które mogłyby skorzystać z usług Mantry. Po przedstawieniu zespół ds. rozwoju biznesu zajmuje się: spotkaniami, prezentacjami produktów, negocjacjami, zamknięciem. Po prostu pomagasz rozpocząć rozmowę."
+  },
+  "sections": {
+    "ways_to_help": "Sposoby, w jakie możesz pomóc",
+    "why_join": "Dlaczego dołączyć?",
+    "ways_to_participate": "Sposoby na udział",
+    "participate_subtitle": "Nie musisz się teraz do niczego zobowiązywać. Oto kilka przykładów, jak nasi partnerzy pomagają:",
+    "how_it_works": "Jak to działa"
+  },
+  "help_items": {
+    "intro_companies": "Wprowadź firmy",
+    "intro_companies_desc": "Polecaj organizacje, które mogą skorzystać z EAP.",
+    "make_intros": "Przedstawij się",
+    "make_intros_desc": "Wystarczy e-mail, LinkedIn lub osobiste przedstawienia.",
+    "share_opps": "Udostępnij możliwości",
+    "share_opps_desc": "Wspominaj o mantrze, gdy to odpowiednie w twojej sieci kontaktów.",
+    "connect_dm": "Łącz decydentów",
+    "connect_dm_desc": "Przedstaw zespoły HR, założycieli, menedżerów lub liderów wellness."
+  },
+  "benefits": {
+    "commission": "Prowizja za udane transakcje",
+    "points": "Zdobywaj punkty Mantry",
+    "no_targets": "Brak celów sprzedażowych",
+    "expand": "Pomóż rozwinąć opiekę psychiczną"
+  },
+  "timeline": {
+    "identify": "Zidentyfikuj firmę",
+    "identify_desc": "Pomyśl o organizacjach w swojej sieci.",
+    "intro": "Wprowadź Mantrę",
+    "intro_desc": "Rozpocznij rozmowę przez e-mail lub LinkedIn.",
+    "biz_team": "Zespół biznesowy przejmuje stery",
+    "biz_team_desc": "Zajmujemy się demonstracjami, negocjacjami i zamknięciem transakcji.",
+    "signup": "Firma zgłasza się do rejestracji",
+    "signup_desc": "Organizacja oficjalnie współpracuje z Mantra.",
+    "earn": "Zdobywaj prowizję i nagrody",
+    "earn_desc": "Otrzymaj swoją prowizję finansową i punkty Mantra."
+  },
+  "participate_items": {
+    "intro_client": "Wprowadź klienta",
+    "intro_client_desc": "Wprowadź MantraCare do klienta lub profesjonalisty ze swojej sieci.",
+    "rec_companies": "Polecaj firmy",
+    "rec_companies_desc": "Podziel się organizacjami, w których programy pomocy pracowniczej (EAP) mogą być cenne.",
+    "make_intro": "Wprowadź",
+    "make_intro_desc": "Połącz nasz zespół z liderem HR lub osobą decydentską przez LinkedIn lub e-mail.",
+    "learn_more": "Dowiedz się więcej",
+    "learn_more_desc": "Nie jesteś dziś gotowy? To w porządku — możesz poznać program i uczestniczyć, kiedy tylko poczujesz się komfortowo."
+  },
+  "celebration": {
+    "title": "Wniosek przyjęty!",
+    "subtitle": "Nasz zespół ds. rozwoju biznesu wkrótce się skontaktuje."
+  }
+}

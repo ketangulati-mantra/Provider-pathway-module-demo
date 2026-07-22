@@ -74,7 +74,7 @@ export const Header = ({
         </button>
 
         <div className="academy-header-logo">
-          <img src="/logo.svg" alt="Mantra Logo" style={{ height: '24px', display: 'block' }} />
+          <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="Mantra Logo" style={{ height: '24px', display: 'block' }} />
         </div>
 
         <div style={{ width: 40 }} /> {/* balance back button */}
@@ -114,8 +114,8 @@ export const Progress = ({ value = 0 }) => {
         />
       </div>
       <div className="academy-progress-meta">
-        {t('progress.lesson_progress')}
-        {t('progress.completed', { percent: roundedValue })}
+        <span>{t('progress.lesson_progress')}</span>
+        <span>{t('progress.completed', { percent: roundedValue })}</span>
       </div>
     </div>
   );

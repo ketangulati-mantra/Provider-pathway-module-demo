@@ -1,0 +1,61 @@
+{
+  "title": "Maging isang Mantra Sales Partner",
+  "description": "Tumulong sa pagpapakilala ng mga organisasyon na maaaring makinabang mula sa Mga Programa ng Tulong sa Empleyado ng Mantra habang kumikita ng mga gantimpala para sa matagumpay na mga referral.",
+  "badges": {
+    "business_dev": "Pag-unlad ng Negosyo",
+    "earn_commission": "Kumita ng komisyon + Mantra Points"
+  },
+  "info": {
+    "not_sell_title": "Hindi ka inaasahang magbebenta.",
+    "not_sell_desc": "Ang iyong tungkulin ay upang ipakilala lamang ang mga potensyal na kumpanya na maaaring makinabang mula sa mga serbisyo ng Mantra. Kapag ang isang pagpapakilala ay ginawa, ang koponan ng Pag-unlad ng Negosyo ay humahawak sa: Mga Pagpupulong, Mga demo ng Produkto, Mga Negosasyon, Pagsasara. Tumulong ka lang sa pagsisimula ng pag-uusap."
+  },
+  "sections": {
+    "ways_to_help": "Mga Paraan na Makakatulong Ka",
+    "why_join": "Bakit sumali?",
+    "ways_to_participate": "Mga Paraan na Maaari Kang Lumahok",
+    "participate_subtitle": "Hindi mo na kailangang mag-commit sa anumang bagay ngayon. Narito ang ilang mga halimbawa kung paano tumutulong ang aming mga kasosyo:",
+    "how_it_works": "Paano ito gumagana"
+  },
+  "help_items": {
+    "intro_companies": "Ipakilala ang Mga Kumpanya",
+    "intro_companies_desc": "Magrekomenda ng mga organisasyon na maaaring makinabang mula sa EAP.",
+    "make_intros": "Gumawa ng Mga Pagpapakilala",
+    "make_intros_desc": "Sapat na ang email, LinkedIn o personal na pagpapakilala.",
+    "share_opps": "Ibahagi ang Mga Pagkakataon",
+    "share_opps_desc": "Banggitin ang Mantra kung naaangkop sa iyong network.",
+    "connect_dm": "Ikonekta ang Mga Gumagawa ng Desisyon",
+    "connect_dm_desc": "Ipakilala ang mga koponan ng HR, tagapagtatag, tagapamahala o mga pinuno ng wellness."
+  },
+  "benefits": {
+    "commission": "Komisyon sa matagumpay na mga deal",
+    "points": "Kumita ng Mantra Points",
+    "no_targets": "Walang mga target sa pagbebenta",
+    "expand": "Tumulong na mapalawak ang pangangalagang pangkalusugan sa pag-iisip"
+  },
+  "timeline": {
+    "identify": "Kilalanin ang isang kumpanya",
+    "identify_desc": "Isaalang-alang ang mga organisasyon sa iyong network.",
+    "intro": "Ipakilala ang Mantra",
+    "intro_desc": "Simulan ang pag-uusap sa pamamagitan ng email o LinkedIn.",
+    "biz_team": "Ang koponan ng negosyo ay pumalit",
+    "biz_team_desc": "Pinangangasiwaan namin ang mga demo, negosasyon, at pagsasara.",
+    "signup": "Pag-sign up ng kumpanya",
+    "signup_desc": "Opisyal na nakikipagsosyo ang organisasyon sa Mantra.",
+    "earn": "Kumita ng komisyon at gantimpala",
+    "earn_desc": "Tanggapin ang iyong komisyon sa pananalapi at Mantra Points."
+  },
+  "participate_items": {
+    "intro_client": "Ipakilala ang isang kliyente",
+    "intro_client_desc": "Ipakilala ang MantraCare sa isang kliyente o propesyonal sa iyong network.",
+    "rec_companies": "Magrekomenda ng Mga Kumpanya",
+    "rec_companies_desc": "Ibahagi ang mga organisasyon kung saan maaaring maging mahalaga ang Mga Programa sa Tulong sa Empleyado (EAP).",
+    "make_intro": "Gumawa ng Panimula",
+    "make_intro_desc": "Ikonekta ang aming koponan sa isang pinuno ng HR o tagagawa ng desisyon sa pamamagitan ng LinkedIn o email.",
+    "learn_more": "Matuto nang higit pa",
+    "learn_more_desc": "Hindi pa handa ngayon? Okay lang iyon—maaari mong galugarin ang programa at lumahok sa tuwing komportable ka."
+  },
+  "celebration": {
+    "title": "Natanggap ang Aplikasyon!",
+    "subtitle": "Ang aming koponan sa pag-unlad ng negosyo ay makikipag-ugnay sa lalong madaling panahon."
+  }
+}

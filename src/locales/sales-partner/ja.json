@@ -1,0 +1,61 @@
+{
+  "title": "マントラセールスパートナーになること",
+  "description": "Mantraの従業員支援プログラムの恩恵を受けられる組織を紹介し、紹介成功した際に報酬を得るのを支援しましょう。",
+  "badges": {
+    "business_dev": "事業開発",
+    "earn_commission": "コミッション獲得+マントラポイント"
+  },
+  "info": {
+    "not_sell_title": "売却を期待されていません。",
+    "not_sell_desc": "あなたの役割は、Mantraのサービスから恩恵を受けそうな潜在的な企業を紹介することです。紹介が行われると、ビジネス開発チームは以下の会議、プロダクトデモ、交渉、クロージングを担当します。あなたは単に会話を始める手助けをするだけです。"
+  },
+  "sections": {
+    "ways_to_help": "あなたが助けられる方法",
+    "why_join": "なぜ参加するのか?",
+    "ways_to_participate": "参加方法",
+    "participate_subtitle": "今すぐ何かにコミットする必要はありません。以下は、私たちのパートナーがどのように支援しているかの例です:",
+    "how_it_works": "仕組み"
+  },
+  "help_items": {
+    "intro_companies": "企業紹介",
+    "intro_companies_desc": "EAPの恩恵を受けそうな組織を推薦してください。",
+    "make_intros": "紹介をする",
+    "make_intros_desc": "メールやLinkedIn、個人的な紹介で十分です。",
+    "share_opps": "機会の共有",
+    "share_opps_desc": "ネットワーク内で適切なタイミングでマントラを言及しましょう。",
+    "connect_dm": "意思決定者をつなげる",
+    "connect_dm_desc": "人事チーム、創業者、マネージャー、ウェルネスリーダーを紹介しましょう。"
+  },
+  "benefits": {
+    "commission": "成功した取引に対する委員会",
+    "points": "マントラポイントを獲得",
+    "no_targets": "販売目標はありません",
+    "expand": "メンタルヘルスケアの拡大を支援してください"
+  },
+  "timeline": {
+    "identify": "企業を特定する",
+    "identify_desc": "ネットワーク内の組織を考えてみてください。",
+    "intro": "マントラの導入",
+    "intro_desc": "会話はメールやLinkedInで始めましょう。",
+    "biz_team": "ビジネスチームが引き継ぐ",
+    "biz_team_desc": "デモ、交渉、クロージングも担当しています。",
+    "signup": "企業の登録",
+    "signup_desc": "この組織は正式にマントラと提携しています。",
+    "earn": "コミッションと報酬を獲得",
+    "earn_desc": "財務手数料とマントラポイントを受け取りましょう。"
+  },
+  "participate_items": {
+    "intro_client": "クライアントを紹介する",
+    "intro_client_desc": "MantraCareをあなたのネットワークのクライアントや専門家に紹介しましょう。",
+    "rec_companies": "おすすめ企業",
+    "rec_companies_desc": "従業員支援プログラム(EAP)が役立つ可能性のある組織を共有しましょう。",
+    "make_intro": "紹介をする",
+    "make_intro_desc": "LinkedInやメールを通じて、人事リーダーや意思決定者とチームをつなげてください。",
+    "learn_more": "詳細はこちら",
+    "learn_more_desc": "今日は準備できてない?それで大丈夫です。プログラムを自由に探索し、好きな時に参加できます。"
+  },
+  "celebration": {
+    "title": "応募受理完了!",
+    "subtitle": "事業開発チームから、まもなくご連絡いたします。"
+  }
+}

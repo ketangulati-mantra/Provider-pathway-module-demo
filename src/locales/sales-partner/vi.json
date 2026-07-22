@@ -1,0 +1,61 @@
+{
+  "title": "Trở thành đối tác bán hàng của Mantra",
+  "description": "Giúp giới thiệu các tổ chức có thể được hưởng lợi từ Chương trình Hỗ trợ Nhân viên của Mantra đồng thời kiếm phần thưởng cho những người giới thiệu thành công.",
+  "badges": {
+    "business_dev": "Phát triển kinh doanh",
+    "earn_commission": "Kiếm hoa hồng + Điểm Mantra"
+  },
+  "info": {
+    "not_sell_title": "Bạn KHÔNG phải bán.",
+    "not_sell_desc": "Vai trò của bạn chỉ đơn giản là giới thiệu các công ty tiềm năng có thể hưởng lợi từ các dịch vụ của Mantra. Sau khi giới thiệu, nhóm Phát triển Kinh doanh sẽ xử lý: Cuộc họp, Bản giới thiệu sản phẩm, Đàm phán, Kết thúc. Bạn chỉ cần giúp bắt đầu cuộc trò chuyện."
+  },
+  "sections": {
+    "ways_to_help": "Những Cách Quý Vị Có Thể Giúp Đỡ",
+    "why_join": "Tại sao nên tham gia?",
+    "ways_to_participate": "Những Cách Bạn Có Thể Tham Gia",
+    "participate_subtitle": "Bạn không cần phải cam kết bất cứ điều gì ngay bây giờ. Dưới đây là một số ví dụ về cách các đối tác của chúng tôi trợ giúp:",
+    "how_it_works": "Cách thức hoạt động"
+  },
+  "help_items": {
+    "intro_companies": "Giới thiệu công ty",
+    "intro_companies_desc": "Đề xuất các tổ chức có thể hưởng lợi từ EAP.",
+    "make_intros": "Giới thiệu",
+    "make_intros_desc": "Email, LinkedIn hoặc giới thiệu cá nhân là đủ.",
+    "share_opps": "Chia sẻ cơ hội",
+    "share_opps_desc": "Đề cập đến Mantra khi thích hợp trong mạng của bạn.",
+    "connect_dm": "Kết nối những người ra quyết định",
+    "connect_dm_desc": "Giới thiệu các nhóm nhân sự, người sáng lập, quản lý hoặc lãnh đạo chăm sóc sức khỏe."
+  },
+  "benefits": {
+    "commission": "Hoa hồng cho các giao dịch thành công",
+    "points": "Kiếm điểm Mantra",
+    "no_targets": "Không có mục tiêu bán hàng",
+    "expand": "Giúp mở rộng chăm sóc sức khỏe tâm thần"
+  },
+  "timeline": {
+    "identify": "Xác định công ty",
+    "identify_desc": "Hãy nghĩ về các tổ chức trong mạng lưới của bạn.",
+    "intro": "Giới thiệu Mantra",
+    "intro_desc": "Bắt đầu cuộc trò chuyện qua email hoặc LinkedIn.",
+    "biz_team": "Đội ngũ kinh doanh tiếp quản",
+    "biz_team_desc": "Chúng tôi xử lý các bản demo, đàm phán và kết thúc.",
+    "signup": "Công ty đăng ký",
+    "signup_desc": "Tổ chức chính thức hợp tác với Mantra.",
+    "earn": "Kiếm hoa hồng và phần thưởng",
+    "earn_desc": "Nhận hoa hồng tài chính và Điểm Mantra của bạn."
+  },
+  "participate_items": {
+    "intro_client": "Giới thiệu khách hàng",
+    "intro_client_desc": "Giới thiệu MantraCare cho khách hàng hoặc chuyên gia trong mạng lưới của bạn.",
+    "rec_companies": "Giới thiệu công ty",
+    "rec_companies_desc": "Chia sẻ các tổ chức mà Chương trình Hỗ trợ Nhân viên (EAP) có thể có giá trị.",
+    "make_intro": "Giới thiệu",
+    "make_intro_desc": "Kết nối đội ngũ của chúng tôi với lãnh đạo nhân sự hoặc người ra quyết định qua LinkedIn hoặc email.",
+    "learn_more": "Tìm hiểu thêm",
+    "learn_more_desc": "Hôm nay chưa sẵn sàng à? Không sao cả—bạn có thể khám phá chương trình và tham gia bất cứ khi nào bạn cảm thấy thoải mái."
+  },
+  "celebration": {
+    "title": "Đã nhận được đơn đăng ký!",
+    "subtitle": "Đội ngũ Phát triển Kinh doanh của chúng tôi sẽ sớm liên hệ."
+  }
+}

@@ -154,6 +154,7 @@ async function run() {
     const finalJson = unflattenObj(langData);
     fs.writeFileSync(langFile, JSON.stringify(finalJson, null, 2));
     console.log(`[${lang}] Saved ${langFile}`);
+    await new Promise(r => setTimeout(r, 1000));
   }
 
   console.log("Translation complete!");

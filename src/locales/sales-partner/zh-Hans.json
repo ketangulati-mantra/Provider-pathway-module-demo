@@ -1,0 +1,61 @@
+{
+  "title": "成为Mantra销售合作伙伴",
+  "description": "帮助介绍可能受益于 Mantra 员工援助计划的组织，同时通过成功推荐获得奖励。",
+  "badges": {
+    "business_dev": "业务发展",
+    "earn_commission": "赚取佣金+Mantra积分"
+  },
+  "info": {
+    "not_sell_title": "你并不被期望卖出去。",
+    "not_sell_desc": "你的职责只是介绍可能受益于 Mantra 服务的潜在公司。一旦介绍完成，业务发展团队负责：会议、产品演示、谈判、成交。你只是帮忙开启对话。"
+  },
+  "sections": {
+    "ways_to_help": "你可以帮忙的方式",
+    "why_join": "为什么加入？",
+    "ways_to_participate": "参与方式",
+    "participate_subtitle": "你现在不需要承诺任何事情。以下是我们合作伙伴如何帮助的一些例子：",
+    "how_it_works": "工作原理"
+  },
+  "help_items": {
+    "intro_companies": "介绍公司",
+    "intro_companies_desc": "推荐可能受益于EAP的组织。",
+    "make_intros": "介绍一下",
+    "make_intros_desc": "电子邮件、LinkedIn或个人介绍就足够了。",
+    "share_opps": "分享机会",
+    "share_opps_desc": "在你的网络中适当时提及咒语。",
+    "connect_dm": "连接决策者",
+    "connect_dm_desc": "介绍人力资源团队、创始人、经理或健康领导者。"
+  },
+  "benefits": {
+    "commission": "成功交易委员会",
+    "points": "赚取咒语积分",
+    "no_targets": "没有销售目标",
+    "expand": "帮助扩大心理健康服务"
+  },
+  "timeline": {
+    "identify": "确定一家公司",
+    "identify_desc": "想想你网络中的组织。",
+    "intro": "引入咒语",
+    "intro_desc": "通过电子邮件或LinkedIn开始对话。",
+    "biz_team": "业务团队接手",
+    "biz_team_desc": "我们负责演示、谈判和成交。",
+    "signup": "公司注册",
+    "signup_desc": "该组织正式与Mantra合作。",
+    "earn": "赚取佣金与奖励",
+    "earn_desc": "领取您的财务佣金和Mantra积分。"
+  },
+  "participate_items": {
+    "intro_client": "介绍客户",
+    "intro_client_desc": "向你网络中的客户或专业人士介绍MantraCare。",
+    "rec_companies": "推荐公司",
+    "rec_companies_desc": "分享员工援助计划（EAP）可能有用的组织。",
+    "make_intro": "做个介绍",
+    "make_intro_desc": "通过LinkedIn或电子邮件将我们的团队与人力资源领导者或决策者连接起来。",
+    "learn_more": "了解更多",
+    "learn_more_desc": "今天还没准备好吗？没关系——你可以随时探索这个项目，随时参与。"
+  },
+  "celebration": {
+    "title": "申请已收到！",
+    "subtitle": "我们的业务发展团队将很快与您联系。"
+  }
+}

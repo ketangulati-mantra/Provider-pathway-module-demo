@@ -1,0 +1,61 @@
+{
+  "title": "Devenir partenaire commercial Mantra",
+  "description": "Aidez à présenter les organisations qui peuvent bénéficier des programmes d’aide aux employés de Mantra tout en recevant des récompenses pour des recommandations réussies.",
+  "badges": {
+    "business_dev": "Développement des affaires",
+    "earn_commission": "Gagner une commission + Points Mantra"
+  },
+  "info": {
+    "not_sell_title": "On n’attend PAS de vous que vous vendiez.",
+    "not_sell_desc": "Votre rôle est simplement de présenter les entreprises potentielles qui pourraient bénéficier des services de Mantra. Une fois la présentation faite, l’équipe de développement commercial s’occupe des réunions : réunions, démonstrations de produits, négociations, clôture. Vous aidez simplement à lancer la conversation."
+  },
+  "sections": {
+    "ways_to_help": "Façons dont vous pouvez aider",
+    "why_join": "Pourquoi rejoindre ?",
+    "ways_to_participate": "Façons de participer",
+    "participate_subtitle": "Tu n’as pas besoin de t’engager dans quoi que ce soit maintenant. Voici quelques exemples de la façon dont nos partenaires aident :",
+    "how_it_works": "Comment ça fonctionne"
+  },
+  "help_items": {
+    "intro_companies": "Présenter les entreprises",
+    "intro_companies_desc": "Recommandez les organisations qui pourraient bénéficier de l’EAP.",
+    "make_intros": "Faire les présentations",
+    "make_intros_desc": "Un e-mail, LinkedIn ou des présentations personnelles suffisent.",
+    "share_opps": "Partagez des opportunités",
+    "share_opps_desc": "Mentionnez Mantra lorsque c’est approprié dans votre réseau.",
+    "connect_dm": "Connecter les décideurs",
+    "connect_dm_desc": "Présentez les équipes RH, les fondateurs, les managers ou les responsables du bien-être."
+  },
+  "benefits": {
+    "commission": "Commission sur les transactions réussies",
+    "points": "Gagner des points mantra",
+    "no_targets": "Aucun objectif de vente",
+    "expand": "Aider à développer les soins de santé mentale"
+  },
+  "timeline": {
+    "identify": "Identifier une entreprise",
+    "identify_desc": "Pensez aux organisations de votre réseau.",
+    "intro": "Introduire le mantra",
+    "intro_desc": "Commence la conversation par email ou LinkedIn.",
+    "biz_team": "L’équipe commerciale prend le relais",
+    "biz_team_desc": "Nous gérons les démonstrations, les négociations et la clôture.",
+    "signup": "Signe de l’entreprise",
+    "signup_desc": "L’organisation s’associe officiellement à Mantra.",
+    "earn": "Gagnez des commissions et des récompenses",
+    "earn_desc": "Recevez votre commission financière et vos Points Mantra."
+  },
+  "participate_items": {
+    "intro_client": "Présenter un client",
+    "intro_client_desc": "Présentez MantraCare à un client ou professionnel de votre réseau.",
+    "rec_companies": "Recommandez des entreprises",
+    "rec_companies_desc": "Partagez les organisations où les programmes d’aide aux employés (PAE) pourraient être précieux.",
+    "make_intro": "Faites une introduction",
+    "make_intro_desc": "Mettez notre équipe en relation avec un responsable RH ou un décideur via LinkedIn ou par email.",
+    "learn_more": "En savoir plus",
+    "learn_more_desc": "Pas prêt aujourd’hui ? Ce n’est pas grave — vous pouvez explorer le programme et participer quand vous vous sentez à l’aise."
+  },
+  "celebration": {
+    "title": "Candidature reçue !",
+    "subtitle": "Notre équipe de développement commercial vous contactera prochainement."
+  }
+}
