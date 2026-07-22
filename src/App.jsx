@@ -54,7 +54,7 @@ import { activities } from './mantra/activities';
 import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
-    const basePath = '/provider_pathways';
+  const basePath = '/provider_pathways';
 
   const getPath = () => {
     let p = window.location.pathname;
@@ -136,6 +136,8 @@ function App() {
         />
       );
     }
+
+    console.log("This is a demo");
 
     if (currentPath === '/task/profile-verification') {
       return (
