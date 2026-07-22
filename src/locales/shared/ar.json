@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ar] +{{points}} Pts"
+    "points_earned": "+{{نقاط}} نقطة"
   },
   "progress": {
-    "lesson_progress": "[ar] Lesson Progress",
-    "completed": "[ar] {{percent}}% Completed"
+    "lesson_progress": "تقدم الدرس",
+    "completed": "{{percent}}٪ مكتمل"
   },
   "overview": {
-    "default_title": "[ar] About this Lesson",
-    "points": "[ar] {{points}} Points"
+    "default_title": "حول هذا الدرس",
+    "points": "{{نقاط}} النقاط"
   },
   "video": {
-    "lesson_duration": "[ar] Video Lesson • {{duration}}",
-    "streaming": "[ar] Streaming Video...",
-    "simulation": "[ar] Simulation is playing. Click reset to watch again.",
-    "reset": "[ar] Reset Video"
+    "lesson_duration": "درس فيديو • {{المدة}}",
+    "streaming": "فيديو متدفق...",
+    "simulation": "المحاكاة تعمل. اضغط إعادة الضبط للمشاهدة مرة أخرى.",
+    "reset": "إعادة ضبط الفيديو"
   },
   "scenario": {
-    "badge": "[ar] Client Scenario",
-    "outcome": "[ar] Outcome: "
+    "badge": "سيناريو العميل",
+    "outcome": "النتيجة: "
   },
   "quiz": {
-    "mcq_title": "[ar] MCQ",
-    "submit": "[ar] Submit",
-    "thank_you": "[ar] Thank you for your response!",
-    "score": "[ar] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ar] Correct Answer : ",
-    "your_answer": "[ar] Your Answer : ",
-    "not_answered": "[ar] Not answered",
-    "done": "[ar] Done",
-    "try_again": "[ar] Try Again",
-    "practice_question": "[ar] Practice Question",
-    "submit_answer": "[ar] Submit Answer",
-    "correct": "[ar] Correct! ",
-    "incorrect": "[ar] Incorrect. ",
-    "default_correct_feedback": "[ar] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ar] Review the material and try again.",
-    "warning_watch_video": "[ar] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "التقديم",
+    "thank_you": "شكرا على ردك!",
+    "score": "درجتك هي: {{score}}/{{total}}.",
+    "correct_answer": "الإجابة الصحيحة: ",
+    "your_answer": "إجابتك: ",
+    "not_answered": "لم يجب على ذلك",
+    "done": "تم",
+    "try_again": "حاول مرة أخرى",
+    "practice_question": "سؤال الممارسة",
+    "submit_answer": "إرسال الإجابة",
+    "correct": "صحيح! ",
+    "incorrect": "غير صحيح. ",
+    "default_correct_feedback": "عمل رائع. لقد حصلت على نقاط لهذا الدرس.",
+    "default_incorrect_feedback": "راجع المادة وجرب مرة أخرى.",
+    "warning_watch_video": "يرجى مشاهدة فيديو الدرس لإكمال هذا الدرس."
   },
   "completion": {
-    "title": "[ar] Congratulations!",
-    "subtitle": "[ar] You completed the lesson and boosted your provider score.",
-    "earned": "[ar] You Earned:",
-    "points": "[ar] {{points}} Provider Points",
-    "continue": "[ar] Continue to Dashboard"
+    "title": "مبروك!",
+    "subtitle": "لقد أنهيت الدرس ورفعت درجة مقدم الرعاية الخاص بك.",
+    "earned": "لقد كسبت:",
+    "points": "{{نقاط}} نقاط المزود",
+    "continue": "تابع إلى لوحة التحكم"
   },
   "error": {
-    "title": "[ar] Something went wrong",
-    "message": "[ar] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ar] View Error Details",
-    "return": "[ar] Return to Dashboard"
+    "title": "حدث خطأ ما",
+    "message": "نعتذر عن الإزعاج. حدث خطأ تقني أثناء محاولة تحميل هذا الدرس.",
+    "details": "عرض تفاصيل الخطأ",
+    "return": "العودة إلى لوحة التحكم"
   }
 }

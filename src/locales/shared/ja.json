@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ja] +{{points}} Pts"
+    "points_earned": "+{{points}} ポイント"
   },
   "progress": {
-    "lesson_progress": "[ja] Lesson Progress",
-    "completed": "[ja] {{percent}}% Completed"
+    "lesson_progress": "授業の進捗",
+    "completed": "{{percent}}% 完了"
   },
   "overview": {
-    "default_title": "[ja] About this Lesson",
-    "points": "[ja] {{points}} Points"
+    "default_title": "このレッスンについて",
+    "points": "{{ポイント}}ポイント"
   },
   "video": {
-    "lesson_duration": "[ja] Video Lesson • {{duration}}",
-    "streaming": "[ja] Streaming Video...",
-    "simulation": "[ja] Simulation is playing. Click reset to watch again.",
-    "reset": "[ja] Reset Video"
+    "lesson_duration": "ビデオレッスン • {{duration}}",
+    "streaming": "ストリーミング動画...",
+    "simulation": "シミュレーションが再生中です。リセットをクリックして再度視聴してください。",
+    "reset": "リセットビデオ"
   },
   "scenario": {
-    "badge": "[ja] Client Scenario",
-    "outcome": "[ja] Outcome: "
+    "badge": "クライアントシナリオ",
+    "outcome": "結果:"
   },
   "quiz": {
-    "mcq_title": "[ja] MCQ",
-    "submit": "[ja] Submit",
-    "thank_you": "[ja] Thank you for your response!",
-    "score": "[ja] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ja] Correct Answer : ",
-    "your_answer": "[ja] Your Answer : ",
-    "not_answered": "[ja] Not answered",
-    "done": "[ja] Done",
-    "try_again": "[ja] Try Again",
-    "practice_question": "[ja] Practice Question",
-    "submit_answer": "[ja] Submit Answer",
-    "correct": "[ja] Correct! ",
-    "incorrect": "[ja] Incorrect. ",
-    "default_correct_feedback": "[ja] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ja] Review the material and try again.",
-    "warning_watch_video": "[ja] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "提出",
+    "thank_you": "ご返信ありがとうございます!",
+    "score": "あなたのスコアは :{{score}}/{{total}}です。",
+    "correct_answer": "正解:",
+    "your_answer": "あなたの答え:",
+    "not_answered": "応答なし",
+    "done": "終わった",
+    "try_again": "もう一度試してみて",
+    "practice_question": "練習問題",
+    "submit_answer": "回答を提出する",
+    "correct": "その通りです!",
+    "incorrect": "それは間違いです。",
+    "default_correct_feedback": "よくやった。この授業でポイントを獲得しました。",
+    "default_incorrect_feedback": "教材を見直してもう一度挑戦してください。",
+    "warning_watch_video": "このレッスンを完成させるために、ぜひレッスンビデオをご覧ください。"
   },
   "completion": {
-    "title": "[ja] Congratulations!",
-    "subtitle": "[ja] You completed the lesson and boosted your provider score.",
-    "earned": "[ja] You Earned:",
-    "points": "[ja] {{points}} Provider Points",
-    "continue": "[ja] Continue to Dashboard"
+    "title": "おめでとうございます!",
+    "subtitle": "レッスンを終え、プロバイダーのスコアが上がりました。",
+    "earned": "あなたが獲得したもの:",
+    "points": "{{ポイント}}プロバイダーポイント",
+    "continue": "ダッシュボードへ続ける"
   },
   "error": {
-    "title": "[ja] Something went wrong",
-    "message": "[ja] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ja] View Error Details",
-    "return": "[ja] Return to Dashboard"
+    "title": "何かがうまくいかなかった",
+    "message": "ご不便をおかけして申し訳ありません。このレッスンの読み込み中に技術的なエラーが発生しました。",
+    "details": "エラー詳細を見る",
+    "return": "ダッシュボードに戻る"
   }
 }

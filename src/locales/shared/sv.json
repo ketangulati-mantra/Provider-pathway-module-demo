@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[sv] +{{points}} Pts"
+    "points_earned": "+{{poäng}} Poäng"
   },
   "progress": {
-    "lesson_progress": "[sv] Lesson Progress",
-    "completed": "[sv] {{percent}}% Completed"
+    "lesson_progress": "Lektionsframsteg",
+    "completed": "{{percent}}% slutförd"
   },
   "overview": {
-    "default_title": "[sv] About this Lesson",
-    "points": "[sv] {{points}} Points"
+    "default_title": "Om denna lektion",
+    "points": "{{poäng}} Poäng"
   },
   "video": {
-    "lesson_duration": "[sv] Video Lesson • {{duration}}",
-    "streaming": "[sv] Streaming Video...",
-    "simulation": "[sv] Simulation is playing. Click reset to watch again.",
-    "reset": "[sv] Reset Video"
+    "lesson_duration": "Videolektion • {{duration}}",
+    "streaming": "Strömmande video...",
+    "simulation": "Simulering är att spela. Klicka på återställ för att titta igen.",
+    "reset": "Återställ video"
   },
   "scenario": {
-    "badge": "[sv] Client Scenario",
-    "outcome": "[sv] Outcome: "
+    "badge": "Klientscenario",
+    "outcome": "Resultat: "
   },
   "quiz": {
-    "mcq_title": "[sv] MCQ",
-    "submit": "[sv] Submit",
-    "thank_you": "[sv] Thank you for your response!",
-    "score": "[sv] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[sv] Correct Answer : ",
-    "your_answer": "[sv] Your Answer : ",
-    "not_answered": "[sv] Not answered",
-    "done": "[sv] Done",
-    "try_again": "[sv] Try Again",
-    "practice_question": "[sv] Practice Question",
-    "submit_answer": "[sv] Submit Answer",
-    "correct": "[sv] Correct! ",
-    "incorrect": "[sv] Incorrect. ",
-    "default_correct_feedback": "[sv] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[sv] Review the material and try again.",
-    "warning_watch_video": "[sv] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Skicka in",
+    "thank_you": "Tack för ditt svar!",
+    "score": "Din poäng är: {{score}}/{{total}}.",
+    "correct_answer": "Rätt svar: ",
+    "your_answer": "Ditt svar: ",
+    "not_answered": "Ej besvarat",
+    "done": "Klart",
+    "try_again": "Försök igen",
+    "practice_question": "Övningsfråga",
+    "submit_answer": "Skicka in svar",
+    "correct": "Korrekt! ",
+    "incorrect": "Fel. ",
+    "default_correct_feedback": "Bra jobbat. Du har tjänat poäng för den här lektionen.",
+    "default_incorrect_feedback": "Gå igenom materialet och försök igen.",
+    "warning_watch_video": "Titta gärna på lektionsvideon för att slutföra denna lektion."
   },
   "completion": {
-    "title": "[sv] Congratulations!",
-    "subtitle": "[sv] You completed the lesson and boosted your provider score.",
-    "earned": "[sv] You Earned:",
-    "points": "[sv] {{points}} Provider Points",
-    "continue": "[sv] Continue to Dashboard"
+    "title": "Grattis!",
+    "subtitle": "Du har slutfört lektionen och höjt din vårdgivares poäng.",
+    "earned": "Du har förtjänat:",
+    "points": "{{poäng}} Leverantörspoäng",
+    "continue": "Fortsätt till instrumentpanelen"
   },
   "error": {
-    "title": "[sv] Something went wrong",
-    "message": "[sv] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[sv] View Error Details",
-    "return": "[sv] Return to Dashboard"
+    "title": "Något gick fel",
+    "message": "Vi ber om ursäkt för besväret. Ett tekniskt fel uppstod när jag försökte ladda denna lektion.",
+    "details": "Visa feldetaljer",
+    "return": "Återvänd till instrumentpanelen"
   }
 }

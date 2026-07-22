@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[hu] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[hu] Lesson Progress",
-    "completed": "[hu] {{percent}}% Completed"
+    "lesson_progress": "Lecke előrehaladása",
+    "completed": "{{percent}}% Kész"
   },
   "overview": {
-    "default_title": "[hu] About this Lesson",
-    "points": "[hu] {{points}} Points"
+    "default_title": "Erről a leckéről",
+    "points": "{{points}} Pontok"
   },
   "video": {
-    "lesson_duration": "[hu] Video Lesson • {{duration}}",
-    "streaming": "[hu] Streaming Video...",
-    "simulation": "[hu] Simulation is playing. Click reset to watch again.",
-    "reset": "[hu] Reset Video"
+    "lesson_duration": "Videólecke • {{duration}}",
+    "streaming": "Streaming videó...",
+    "simulation": "A szimuláció játszik. Kattints a reset gombra, hogy újra nézhesd.",
+    "reset": "Videó visszaállítása"
   },
   "scenario": {
-    "badge": "[hu] Client Scenario",
-    "outcome": "[hu] Outcome: "
+    "badge": "Kliens forgatókönyv",
+    "outcome": "Eredmény: "
   },
   "quiz": {
-    "mcq_title": "[hu] MCQ",
-    "submit": "[hu] Submit",
-    "thank_you": "[hu] Thank you for your response!",
-    "score": "[hu] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[hu] Correct Answer : ",
-    "your_answer": "[hu] Your Answer : ",
-    "not_answered": "[hu] Not answered",
-    "done": "[hu] Done",
-    "try_again": "[hu] Try Again",
-    "practice_question": "[hu] Practice Question",
-    "submit_answer": "[hu] Submit Answer",
-    "correct": "[hu] Correct! ",
-    "incorrect": "[hu] Incorrect. ",
-    "default_correct_feedback": "[hu] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[hu] Review the material and try again.",
-    "warning_watch_video": "[hu] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Beküldés",
+    "thank_you": "Köszönöm a válaszodat!",
+    "score": "Pontszámod: {{score}}/{{total}}.",
+    "correct_answer": "Helyes válasz: ",
+    "your_answer": "A válaszod: ",
+    "not_answered": "Nem válaszoltak",
+    "done": "Kész",
+    "try_again": "Próbáld újra",
+    "practice_question": "Gyakorló kérdés",
+    "submit_answer": "Válasz küldése",
+    "correct": "Így van! ",
+    "incorrect": "Tévedés. ",
+    "default_correct_feedback": "Szép munka. Pontokat szereztél ezért a leckéért.",
+    "default_incorrect_feedback": "Nézd át az anyagot, és próbáld újra.",
+    "warning_watch_video": "Kérjük, nézze meg az órás videót, hogy befejezze ezt az órát."
   },
   "completion": {
-    "title": "[hu] Congratulations!",
-    "subtitle": "[hu] You completed the lesson and boosted your provider score.",
-    "earned": "[hu] You Earned:",
-    "points": "[hu] {{points}} Provider Points",
-    "continue": "[hu] Continue to Dashboard"
+    "title": "Gratulálok!",
+    "subtitle": "Befejezted az órát, és növelted a szolgáltatói pontszámodat.",
+    "earned": "Megérdemelted:",
+    "points": "{{points}} Szolgáltatói pontok",
+    "continue": "Folytasd a Dashboard"
   },
   "error": {
-    "title": "[hu] Something went wrong",
-    "message": "[hu] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[hu] View Error Details",
-    "return": "[hu] Return to Dashboard"
+    "title": "Valami rosszul ment",
+    "message": "Elnézést kérünk a kellemetlenségért. Technikai hiba történt, miközben ezt a leckét próbáltam betölteni.",
+    "details": "Hiba részleteinek megtekintése",
+    "return": "Visszatérés a Dashboard-ra"
   }
 }

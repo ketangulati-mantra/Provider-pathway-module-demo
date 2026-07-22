@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[tl] +{{points}} Pts"
+    "points_earned": "+{{puntos}} pts"
   },
   "progress": {
-    "lesson_progress": "[tl] Lesson Progress",
-    "completed": "[tl] {{percent}}% Completed"
+    "lesson_progress": "Pag-unlad ng Aralin",
+    "completed": "{{porsyento}}% Nakumpleto"
   },
   "overview": {
-    "default_title": "[tl] About this Lesson",
-    "points": "[tl] {{points}} Points"
+    "default_title": "Tungkol sa Araling ito",
+    "points": "{{puntos}} Mga puntos"
   },
   "video": {
-    "lesson_duration": "[tl] Video Lesson • {{duration}}",
-    "streaming": "[tl] Streaming Video...",
-    "simulation": "[tl] Simulation is playing. Click reset to watch again.",
-    "reset": "[tl] Reset Video"
+    "lesson_duration": "Aralin sa Video • {{duration}}",
+    "streaming": "Streaming ng Video ...",
+    "simulation": "Naglalaro ang simulation. I-click ang i-reset para manood muli.",
+    "reset": "I-reset ang Video"
   },
   "scenario": {
-    "badge": "[tl] Client Scenario",
-    "outcome": "[tl] Outcome: "
+    "badge": "Sitwasyon ng Kliyente",
+    "outcome": "Kinalabasan: "
   },
   "quiz": {
-    "mcq_title": "[tl] MCQ",
-    "submit": "[tl] Submit",
-    "thank_you": "[tl] Thank you for your response!",
-    "score": "[tl] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[tl] Correct Answer : ",
-    "your_answer": "[tl] Your Answer : ",
-    "not_answered": "[tl] Not answered",
-    "done": "[tl] Done",
-    "try_again": "[tl] Try Again",
-    "practice_question": "[tl] Practice Question",
-    "submit_answer": "[tl] Submit Answer",
-    "correct": "[tl] Correct! ",
-    "incorrect": "[tl] Incorrect. ",
-    "default_correct_feedback": "[tl] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[tl] Review the material and try again.",
-    "warning_watch_video": "[tl] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Email Address *",
+    "thank_you": "Salamat sa iyong sagot!",
+    "score": "Ang iyong iskor ay : {{score}}/{{total}}.",
+    "correct_answer": "Tamang Sagot : ",
+    "your_answer": "Ang Iyong Sagot : ",
+    "not_answered": "Hindi sinagot",
+    "done": "Tapos na",
+    "try_again": "Subukang Muli",
+    "practice_question": "Tanong sa Pagsasanay",
+    "submit_answer": "Email Address *",
+    "correct": "Tama! ",
+    "incorrect": "Mali. ",
+    "default_correct_feedback": "Mahusay na ginawa. Nakakuha ka ng mga puntos para sa araling ito.",
+    "default_incorrect_feedback": "Suriin ang materyal at subukang muli.",
+    "warning_watch_video": "Panoorin ang lesson video para makumpleto ang lesson na ito."
   },
   "completion": {
-    "title": "[tl] Congratulations!",
-    "subtitle": "[tl] You completed the lesson and boosted your provider score.",
-    "earned": "[tl] You Earned:",
-    "points": "[tl] {{points}} Provider Points",
-    "continue": "[tl] Continue to Dashboard"
+    "title": "Binabati kita!",
+    "subtitle": "Nakumpleto mo ang aralin at pinalakas ang iyong provider score.",
+    "earned": "Nakuha mo:",
+    "points": "{{puntos}} Mga Puntos ng Provider",
+    "continue": "Magpatuloy sa Dashboard"
   },
   "error": {
-    "title": "[tl] Something went wrong",
-    "message": "[tl] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[tl] View Error Details",
-    "return": "[tl] Return to Dashboard"
+    "title": "May mali",
+    "message": "Humihingi kami ng paumanhin para sa kakulangan sa ginhawa. Isang teknikal na error ang naganap habang sinusubukang i-load ang araling ito.",
+    "details": "Tingnan ang Mga Detalye ng Error",
+    "return": "Bumalik sa Dashboard"
   }
 }

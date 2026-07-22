@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[cs] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[cs] Lesson Progress",
-    "completed": "[cs] {{percent}}% Completed"
+    "lesson_progress": "Postup v lekci",
+    "completed": "{{percent}}% Dokončeno"
   },
   "overview": {
-    "default_title": "[cs] About this Lesson",
-    "points": "[cs] {{points}} Points"
+    "default_title": "O této lekci",
+    "points": "{{points}} Body"
   },
   "video": {
-    "lesson_duration": "[cs] Video Lesson • {{duration}}",
-    "streaming": "[cs] Streaming Video...",
-    "simulation": "[cs] Simulation is playing. Click reset to watch again.",
-    "reset": "[cs] Reset Video"
+    "lesson_duration": "Video lekce • {{duration}}",
+    "streaming": "Streamování videa...",
+    "simulation": "Simulace hraje. Klikněte na reset, abyste se podívali znovu.",
+    "reset": "Reset Video"
   },
   "scenario": {
-    "badge": "[cs] Client Scenario",
-    "outcome": "[cs] Outcome: "
+    "badge": "Klientský scénář",
+    "outcome": "Výsledek: "
   },
   "quiz": {
-    "mcq_title": "[cs] MCQ",
-    "submit": "[cs] Submit",
-    "thank_you": "[cs] Thank you for your response!",
-    "score": "[cs] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[cs] Correct Answer : ",
-    "your_answer": "[cs] Your Answer : ",
-    "not_answered": "[cs] Not answered",
-    "done": "[cs] Done",
-    "try_again": "[cs] Try Again",
-    "practice_question": "[cs] Practice Question",
-    "submit_answer": "[cs] Submit Answer",
-    "correct": "[cs] Correct! ",
-    "incorrect": "[cs] Incorrect. ",
-    "default_correct_feedback": "[cs] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[cs] Review the material and try again.",
-    "warning_watch_video": "[cs] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Odeslat",
+    "thank_you": "Děkuji za odpověď!",
+    "score": "Vaše skóre je: {{score}}/{{total}}.",
+    "correct_answer": "Správná odpověď: ",
+    "your_answer": "Vaše odpověď: ",
+    "not_answered": "Neodpovězeno",
+    "done": "Hotovo",
+    "try_again": "Zkus to znovu",
+    "practice_question": "Cvičná otázka",
+    "submit_answer": "Odeslat odpověď",
+    "correct": "Správně! ",
+    "incorrect": "Nesprávně. ",
+    "default_correct_feedback": "Dobrá práce. Za tuto lekci jsi získal body.",
+    "default_incorrect_feedback": "Projděte si materiál a zkuste to znovu.",
+    "warning_watch_video": "Pro dokončení této lekce si prosím podívejte video lekce."
   },
   "completion": {
-    "title": "[cs] Congratulations!",
-    "subtitle": "[cs] You completed the lesson and boosted your provider score.",
-    "earned": "[cs] You Earned:",
-    "points": "[cs] {{points}} Provider Points",
-    "continue": "[cs] Continue to Dashboard"
+    "title": "Gratuluji!",
+    "subtitle": "Dokončili jste lekci a zvýšili své skóre poskytovatele.",
+    "earned": "Vydělal jsi:",
+    "points": "{{points}} Body poskytovatelů",
+    "continue": "Pokračovat na dashboard"
   },
   "error": {
-    "title": "[cs] Something went wrong",
-    "message": "[cs] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[cs] View Error Details",
-    "return": "[cs] Return to Dashboard"
+    "title": "Něco se pokazilo",
+    "message": "Omlouváme se za nepříjemnosti. Při načtení této lekce došlo k technické chybě.",
+    "details": "Zobrazit podrobnosti o chybě",
+    "return": "Návrat na dashboard"
   }
 }

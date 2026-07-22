@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[tr] +{{points}} Pts"
+    "points_earned": "+{{puan}} Puanlar"
   },
   "progress": {
-    "lesson_progress": "[tr] Lesson Progress",
-    "completed": "[tr] {{percent}}% Completed"
+    "lesson_progress": "Ders İlerlemesi",
+    "completed": "{{percent}}% Tamamlandı"
   },
   "overview": {
-    "default_title": "[tr] About this Lesson",
-    "points": "[tr] {{points}} Points"
+    "default_title": "Bu Ders hakkında",
+    "points": "{{puan}} Puanlar"
   },
   "video": {
-    "lesson_duration": "[tr] Video Lesson • {{duration}}",
-    "streaming": "[tr] Streaming Video...",
-    "simulation": "[tr] Simulation is playing. Click reset to watch again.",
-    "reset": "[tr] Reset Video"
+    "lesson_duration": "Video Dersi • {{duration}}",
+    "streaming": "Yayın Videosu...",
+    "simulation": "Simülasyon oynuyor. Tekrar izlemek için reset tıkına tıklayın.",
+    "reset": "Video Sıfırlama"
   },
   "scenario": {
-    "badge": "[tr] Client Scenario",
-    "outcome": "[tr] Outcome: "
+    "badge": "İstemci Senaryosu",
+    "outcome": "Sonuç: "
   },
   "quiz": {
-    "mcq_title": "[tr] MCQ",
-    "submit": "[tr] Submit",
-    "thank_you": "[tr] Thank you for your response!",
-    "score": "[tr] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[tr] Correct Answer : ",
-    "your_answer": "[tr] Your Answer : ",
-    "not_answered": "[tr] Not answered",
-    "done": "[tr] Done",
-    "try_again": "[tr] Try Again",
-    "practice_question": "[tr] Practice Question",
-    "submit_answer": "[tr] Submit Answer",
-    "correct": "[tr] Correct! ",
-    "incorrect": "[tr] Incorrect. ",
-    "default_correct_feedback": "[tr] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[tr] Review the material and try again.",
-    "warning_watch_video": "[tr] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Gönder",
+    "thank_you": "Cevabınız için teşekkürler!",
+    "score": "Puanınız : {{score}}/{{total}}.",
+    "correct_answer": "Doğru Cevap: ",
+    "your_answer": "Cevabınız : ",
+    "not_answered": "Cevap verilmedi",
+    "done": "Tamam",
+    "try_again": "Tekrar Deneyin",
+    "practice_question": "Pratik Sorusu",
+    "submit_answer": "Yanıt Gönder",
+    "correct": "Doğru! ",
+    "incorrect": "Yanlış. ",
+    "default_correct_feedback": "Aferin. Bu dersle puan kazandın.",
+    "default_incorrect_feedback": "Materyali gözden geçir ve tekrar dene.",
+    "warning_watch_video": "Bu dersi tamamlamak için lütfen ders videosunu izleyin."
   },
   "completion": {
-    "title": "[tr] Congratulations!",
-    "subtitle": "[tr] You completed the lesson and boosted your provider score.",
-    "earned": "[tr] You Earned:",
-    "points": "[tr] {{points}} Provider Points",
-    "continue": "[tr] Continue to Dashboard"
+    "title": "Tebrikler!",
+    "subtitle": "Dersi tamamladın ve sağlayıcı puanını yükselttin.",
+    "earned": "Şunları Kazandınız:",
+    "points": "{{puan}} Sağlayıcı Puanları",
+    "continue": "Kontrol Paneline Devam Et"
   },
   "error": {
-    "title": "[tr] Something went wrong",
-    "message": "[tr] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[tr] View Error Details",
-    "return": "[tr] Return to Dashboard"
+    "title": "Bir şeyler ters gitti",
+    "message": "Yaşadığımız rahatsızlık için özür dileriz. Bu dersi yüklemeye çalışırken teknik bir hata meydana geldi.",
+    "details": "Hata Detaylarını Görüntüle",
+    "return": "Dashboard'a Dönüş"
   }
 }

@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[no] +{{points}} Pts"
+    "points_earned": "+{{poeng}} Poeng"
   },
   "progress": {
-    "lesson_progress": "[no] Lesson Progress",
-    "completed": "[no] {{percent}}% Completed"
+    "lesson_progress": "Fremgang i leksjonen",
+    "completed": "{{prosent}}% fullført"
   },
   "overview": {
-    "default_title": "[no] About this Lesson",
-    "points": "[no] {{points}} Points"
+    "default_title": "Om denne leksjonen",
+    "points": "{{poeng}} Poeng"
   },
   "video": {
-    "lesson_duration": "[no] Video Lesson • {{duration}}",
-    "streaming": "[no] Streaming Video...",
-    "simulation": "[no] Simulation is playing. Click reset to watch again.",
-    "reset": "[no] Reset Video"
+    "lesson_duration": "Videoleksjon • {{duration}}",
+    "streaming": "Strømmer video...",
+    "simulation": "Simulering er å spille. Klikk på reset for å se igjen.",
+    "reset": "Tilbakestill video"
   },
   "scenario": {
-    "badge": "[no] Client Scenario",
-    "outcome": "[no] Outcome: "
+    "badge": "Klientscenario",
+    "outcome": "Resultat: "
   },
   "quiz": {
-    "mcq_title": "[no] MCQ",
-    "submit": "[no] Submit",
-    "thank_you": "[no] Thank you for your response!",
-    "score": "[no] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[no] Correct Answer : ",
-    "your_answer": "[no] Your Answer : ",
-    "not_answered": "[no] Not answered",
-    "done": "[no] Done",
-    "try_again": "[no] Try Again",
-    "practice_question": "[no] Practice Question",
-    "submit_answer": "[no] Submit Answer",
-    "correct": "[no] Correct! ",
-    "incorrect": "[no] Incorrect. ",
-    "default_correct_feedback": "[no] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[no] Review the material and try again.",
-    "warning_watch_video": "[no] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Send inn",
+    "thank_you": "Takk for svaret ditt!",
+    "score": "Poengsummen din er: {{score}}/{{total}}.",
+    "correct_answer": "Riktig svar: ",
+    "your_answer": "Ditt svar: ",
+    "not_answered": "Ikke besvart",
+    "done": "Ferdig",
+    "try_again": "Prøv igjen",
+    "practice_question": "Øvingsspørsmål",
+    "submit_answer": "Send inn svar",
+    "correct": "Korrekt! ",
+    "incorrect": "Feil. ",
+    "default_correct_feedback": "Bra jobbet. Du har tjent poeng for denne leksjonen.",
+    "default_incorrect_feedback": "Gå gjennom materialet og prøv igjen.",
+    "warning_watch_video": "Vennligst se leksjonsvideoen for å fullføre denne leksjonen."
   },
   "completion": {
-    "title": "[no] Congratulations!",
-    "subtitle": "[no] You completed the lesson and boosted your provider score.",
-    "earned": "[no] You Earned:",
-    "points": "[no] {{points}} Provider Points",
-    "continue": "[no] Continue to Dashboard"
+    "title": "Gratulerer!",
+    "subtitle": "Du fullførte leksjonen og økte behandlerscoren din.",
+    "earned": "Du har fortjent:",
+    "points": "{{poeng}} Leverandørpoeng",
+    "continue": "Fortsett til dashbordet"
   },
   "error": {
-    "title": "[no] Something went wrong",
-    "message": "[no] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[no] View Error Details",
-    "return": "[no] Return to Dashboard"
+    "title": "Noe gikk galt",
+    "message": "Vi beklager ulempen. En teknisk feil oppsto da jeg prøvde å laste inn denne leksjonen.",
+    "details": "Vis feildetaljer",
+    "return": "Tilbake til dashbordet"
   }
 }

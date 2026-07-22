@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ms] +{{points}} Pts"
+    "points_earned": "+{{mata}} mata"
   },
   "progress": {
-    "lesson_progress": "[ms] Lesson Progress",
-    "completed": "[ms] {{percent}}% Completed"
+    "lesson_progress": "Kemajuan Pelajaran",
+    "completed": "{{peratus}}% Selesai"
   },
   "overview": {
-    "default_title": "[ms] About this Lesson",
-    "points": "[ms] {{points}} Points"
+    "default_title": "Mengenai Pelajaran ini",
+    "points": "{{mata}} Mata"
   },
   "video": {
-    "lesson_duration": "[ms] Video Lesson • {{duration}}",
-    "streaming": "[ms] Streaming Video...",
-    "simulation": "[ms] Simulation is playing. Click reset to watch again.",
-    "reset": "[ms] Reset Video"
+    "lesson_duration": "Pelajaran Video • {{duration}}",
+    "streaming": "Video Penstriman...",
+    "simulation": "Simulasi sedang dimainkan. Klik tetapkan semula untuk menonton semula.",
+    "reset": "Tetapkan semula Video"
   },
   "scenario": {
-    "badge": "[ms] Client Scenario",
-    "outcome": "[ms] Outcome: "
+    "badge": "Senario Pelanggan",
+    "outcome": "Keputusan: "
   },
   "quiz": {
-    "mcq_title": "[ms] MCQ",
-    "submit": "[ms] Submit",
-    "thank_you": "[ms] Thank you for your response!",
-    "score": "[ms] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ms] Correct Answer : ",
-    "your_answer": "[ms] Your Answer : ",
-    "not_answered": "[ms] Not answered",
-    "done": "[ms] Done",
-    "try_again": "[ms] Try Again",
-    "practice_question": "[ms] Practice Question",
-    "submit_answer": "[ms] Submit Answer",
-    "correct": "[ms] Correct! ",
-    "incorrect": "[ms] Incorrect. ",
-    "default_correct_feedback": "[ms] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ms] Review the material and try again.",
-    "warning_watch_video": "[ms] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Hantar",
+    "thank_you": "Terima kasih atas maklum balas anda!",
+    "score": "Markah anda ialah : {{skor}}/{{jumlah}}.",
+    "correct_answer": "Jawapan Betul : ",
+    "your_answer": "Jawapan anda : ",
+    "not_answered": "Tidak dijawab",
+    "done": "Selesai",
+    "try_again": "Cuba lagi",
+    "practice_question": "Soalan Amalan",
+    "submit_answer": "Hantar Jawapan",
+    "correct": "Betul! ",
+    "incorrect": "Tidak betul. ",
+    "default_correct_feedback": "Syabas. Anda telah memperoleh mata untuk pelajaran ini.",
+    "default_incorrect_feedback": "Semak bahan dan cuba lagi.",
+    "warning_watch_video": "Sila tonton video pelajaran untuk melengkapkan pelajaran ini."
   },
   "completion": {
-    "title": "[ms] Congratulations!",
-    "subtitle": "[ms] You completed the lesson and boosted your provider score.",
-    "earned": "[ms] You Earned:",
-    "points": "[ms] {{points}} Provider Points",
-    "continue": "[ms] Continue to Dashboard"
+    "title": "Tahniah!",
+    "subtitle": "Anda menyelesaikan pelajaran dan meningkatkan skor pembekal anda.",
+    "earned": "Anda Memperolehi:",
+    "points": "{{mata}} Mata Pembekal",
+    "continue": "Teruskan ke Papan Pemuka"
   },
   "error": {
-    "title": "[ms] Something went wrong",
-    "message": "[ms] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ms] View Error Details",
-    "return": "[ms] Return to Dashboard"
+    "title": "Ada sesuatu yang tidak kena",
+    "message": "Kami memohon maaf atas kesulitan itu. Ralat teknikal berlaku semasa cuba memuatkan pelajaran ini.",
+    "details": "Lihat Butiran Ralat",
+    "return": "Kembali ke Papan Pemuka"
   }
 }

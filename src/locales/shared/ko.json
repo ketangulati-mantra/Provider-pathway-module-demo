@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ko] +{{points}} Pts"
+    "points_earned": "+{{points}} 점부"
   },
   "progress": {
-    "lesson_progress": "[ko] Lesson Progress",
-    "completed": "[ko] {{percent}}% Completed"
+    "lesson_progress": "수업 진행 상황",
+    "completed": "{{percent}}% 완료"
   },
   "overview": {
-    "default_title": "[ko] About this Lesson",
-    "points": "[ko] {{points}} Points"
+    "default_title": "이 수업에 대하여",
+    "points": "{{포인트}} 점수"
   },
   "video": {
-    "lesson_duration": "[ko] Video Lesson • {{duration}}",
-    "streaming": "[ko] Streaming Video...",
-    "simulation": "[ko] Simulation is playing. Click reset to watch again.",
-    "reset": "[ko] Reset Video"
+    "lesson_duration": "비디오 레슨 • {{duration}}",
+    "streaming": "스트리밍 비디오...",
+    "simulation": "시뮬레이션이 재생 중이야. 리셋을 클릭해 다시 시청하세요.",
+    "reset": "리셋 비디오"
   },
   "scenario": {
-    "badge": "[ko] Client Scenario",
-    "outcome": "[ko] Outcome: "
+    "badge": "클라이언트 시나리오",
+    "outcome": "결과: "
   },
   "quiz": {
-    "mcq_title": "[ko] MCQ",
-    "submit": "[ko] Submit",
-    "thank_you": "[ko] Thank you for your response!",
-    "score": "[ko] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ko] Correct Answer : ",
-    "your_answer": "[ko] Your Answer : ",
-    "not_answered": "[ko] Not answered",
-    "done": "[ko] Done",
-    "try_again": "[ko] Try Again",
-    "practice_question": "[ko] Practice Question",
-    "submit_answer": "[ko] Submit Answer",
-    "correct": "[ko] Correct! ",
-    "incorrect": "[ko] Incorrect. ",
-    "default_correct_feedback": "[ko] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ko] Review the material and try again.",
-    "warning_watch_video": "[ko] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "제출하세요",
+    "thank_you": "답변 감사합니다!",
+    "score": "당신의 점수는 : {{score}}/{{total}}입니다.",
+    "correct_answer": "정답: ",
+    "your_answer": "당신의 답변: ",
+    "not_answered": "답변 없음",
+    "done": "끝났어",
+    "try_again": "다시 시도해 보세요",
+    "practice_question": "연습 문제",
+    "submit_answer": "답변 제출하기",
+    "correct": "맞아요! ",
+    "incorrect": "틀렸습니다. ",
+    "default_correct_feedback": "잘했어. 이 수업으로 점수를 얻었어.",
+    "default_incorrect_feedback": "자료를 복습하고 다시 시도하세요.",
+    "warning_watch_video": "이 수업을 완성하려면 수업 영상을 꼭 시청해 주세요."
   },
   "completion": {
-    "title": "[ko] Congratulations!",
-    "subtitle": "[ko] You completed the lesson and boosted your provider score.",
-    "earned": "[ko] You Earned:",
-    "points": "[ko] {{points}} Provider Points",
-    "continue": "[ko] Continue to Dashboard"
+    "title": "축하해요!",
+    "subtitle": "수업을 완료하고 제공자 점수를 올렸습니다.",
+    "earned": "당신이 받은 것:",
+    "points": "{{포인트}} 제공자 포인트",
+    "continue": "대시보드로 계속 보기"
   },
   "error": {
-    "title": "[ko] Something went wrong",
-    "message": "[ko] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ko] View Error Details",
-    "return": "[ko] Return to Dashboard"
+    "title": "뭔가 잘못됐어",
+    "message": "불편을 끼쳐 드려 죄송합니다. 이 수업을 불러오려던 중 기술적인 오류가 발생했습니다.",
+    "details": "오류 세부 정보 보기",
+    "return": "대시보드로 돌아가기"
   }
 }

@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[zh-Hans] +{{points}} Pts"
+    "points_earned": "+{{points}} 点数"
   },
   "progress": {
-    "lesson_progress": "[zh-Hans] Lesson Progress",
-    "completed": "[zh-Hans] {{percent}}% Completed"
+    "lesson_progress": "课程进展",
+    "completed": "{{percent}}% 已完成"
   },
   "overview": {
-    "default_title": "[zh-Hans] About this Lesson",
-    "points": "[zh-Hans] {{points}} Points"
+    "default_title": "关于本课",
+    "points": "{{points}}积分"
   },
   "video": {
-    "lesson_duration": "[zh-Hans] Video Lesson • {{duration}}",
-    "streaming": "[zh-Hans] Streaming Video...",
-    "simulation": "[zh-Hans] Simulation is playing. Click reset to watch again.",
-    "reset": "[zh-Hans] Reset Video"
+    "lesson_duration": "视频课程 • {{duration}}",
+    "streaming": "流媒体视频......",
+    "simulation": "模拟正在播放。点击重置以重新观看。",
+    "reset": "重置视频"
   },
   "scenario": {
-    "badge": "[zh-Hans] Client Scenario",
-    "outcome": "[zh-Hans] Outcome: "
+    "badge": "客户端场景",
+    "outcome": "结果："
   },
   "quiz": {
-    "mcq_title": "[zh-Hans] MCQ",
-    "submit": "[zh-Hans] Submit",
-    "thank_you": "[zh-Hans] Thank you for your response!",
-    "score": "[zh-Hans] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[zh-Hans] Correct Answer : ",
-    "your_answer": "[zh-Hans] Your Answer : ",
-    "not_answered": "[zh-Hans] Not answered",
-    "done": "[zh-Hans] Done",
-    "try_again": "[zh-Hans] Try Again",
-    "practice_question": "[zh-Hans] Practice Question",
-    "submit_answer": "[zh-Hans] Submit Answer",
-    "correct": "[zh-Hans] Correct! ",
-    "incorrect": "[zh-Hans] Incorrect. ",
-    "default_correct_feedback": "[zh-Hans] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[zh-Hans] Review the material and try again.",
-    "warning_watch_video": "[zh-Hans] Please watch the lesson video to complete this lesson."
+    "mcq_title": "选择题",
+    "submit": "提交",
+    "thank_you": "谢谢你的回复！",
+    "score": "你的得分是：{{score}}/{{total}}。",
+    "correct_answer": "正确答案：",
+    "your_answer": "你的回答：",
+    "not_answered": "未回复",
+    "done": "完成",
+    "try_again": "再试一次",
+    "practice_question": "练习题",
+    "submit_answer": "提交答案",
+    "correct": "没错！",
+    "incorrect": "不对。",
+    "default_correct_feedback": "干得好。你为这节课赢得了积分。",
+    "default_incorrect_feedback": "复习材料，再试一次。",
+    "warning_watch_video": "请观看课程视频以完成本课程。"
   },
   "completion": {
-    "title": "[zh-Hans] Congratulations!",
-    "subtitle": "[zh-Hans] You completed the lesson and boosted your provider score.",
-    "earned": "[zh-Hans] You Earned:",
-    "points": "[zh-Hans] {{points}} Provider Points",
-    "continue": "[zh-Hans] Continue to Dashboard"
+    "title": "恭喜你！",
+    "subtitle": "你完成了课程并提升了你的提供者评分。",
+    "earned": "你获得了：",
+    "points": "{{points}}提供者积分",
+    "continue": "继续前往仪表盘"
   },
   "error": {
-    "title": "[zh-Hans] Something went wrong",
-    "message": "[zh-Hans] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[zh-Hans] View Error Details",
-    "return": "[zh-Hans] Return to Dashboard"
+    "title": "出了点问题",
+    "message": "对给你带来的不便我们深表歉意。在尝试加载本课程时发生了技术错误。",
+    "details": "查看错误详情",
+    "return": "返回仪表盘"
   }
 }

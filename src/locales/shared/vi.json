@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[vi] +{{points}} Pts"
+    "points_earned": "+{{điểm}} điểm"
   },
   "progress": {
-    "lesson_progress": "[vi] Lesson Progress",
-    "completed": "[vi] {{percent}}% Completed"
+    "lesson_progress": "Tiến trình bài học",
+    "completed": "{{percent}}% Đã hoàn thành"
   },
   "overview": {
-    "default_title": "[vi] About this Lesson",
-    "points": "[vi] {{points}} Points"
+    "default_title": "Giới thiệu về bài học này",
+    "points": "{{điểm}} Điểm"
   },
   "video": {
-    "lesson_duration": "[vi] Video Lesson • {{duration}}",
-    "streaming": "[vi] Streaming Video...",
-    "simulation": "[vi] Simulation is playing. Click reset to watch again.",
-    "reset": "[vi] Reset Video"
+    "lesson_duration": "Bài học video • {{duration}}",
+    "streaming": "Truyền phát video...",
+    "simulation": "Mô phỏng đang chơi. Nhấp vào đặt lại để xem lại.",
+    "reset": "Đặt lại video"
   },
   "scenario": {
-    "badge": "[vi] Client Scenario",
-    "outcome": "[vi] Outcome: "
+    "badge": "Kịch bản khách hàng",
+    "outcome": "Kết quả: "
   },
   "quiz": {
-    "mcq_title": "[vi] MCQ",
-    "submit": "[vi] Submit",
-    "thank_you": "[vi] Thank you for your response!",
-    "score": "[vi] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[vi] Correct Answer : ",
-    "your_answer": "[vi] Your Answer : ",
-    "not_answered": "[vi] Not answered",
-    "done": "[vi] Done",
-    "try_again": "[vi] Try Again",
-    "practice_question": "[vi] Practice Question",
-    "submit_answer": "[vi] Submit Answer",
-    "correct": "[vi] Correct! ",
-    "incorrect": "[vi] Incorrect. ",
-    "default_correct_feedback": "[vi] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[vi] Review the material and try again.",
-    "warning_watch_video": "[vi] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Gửi",
+    "thank_you": "Cảm ơn bạn đã trả lời!",
+    "score": "Điểm của bạn là: {{score}}/{{total}}.",
+    "correct_answer": "Câu trả lời đúng: ",
+    "your_answer": "Câu trả lời của bạn: ",
+    "not_answered": "Chưa trả lời",
+    "done": "Xong",
+    "try_again": "Thử lại",
+    "practice_question": "Câu hỏi thực hành",
+    "submit_answer": "Gửi câu trả lời",
+    "correct": "Đúng! ",
+    "incorrect": "Không chính xác. ",
+    "default_correct_feedback": "Làm tốt lắm. Bạn đã kiếm được điểm cho bài học này.",
+    "default_incorrect_feedback": "Xem lại tài liệu và thử lại.",
+    "warning_watch_video": "Vui lòng xem video bài học để hoàn thành bài học này."
   },
   "completion": {
-    "title": "[vi] Congratulations!",
-    "subtitle": "[vi] You completed the lesson and boosted your provider score.",
-    "earned": "[vi] You Earned:",
-    "points": "[vi] {{points}} Provider Points",
-    "continue": "[vi] Continue to Dashboard"
+    "title": "Xin chúc mừng!",
+    "subtitle": "Bạn đã hoàn thành bài học và tăng điểm nhà cung cấp của mình.",
+    "earned": "Bạn đã kiếm được:",
+    "points": "{{điểm}} Điểm nhà cung cấp",
+    "continue": "Tiếp tục đến Bảng điều khiển"
   },
   "error": {
-    "title": "[vi] Something went wrong",
-    "message": "[vi] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[vi] View Error Details",
-    "return": "[vi] Return to Dashboard"
+    "title": "Đã xảy ra sự cố",
+    "message": "Chúng tôi xin lỗi vì sự bất tiện này. Đã xảy ra lỗi kỹ thuật trong khi cố gắng tải bài học này.",
+    "details": "Xem chi tiết lỗi",
+    "return": "Quay lại Bảng điều khiển"
   }
 }

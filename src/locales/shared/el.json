@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[el] +{{points}} Pts"
+    "points_earned": "+{{πόντοι}} πόντοι"
   },
   "progress": {
-    "lesson_progress": "[el] Lesson Progress",
-    "completed": "[el] {{percent}}% Completed"
+    "lesson_progress": "Πρόοδος μαθήματος",
+    "completed": "{{percent}}% Ολοκληρώθηκε"
   },
   "overview": {
-    "default_title": "[el] About this Lesson",
-    "points": "[el] {{points}} Points"
+    "default_title": "Σχετικά με αυτό το μάθημα",
+    "points": "{{πόντοι}} Πόντοι"
   },
   "video": {
-    "lesson_duration": "[el] Video Lesson • {{duration}}",
-    "streaming": "[el] Streaming Video...",
-    "simulation": "[el] Simulation is playing. Click reset to watch again.",
-    "reset": "[el] Reset Video"
+    "lesson_duration": "Βίντεο Μάθημα • {{duration}}",
+    "streaming": "Ροή βίντεο...",
+    "simulation": "Η προσομοίωση παίζει. Κάντε κλικ στην επαναφορά για να παρακολουθήσετε ξανά.",
+    "reset": "Επαναφορά βίντεο"
   },
   "scenario": {
-    "badge": "[el] Client Scenario",
-    "outcome": "[el] Outcome: "
+    "badge": "Σενάριο πελάτη",
+    "outcome": "Αποτέλεσμα: "
   },
   "quiz": {
-    "mcq_title": "[el] MCQ",
-    "submit": "[el] Submit",
-    "thank_you": "[el] Thank you for your response!",
-    "score": "[el] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[el] Correct Answer : ",
-    "your_answer": "[el] Your Answer : ",
-    "not_answered": "[el] Not answered",
-    "done": "[el] Done",
-    "try_again": "[el] Try Again",
-    "practice_question": "[el] Practice Question",
-    "submit_answer": "[el] Submit Answer",
-    "correct": "[el] Correct! ",
-    "incorrect": "[el] Incorrect. ",
-    "default_correct_feedback": "[el] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[el] Review the material and try again.",
-    "warning_watch_video": "[el] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Υποβολή",
+    "thank_you": "Σας ευχαριστώ για την απάντησή σας!",
+    "score": "Η βαθμολογία σας είναι: {{score}}/{{total}}.",
+    "correct_answer": "Σωστή Απάντηση : ",
+    "your_answer": "Η απάντησή σας : ",
+    "not_answered": "Δεν απαντήθηκε",
+    "done": "Έτοιμο",
+    "try_again": "Προσπάθησε ξανά",
+    "practice_question": "Ερώτηση εξάσκησης",
+    "submit_answer": "Υποβολή απάντησης",
+    "correct": "Σωστός! ",
+    "incorrect": "Λάθος. ",
+    "default_correct_feedback": "Μπράβο. Έχετε κερδίσει πόντους για αυτό το μάθημα.",
+    "default_incorrect_feedback": "Ελέγξτε το υλικό και δοκιμάστε ξανά.",
+    "warning_watch_video": "Παρακολουθήστε το βίντεο του μαθήματος για να ολοκληρώσετε αυτό το μάθημα."
   },
   "completion": {
-    "title": "[el] Congratulations!",
-    "subtitle": "[el] You completed the lesson and boosted your provider score.",
-    "earned": "[el] You Earned:",
-    "points": "[el] {{points}} Provider Points",
-    "continue": "[el] Continue to Dashboard"
+    "title": "Συγχαρητήρια!",
+    "subtitle": "Ολοκληρώσατε το μάθημα και ενισχύσατε τη βαθμολογία του παρόχου σας.",
+    "earned": "Κερδίσατε:",
+    "points": "{{πόντοι}} Πόντοι Παρόχου",
+    "continue": "Συνέχεια στον πίνακα ελέγχου"
   },
   "error": {
-    "title": "[el] Something went wrong",
-    "message": "[el] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[el] View Error Details",
-    "return": "[el] Return to Dashboard"
+    "title": "Κάτι πήγε στραβά",
+    "message": "Ζητούμε συγγνώμη για την αναστάτωση. Παρουσιάστηκε τεχνικό σφάλμα κατά την προσπάθεια φόρτωσης αυτού του μαθήματος.",
+    "details": "Προβολή λεπτομερειών σφάλματος",
+    "return": "Επιστροφή στον πίνακα ελέγχου"
   }
 }

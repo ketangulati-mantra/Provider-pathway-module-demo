@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[id] +{{points}} Pts"
+    "points_earned": "+{{poin}} Poin"
   },
   "progress": {
-    "lesson_progress": "[id] Lesson Progress",
-    "completed": "[id] {{percent}}% Completed"
+    "lesson_progress": "Kemajuan Pelajaran",
+    "completed": "{{persen}}% Selesai"
   },
   "overview": {
-    "default_title": "[id] About this Lesson",
-    "points": "[id] {{points}} Points"
+    "default_title": "Tentang Pelajaran ini",
+    "points": "{{poin}} Poin"
   },
   "video": {
-    "lesson_duration": "[id] Video Lesson • {{duration}}",
-    "streaming": "[id] Streaming Video...",
-    "simulation": "[id] Simulation is playing. Click reset to watch again.",
-    "reset": "[id] Reset Video"
+    "lesson_duration": "Pelajaran Video • {{durasi}}",
+    "streaming": "Video Streaming...",
+    "simulation": "Simulasi sedang dimainkan. Klik atur ulang untuk menonton lagi.",
+    "reset": "Atur ulang Video"
   },
   "scenario": {
-    "badge": "[id] Client Scenario",
-    "outcome": "[id] Outcome: "
+    "badge": "Skenario Klien",
+    "outcome": "Hasil: "
   },
   "quiz": {
-    "mcq_title": "[id] MCQ",
-    "submit": "[id] Submit",
-    "thank_you": "[id] Thank you for your response!",
-    "score": "[id] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[id] Correct Answer : ",
-    "your_answer": "[id] Your Answer : ",
-    "not_answered": "[id] Not answered",
-    "done": "[id] Done",
-    "try_again": "[id] Try Again",
-    "practice_question": "[id] Practice Question",
-    "submit_answer": "[id] Submit Answer",
-    "correct": "[id] Correct! ",
-    "incorrect": "[id] Incorrect. ",
-    "default_correct_feedback": "[id] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[id] Review the material and try again.",
-    "warning_watch_video": "[id] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Kirim",
+    "thank_you": "Terima kasih atas tanggapan Anda!",
+    "score": "Skor Anda adalah : {{score}}/{{total}}.",
+    "correct_answer": "Jawaban yang benar : ",
+    "your_answer": "Jawaban Anda : ",
+    "not_answered": "Tidak terjawab",
+    "done": "Selesai",
+    "try_again": "Coba lagi",
+    "practice_question": "Pertanyaan Latihan",
+    "submit_answer": "Kirim Jawaban",
+    "correct": "Benar! ",
+    "incorrect": "Salah. ",
+    "default_correct_feedback": "Bagus. Anda telah mendapatkan poin untuk pelajaran ini.",
+    "default_incorrect_feedback": "Tinjau materi dan coba lagi.",
+    "warning_watch_video": "Silakan tonton video pelajaran untuk menyelesaikan pelajaran ini."
   },
   "completion": {
-    "title": "[id] Congratulations!",
-    "subtitle": "[id] You completed the lesson and boosted your provider score.",
-    "earned": "[id] You Earned:",
-    "points": "[id] {{points}} Provider Points",
-    "continue": "[id] Continue to Dashboard"
+    "title": "Selamat!",
+    "subtitle": "Anda menyelesaikan pelajaran dan meningkatkan skor penyedia Anda.",
+    "earned": "Anda Mendapatkan:",
+    "points": "{{poin}} Poin Penyedia",
+    "continue": "Lanjutkan ke Dasbor"
   },
   "error": {
-    "title": "[id] Something went wrong",
-    "message": "[id] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[id] View Error Details",
-    "return": "[id] Return to Dashboard"
+    "title": "Ada yang tidak beres",
+    "message": "Kami mohon maaf atas ketidaknyamanan tersebut. Terjadi kesalahan teknis saat mencoba memuat pelajaran ini.",
+    "details": "Lihat Detail Kesalahan",
+    "return": "Kembali ke Dasbor"
   }
 }

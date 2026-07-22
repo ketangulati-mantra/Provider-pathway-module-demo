@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ru] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[ru] Lesson Progress",
-    "completed": "[ru] {{percent}}% Completed"
+    "lesson_progress": "Прогресс урока",
+    "completed": "{{percent}}% выполнено"
   },
   "overview": {
-    "default_title": "[ru] About this Lesson",
-    "points": "[ru] {{points}} Points"
+    "default_title": "Об этом уроке",
+    "points": "{{points}} Очки"
   },
   "video": {
-    "lesson_duration": "[ru] Video Lesson • {{duration}}",
-    "streaming": "[ru] Streaming Video...",
-    "simulation": "[ru] Simulation is playing. Click reset to watch again.",
-    "reset": "[ru] Reset Video"
+    "lesson_duration": "Видеоурок • {{duration}}",
+    "streaming": "Потоковое видео...",
+    "simulation": "Симуляция играет. Нажмите «сбросить», чтобы посмотреть снова.",
+    "reset": "Сброс видео"
   },
   "scenario": {
-    "badge": "[ru] Client Scenario",
-    "outcome": "[ru] Outcome: "
+    "badge": "Клиентский сценарий",
+    "outcome": "Результат: "
   },
   "quiz": {
-    "mcq_title": "[ru] MCQ",
-    "submit": "[ru] Submit",
-    "thank_you": "[ru] Thank you for your response!",
-    "score": "[ru] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ru] Correct Answer : ",
-    "your_answer": "[ru] Your Answer : ",
-    "not_answered": "[ru] Not answered",
-    "done": "[ru] Done",
-    "try_again": "[ru] Try Again",
-    "practice_question": "[ru] Practice Question",
-    "submit_answer": "[ru] Submit Answer",
-    "correct": "[ru] Correct! ",
-    "incorrect": "[ru] Incorrect. ",
-    "default_correct_feedback": "[ru] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ru] Review the material and try again.",
-    "warning_watch_video": "[ru] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Отправить",
+    "thank_you": "Спасибо за ваш ответ!",
+    "score": "Ваш счёт: {{score}}/{{total}}.",
+    "correct_answer": "Правильный ответ: ",
+    "your_answer": "Ваш ответ: ",
+    "not_answered": "Ответ не получил",
+    "done": "Готово",
+    "try_again": "Попробуй ещё раз",
+    "practice_question": "Практический вопрос",
+    "submit_answer": "Отправить ответ",
+    "correct": "Верно! ",
+    "incorrect": "Неверно. ",
+    "default_correct_feedback": "Молодец. Вы заработали баллы за этот урок.",
+    "default_incorrect_feedback": "Прочитайте материал и попробуйте снова.",
+    "warning_watch_video": "Пожалуйста, посмотрите видео урока, чтобы завершить этот урок."
   },
   "completion": {
-    "title": "[ru] Congratulations!",
-    "subtitle": "[ru] You completed the lesson and boosted your provider score.",
-    "earned": "[ru] You Earned:",
-    "points": "[ru] {{points}} Provider Points",
-    "continue": "[ru] Continue to Dashboard"
+    "title": "Поздравляю!",
+    "subtitle": "Вы завершили урок и повысили свой рейтинг по провайдеру.",
+    "earned": "Вы заслужили:",
+    "points": "{{points}} Очки поставщика",
+    "continue": "Продолжить на панель управления"
   },
   "error": {
-    "title": "[ru] Something went wrong",
-    "message": "[ru] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ru] View Error Details",
-    "return": "[ru] Return to Dashboard"
+    "title": "Что-то пошло не так",
+    "message": "Просим извинения за неудобства. При попытке загрузить этот урок произошла техническая ошибка.",
+    "details": "Подробнее об ошибках",
+    "return": "Вернуться на панель управления"
   }
 }

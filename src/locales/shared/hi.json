@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[hi] +{{points}} Pts"
+    "points_earned": "+{{अंक}} अंक"
   },
   "progress": {
-    "lesson_progress": "[hi] Lesson Progress",
-    "completed": "[hi] {{percent}}% Completed"
+    "lesson_progress": "पाठ प्रगति",
+    "completed": "{{प्रतिशत}}% पूरा हो गया"
   },
   "overview": {
-    "default_title": "[hi] About this Lesson",
-    "points": "[hi] {{points}} Points"
+    "default_title": "इस पाठ के बारे में",
+    "points": "{{अंक}} अंक"
   },
   "video": {
-    "lesson_duration": "[hi] Video Lesson • {{duration}}",
-    "streaming": "[hi] Streaming Video...",
-    "simulation": "[hi] Simulation is playing. Click reset to watch again.",
-    "reset": "[hi] Reset Video"
+    "lesson_duration": "वीडियो पाठ • {{अवधि}}",
+    "streaming": "स्ट्रीमिंग वीडियो...",
+    "simulation": "सिमुलेशन खेल रहा है। फिर से देखने के लिए रीसेट पर क्लिक करें।",
+    "reset": "वीडियो रीसेट करें"
   },
   "scenario": {
-    "badge": "[hi] Client Scenario",
-    "outcome": "[hi] Outcome: "
+    "badge": "ग्राहक परिदृश्य",
+    "outcome": "परिणाम: "
   },
   "quiz": {
-    "mcq_title": "[hi] MCQ",
-    "submit": "[hi] Submit",
-    "thank_you": "[hi] Thank you for your response!",
-    "score": "[hi] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[hi] Correct Answer : ",
-    "your_answer": "[hi] Your Answer : ",
-    "not_answered": "[hi] Not answered",
-    "done": "[hi] Done",
-    "try_again": "[hi] Try Again",
-    "practice_question": "[hi] Practice Question",
-    "submit_answer": "[hi] Submit Answer",
-    "correct": "[hi] Correct! ",
-    "incorrect": "[hi] Incorrect. ",
-    "default_correct_feedback": "[hi] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[hi] Review the material and try again.",
-    "warning_watch_video": "[hi] Please watch the lesson video to complete this lesson."
+    "mcq_title": "उत्तर और समाधान समाधान",
+    "submit": "जमा करें",
+    "thank_you": "आपकी प्रतिक्रिया के लिए धन्यवाद!",
+    "score": "आपका स्कोर है: {{score}}/{{total}}।",
+    "correct_answer": "सही उत्तर : ",
+    "your_answer": "आपका जवाब : ",
+    "not_answered": "उत्तर नहीं दिया गया",
+    "done": "हो गया",
+    "try_again": "पुन: प्रयास करें",
+    "practice_question": "अभ्यास प्रश्न",
+    "submit_answer": "उत्तर सबमिट करें",
+    "correct": "ग़लती बताना! ",
+    "incorrect": "ग़लत। ",
+    "default_correct_feedback": "बहुत बढ़िया। आपने इस पाठ के लिए अंक अर्जित किए हैं।",
+    "default_incorrect_feedback": "सामग्री की समीक्षा करें और पुन: प्रयास करें।",
+    "warning_watch_video": "इस पाठ को पूरा करने के लिए कृपया पाठ वीडियो देखें।"
   },
   "completion": {
-    "title": "[hi] Congratulations!",
-    "subtitle": "[hi] You completed the lesson and boosted your provider score.",
-    "earned": "[hi] You Earned:",
-    "points": "[hi] {{points}} Provider Points",
-    "continue": "[hi] Continue to Dashboard"
+    "title": "बधाई हो!",
+    "subtitle": "आपने पाठ पूरा किया और अपने प्रदाता स्कोर को बढ़ाया।",
+    "earned": "आपने कमाया:",
+    "points": "{{अंक}} प्रदाता अंक",
+    "continue": "डैशबोर्ड पर जारी रखें"
   },
   "error": {
-    "title": "[hi] Something went wrong",
-    "message": "[hi] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[hi] View Error Details",
-    "return": "[hi] Return to Dashboard"
+    "title": "कुछ गलत हो गया",
+    "message": "असुविधा के लिए हमें खेद है। इस पाठ को लोड करने का प्रयास करते समय कोई तकनीकी त्रुटि उत्पन्न हुई.",
+    "details": "त्रुटि विवरण देखें",
+    "return": "डैशबोर्ड पर लौटें"
   }
 }

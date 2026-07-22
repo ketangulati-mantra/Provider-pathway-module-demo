@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[he] +{{points}} Pts"
+    "points_earned": "+{{נקודות}} נקודות"
   },
   "progress": {
-    "lesson_progress": "[he] Lesson Progress",
-    "completed": "[he] {{percent}}% Completed"
+    "lesson_progress": "התקדמות השיעור",
+    "completed": "{{percent}}% הושלמו"
   },
   "overview": {
-    "default_title": "[he] About this Lesson",
-    "points": "[he] {{points}} Points"
+    "default_title": "על השיעור הזה",
+    "points": "{{נקודות}} נקודות"
   },
   "video": {
-    "lesson_duration": "[he] Video Lesson • {{duration}}",
-    "streaming": "[he] Streaming Video...",
-    "simulation": "[he] Simulation is playing. Click reset to watch again.",
-    "reset": "[he] Reset Video"
+    "lesson_duration": "שיעור וידאו • {{משך זמן}}",
+    "streaming": "וידאו סטרימינג...",
+    "simulation": "סימולציה מתנגנת. לחץ על איפוס כדי לצפות שוב.",
+    "reset": "איפוס וידאו"
   },
   "scenario": {
-    "badge": "[he] Client Scenario",
-    "outcome": "[he] Outcome: "
+    "badge": "תרחיש לקוח",
+    "outcome": "תוצאה: "
   },
   "quiz": {
-    "mcq_title": "[he] MCQ",
-    "submit": "[he] Submit",
-    "thank_you": "[he] Thank you for your response!",
-    "score": "[he] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[he] Correct Answer : ",
-    "your_answer": "[he] Your Answer : ",
-    "not_answered": "[he] Not answered",
-    "done": "[he] Done",
-    "try_again": "[he] Try Again",
-    "practice_question": "[he] Practice Question",
-    "submit_answer": "[he] Submit Answer",
-    "correct": "[he] Correct! ",
-    "incorrect": "[he] Incorrect. ",
-    "default_correct_feedback": "[he] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[he] Review the material and try again.",
-    "warning_watch_video": "[he] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "שלח",
+    "thank_you": "תודה על התגובה שלך!",
+    "score": "הציון שלך הוא: {{score}}/{{total}}.",
+    "correct_answer": "תשובה נכונה: ",
+    "your_answer": "התשובה שלך: ",
+    "not_answered": "לא נענה",
+    "done": "סגור",
+    "try_again": "נסה שוב",
+    "practice_question": "שאלת תרגול",
+    "submit_answer": "שלח תשובה",
+    "correct": "נכון! ",
+    "incorrect": "לא נכון. ",
+    "default_correct_feedback": "כל הכבוד. הרווחת נקודות על השיעור הזה.",
+    "default_incorrect_feedback": "עיין בחומר ונסה שוב.",
+    "warning_watch_video": "אנא צפו בסרטון השיעור כדי להשלים את השיעור."
   },
   "completion": {
-    "title": "[he] Congratulations!",
-    "subtitle": "[he] You completed the lesson and boosted your provider score.",
-    "earned": "[he] You Earned:",
-    "points": "[he] {{points}} Provider Points",
-    "continue": "[he] Continue to Dashboard"
+    "title": "מזל טוב!",
+    "subtitle": "סיימת את השיעור ושיפרת את הציון של הרופא שלך.",
+    "earned": "הרווחת:",
+    "points": "{{נקודות}} נקודות ספק",
+    "continue": "המשך ללוח הבקרה"
   },
   "error": {
-    "title": "[he] Something went wrong",
-    "message": "[he] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[he] View Error Details",
-    "return": "[he] Return to Dashboard"
+    "title": "משהו השתבש",
+    "message": "אנו מתנצלים על אי הנוחות. אירעה טעות טכנית בזמן שניסינו לטעון את השיעור הזה.",
+    "details": "הצג פרטי שגיאות",
+    "return": "חזרה ללוח הבקרה"
   }
 }

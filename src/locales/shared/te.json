@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[te] +{{points}} Pts"
+    "points_earned": "+{{పాయింట్స్}} పి.టి.ఎస్."
   },
   "progress": {
-    "lesson_progress": "[te] Lesson Progress",
-    "completed": "[te] {{percent}}% Completed"
+    "lesson_progress": "పాఠం పురోగతి",
+    "completed": "{{percent}}% పూర్తయింది"
   },
   "overview": {
-    "default_title": "[te] About this Lesson",
-    "points": "[te] {{points}} Points"
+    "default_title": "ఈ పాఠం గురించి",
+    "points": "{{పాయింట్లు}} పాయింట్లు"
   },
   "video": {
-    "lesson_duration": "[te] Video Lesson • {{duration}}",
-    "streaming": "[te] Streaming Video...",
-    "simulation": "[te] Simulation is playing. Click reset to watch again.",
-    "reset": "[te] Reset Video"
+    "lesson_duration": "వీడియో పాఠం • {{duration}}",
+    "streaming": "వీడియో స్ట్రీమింగ్ ...",
+    "simulation": "అనుకరణ ప్లే అవుతోంది. మళ్లీ చూడటం కొరకు రీసెట్ మీద క్లిక్ చేయండి.",
+    "reset": "వీడియోను రీసెట్ చేయండి"
   },
   "scenario": {
-    "badge": "[te] Client Scenario",
-    "outcome": "[te] Outcome: "
+    "badge": "క్లయింట్ దృష్టాంతం",
+    "outcome": "ఫలితం: "
   },
   "quiz": {
-    "mcq_title": "[te] MCQ",
-    "submit": "[te] Submit",
-    "thank_you": "[te] Thank you for your response!",
-    "score": "[te] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[te] Correct Answer : ",
-    "your_answer": "[te] Your Answer : ",
-    "not_answered": "[te] Not answered",
-    "done": "[te] Done",
-    "try_again": "[te] Try Again",
-    "practice_question": "[te] Practice Question",
-    "submit_answer": "[te] Submit Answer",
-    "correct": "[te] Correct! ",
-    "incorrect": "[te] Incorrect. ",
-    "default_correct_feedback": "[te] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[te] Review the material and try again.",
-    "warning_watch_video": "[te] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "సమర్పించండి",
+    "thank_you": "మీ ప్రతిస్పందనకు ధన్యవాదాలు!",
+    "score": "మీ స్కోరు : {{score}}/{{total}}.",
+    "correct_answer": "సరైన సమాధానం : ",
+    "your_answer": "మీ సమాధానం : ",
+    "not_answered": "సమాధానం ఇవ్వలేదు",
+    "done": "పూర్తయింది",
+    "try_again": "మళ్లీ ప్రయత్నించండి",
+    "practice_question": "ప్రాక్టీస్ ప్రశ్న",
+    "submit_answer": "సమాధానం సమర్పించండి",
+    "correct": "సరైనది! ",
+    "incorrect": "తప్పు. ",
+    "default_correct_feedback": "బాగుంది. ఈ పాఠం కొరకు మీరు పాయింట్ లను సంపాదించారు.",
+    "default_incorrect_feedback": "మెటీరియల్ ని సమీక్షించండి మరియు తిరిగి ప్రయత్నించండి.",
+    "warning_watch_video": "ఈ పాఠాన్ని పూర్తి చేయడం కొరకు దయచేసి లెసన్ వీడియోని చూడండి."
   },
   "completion": {
-    "title": "[te] Congratulations!",
-    "subtitle": "[te] You completed the lesson and boosted your provider score.",
-    "earned": "[te] You Earned:",
-    "points": "[te] {{points}} Provider Points",
-    "continue": "[te] Continue to Dashboard"
+    "title": "అభినందనలు!",
+    "subtitle": "మీరు పాఠాన్ని పూర్తి చేశారు మరియు మీ ప్రొవైడర్ స్కోరును పెంచారు.",
+    "earned": "మీరు సంపాదించారు:",
+    "points": "{{పాయింట్లు}} ప్రొవైడర్ పాయింట్లు",
+    "continue": "డ్యాష్ బోర్డ్ కు కొనసాగండి"
   },
   "error": {
-    "title": "[te] Something went wrong",
-    "message": "[te] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[te] View Error Details",
-    "return": "[te] Return to Dashboard"
+    "title": "ఏదో తప్పు జరిగింది",
+    "message": "మీకు కలిగిన అసౌకర్యానికి మమ్మల్ని క్షమాపణలు కోరుతున్నాం. ఈ పాఠాన్ని లోడ్ చేయడానికి ప్రయత్నిస్తున్నప్పుడు సాంకేతిక దోషం సంభవించింది.",
+    "details": "దోష వివరాలను వీక్షించండి",
+    "return": "డ్యాష్ బోర్డ్ కు తిరిగి వెళ్లండి"
   }
 }

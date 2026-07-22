@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ro] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[ro] Lesson Progress",
-    "completed": "[ro] {{percent}}% Completed"
+    "lesson_progress": "Progresul lecției",
+    "completed": "{{percent}}% finalizat"
   },
   "overview": {
-    "default_title": "[ro] About this Lesson",
-    "points": "[ro] {{points}} Points"
+    "default_title": "Despre această lecție",
+    "points": "{{points}} Puncte"
   },
   "video": {
-    "lesson_duration": "[ro] Video Lesson • {{duration}}",
-    "streaming": "[ro] Streaming Video...",
-    "simulation": "[ro] Simulation is playing. Click reset to watch again.",
-    "reset": "[ro] Reset Video"
+    "lesson_duration": "Lecție video • {{durată}}",
+    "streaming": "Video în streaming...",
+    "simulation": "Simularea se joacă. Apasă pe reset ca să urmărești din nou.",
+    "reset": "Resetare video"
   },
   "scenario": {
-    "badge": "[ro] Client Scenario",
-    "outcome": "[ro] Outcome: "
+    "badge": "Scenariul clientului",
+    "outcome": "Rezultat: "
   },
   "quiz": {
-    "mcq_title": "[ro] MCQ",
-    "submit": "[ro] Submit",
-    "thank_you": "[ro] Thank you for your response!",
-    "score": "[ro] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ro] Correct Answer : ",
-    "your_answer": "[ro] Your Answer : ",
-    "not_answered": "[ro] Not answered",
-    "done": "[ro] Done",
-    "try_again": "[ro] Try Again",
-    "practice_question": "[ro] Practice Question",
-    "submit_answer": "[ro] Submit Answer",
-    "correct": "[ro] Correct! ",
-    "incorrect": "[ro] Incorrect. ",
-    "default_correct_feedback": "[ro] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ro] Review the material and try again.",
-    "warning_watch_video": "[ro] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Trimite",
+    "thank_you": "Mulțumesc pentru răspuns!",
+    "score": "Scorul tău este: {{score}}/{{total}}.",
+    "correct_answer": "Răspuns corect: ",
+    "your_answer": "Răspunsul tău: ",
+    "not_answered": "Nerăspuns",
+    "done": "Gata",
+    "try_again": "Încearcă din nou",
+    "practice_question": "Întrebare de practică",
+    "submit_answer": "Trimite răspuns",
+    "correct": "Corect! ",
+    "incorrect": "Incorect. ",
+    "default_correct_feedback": "Bravo. Ai câștigat puncte pentru această lecție.",
+    "default_incorrect_feedback": "Revizuiește materialul și încearcă din nou.",
+    "warning_watch_video": "Vă rugăm să urmăriți videoclipul lecției pentru a finaliza această lecție."
   },
   "completion": {
-    "title": "[ro] Congratulations!",
-    "subtitle": "[ro] You completed the lesson and boosted your provider score.",
-    "earned": "[ro] You Earned:",
-    "points": "[ro] {{points}} Provider Points",
-    "continue": "[ro] Continue to Dashboard"
+    "title": "Felicitări!",
+    "subtitle": "Ai terminat lecția și ți-ai crescut scorul la furnizor.",
+    "earned": "Ai câștigat:",
+    "points": "{{points}} Puncte de furnizor",
+    "continue": "Continuă la Dashboard"
   },
   "error": {
-    "title": "[ro] Something went wrong",
-    "message": "[ro] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ro] View Error Details",
-    "return": "[ro] Return to Dashboard"
+    "title": "Ceva a mers prost",
+    "message": "Ne cerem scuze pentru inconvenient. A apărut o eroare tehnică în timp ce încercam să încarc această lecție.",
+    "details": "Vezi detaliile erorii",
+    "return": "Întoarcerea la Dashboard"
   }
 }

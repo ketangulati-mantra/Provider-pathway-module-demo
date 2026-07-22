@@ -39,7 +39,13 @@ async function translateText(texts, targetLang) {
     return texts.map(t => `[${targetLang}] ${t}`);
   }
 
-  const url = `${ENDPOINT}/translate?api-version=3.0&from=en&to=${targetLang}`;
+  const map = {
+    'tl': 'fil',
+    'no': 'nb'
+  };
+  const azureLang = map[targetLang] || targetLang;
+
+  const url = `${ENDPOINT}/translate?api-version=3.0&from=en&to=${azureLang}`;
   
   try {
     const response = await axios({
@@ -56,7 +62,7 @@ async function translateText(texts, targetLang) {
     });
     return response.data.map(d => d.translations[0].text);
   } catch (error) {
-    console.error(`Azure Translation API Error for ${targetLang}:`, error.response?.data || error.message);
+    console.error(`Azure Translation API Error for ${targetLang}:`, JSON.stringify(error.response?.data, null, 2) || error.message);
     throw error;
   }
 }

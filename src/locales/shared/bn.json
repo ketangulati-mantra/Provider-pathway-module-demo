@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[bn] +{{points}} Pts"
+    "points_earned": "+{{পয়েন্ট}} পিটিএস"
   },
   "progress": {
-    "lesson_progress": "[bn] Lesson Progress",
-    "completed": "[bn] {{percent}}% Completed"
+    "lesson_progress": "পাঠের অগ্রগতি",
+    "completed": "{{শতাংশ}}% সম্পন্ন হয়েছে"
   },
   "overview": {
-    "default_title": "[bn] About this Lesson",
-    "points": "[bn] {{points}} Points"
+    "default_title": "এই পাঠ সম্পর্কে",
+    "points": "{{পয়েন্ট}} পয়েন্ট"
   },
   "video": {
-    "lesson_duration": "[bn] Video Lesson • {{duration}}",
-    "streaming": "[bn] Streaming Video...",
-    "simulation": "[bn] Simulation is playing. Click reset to watch again.",
-    "reset": "[bn] Reset Video"
+    "lesson_duration": "ভিডিও পাঠ • {{duration}}",
+    "streaming": "স্ট্রিমিং ভিডিও...",
+    "simulation": "সিমুলেশন প্লে হচ্ছে। আবার দেখতে রিসেট ক্লিক করুন।",
+    "reset": "ভিডিও রিসেট করুন"
   },
   "scenario": {
-    "badge": "[bn] Client Scenario",
-    "outcome": "[bn] Outcome: "
+    "badge": "ক্লায়েন্ট দৃশ্যপট",
+    "outcome": "ফলাফল: "
   },
   "quiz": {
-    "mcq_title": "[bn] MCQ",
-    "submit": "[bn] Submit",
-    "thank_you": "[bn] Thank you for your response!",
-    "score": "[bn] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[bn] Correct Answer : ",
-    "your_answer": "[bn] Your Answer : ",
-    "not_answered": "[bn] Not answered",
-    "done": "[bn] Done",
-    "try_again": "[bn] Try Again",
-    "practice_question": "[bn] Practice Question",
-    "submit_answer": "[bn] Submit Answer",
-    "correct": "[bn] Correct! ",
-    "incorrect": "[bn] Incorrect. ",
-    "default_correct_feedback": "[bn] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[bn] Review the material and try again.",
-    "warning_watch_video": "[bn] Please watch the lesson video to complete this lesson."
+    "mcq_title": "এমসিকিউ",
+    "submit": "জমা দিন",
+    "thank_you": "আপনার প্রতিক্রিয়ার জন্য আপনাকে ধন্যবাদ!",
+    "score": "আপনার স্কোর হল: {{স্কোর}}/{{মোট}}।",
+    "correct_answer": "সঠিক উত্তর : ",
+    "your_answer": "আপনার উত্তর : ",
+    "not_answered": "উত্তর দেওয়া হয়নি",
+    "done": "হয়ে গেছে",
+    "try_again": "আবার চেষ্টা করুন",
+    "practice_question": "অনুশীলন প্রশ্ন",
+    "submit_answer": "উত্তর জমা দিন",
+    "correct": "সঠিক! ",
+    "incorrect": "ভুল। ",
+    "default_correct_feedback": "সাবাশ। আপনি এই পাঠ্যক্রমের জন্য পয়েন্ট অর্জন করেছেন।",
+    "default_incorrect_feedback": "উপাদানটি পর্যালোচনা করুন এবং আবার চেষ্টা করুন।",
+    "warning_watch_video": "এই পাঠটি সম্পূর্ণ করতে দয়া করে পাঠের ভিডিওটি দেখুন।"
   },
   "completion": {
-    "title": "[bn] Congratulations!",
-    "subtitle": "[bn] You completed the lesson and boosted your provider score.",
-    "earned": "[bn] You Earned:",
-    "points": "[bn] {{points}} Provider Points",
-    "continue": "[bn] Continue to Dashboard"
+    "title": "অভিনন্দন!",
+    "subtitle": "আপনি পাঠ্যক্রমটি সম্পূর্ণ করেছেন এবং আপনার সরবরাহকারীর স্কোর বাড়িয়েছেন।",
+    "earned": "আপনি উপার্জন করেছেন:",
+    "points": "{{পয়েন্ট}} সরবরাহকারী পয়েন্ট",
+    "continue": "ড্যাশবোর্ডে চালিয়ে যান"
   },
   "error": {
-    "title": "[bn] Something went wrong",
-    "message": "[bn] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[bn] View Error Details",
-    "return": "[bn] Return to Dashboard"
+    "title": "কিছু একটা গন্ডগোল হয়েছে",
+    "message": "অসুবিধার জন্য আমরা ক্ষমাপ্রার্থী। এই পাঠ্যক্রমটি লোড করার চেষ্টা করার সময় একটি প্রযুক্তিগত ত্রুটি ঘটেছে।",
+    "details": "ত্রুটির বিবরণ দেখুন",
+    "return": "ড্যাশবোর্ডে ফিরে যান"
   }
 }

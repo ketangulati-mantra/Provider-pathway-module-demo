@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[pl] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[pl] Lesson Progress",
-    "completed": "[pl] {{percent}}% Completed"
+    "lesson_progress": "Postępy lekcji",
+    "completed": "{{percent}}% Ukończone"
   },
   "overview": {
-    "default_title": "[pl] About this Lesson",
-    "points": "[pl] {{points}} Points"
+    "default_title": "O tej lekcji",
+    "points": "{{points}} Punkty"
   },
   "video": {
-    "lesson_duration": "[pl] Video Lesson • {{duration}}",
-    "streaming": "[pl] Streaming Video...",
-    "simulation": "[pl] Simulation is playing. Click reset to watch again.",
-    "reset": "[pl] Reset Video"
+    "lesson_duration": "Lekcja wideo • {{duration}}",
+    "streaming": "Streaming wideo...",
+    "simulation": "Symulacja się rozgrywa. Kliknij reset, aby obejrzeć ponownie.",
+    "reset": "Reset Video"
   },
   "scenario": {
-    "badge": "[pl] Client Scenario",
-    "outcome": "[pl] Outcome: "
+    "badge": "Scenariusz klienta",
+    "outcome": "Wynik: "
   },
   "quiz": {
-    "mcq_title": "[pl] MCQ",
-    "submit": "[pl] Submit",
-    "thank_you": "[pl] Thank you for your response!",
-    "score": "[pl] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[pl] Correct Answer : ",
-    "your_answer": "[pl] Your Answer : ",
-    "not_answered": "[pl] Not answered",
-    "done": "[pl] Done",
-    "try_again": "[pl] Try Again",
-    "practice_question": "[pl] Practice Question",
-    "submit_answer": "[pl] Submit Answer",
-    "correct": "[pl] Correct! ",
-    "incorrect": "[pl] Incorrect. ",
-    "default_correct_feedback": "[pl] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[pl] Review the material and try again.",
-    "warning_watch_video": "[pl] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Zgłoś",
+    "thank_you": "Dziękuję za odpowiedź!",
+    "score": "Twój wynik to: {{score}}/{{total}}.",
+    "correct_answer": "Poprawna odpowiedź: ",
+    "your_answer": "Twoja odpowiedź: ",
+    "not_answered": "Nie odpowiedziano",
+    "done": "Gotowe",
+    "try_again": "Spróbuj ponownie",
+    "practice_question": "Pytanie ćwiczeniowe",
+    "submit_answer": "Wyślij odpowiedź",
+    "correct": "Zgadza się! ",
+    "incorrect": "Nieprawda. ",
+    "default_correct_feedback": "Dobra robota. Zdobyłeś punkty za tę lekcję.",
+    "default_incorrect_feedback": "Przejrzyj materiał i spróbuj ponownie.",
+    "warning_watch_video": "Proszę, obejrzyj film z lekcji, aby ukończyć tę lekcję."
   },
   "completion": {
-    "title": "[pl] Congratulations!",
-    "subtitle": "[pl] You completed the lesson and boosted your provider score.",
-    "earned": "[pl] You Earned:",
-    "points": "[pl] {{points}} Provider Points",
-    "continue": "[pl] Continue to Dashboard"
+    "title": "Gratulacje!",
+    "subtitle": "Ukończyłeś lekcję i podniósłeś wynik swojego świadczeniodawcy.",
+    "earned": "Zasłużyłeś:",
+    "points": "{{points}} Punkty dla dostawców",
+    "continue": "Przejdź do Dashboardu"
   },
   "error": {
-    "title": "[pl] Something went wrong",
-    "message": "[pl] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[pl] View Error Details",
-    "return": "[pl] Return to Dashboard"
+    "title": "Coś poszło nie tak",
+    "message": "Przepraszamy za niedogodności. Podczas próby ładowania tej lekcji wystąpił błąd techniczny.",
+    "details": "Zobacz szczegóły błędów",
+    "return": "Powrót do pulpitu"
   }
 }

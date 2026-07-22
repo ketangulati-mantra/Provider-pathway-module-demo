@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ur] +{{points}} Pts"
+    "points_earned": "+{{پوائنٹس}} پوائنٹس"
   },
   "progress": {
-    "lesson_progress": "[ur] Lesson Progress",
-    "completed": "[ur] {{percent}}% Completed"
+    "lesson_progress": "سبق کی پیش رفت",
+    "completed": "{{percent}}٪ مکمل"
   },
   "overview": {
-    "default_title": "[ur] About this Lesson",
-    "points": "[ur] {{points}} Points"
+    "default_title": "اس سبق کے بارے میں",
+    "points": "{{پوائنٹس}} پوائنٹس"
   },
   "video": {
-    "lesson_duration": "[ur] Video Lesson • {{duration}}",
-    "streaming": "[ur] Streaming Video...",
-    "simulation": "[ur] Simulation is playing. Click reset to watch again.",
-    "reset": "[ur] Reset Video"
+    "lesson_duration": "ویڈیو سبق • {{دورانیہ}}",
+    "streaming": "ویڈیو اسٹریمنگ...",
+    "simulation": "سیمولیشن چل رہی ہے۔ دوبارہ دیکھنے کے لیے ری سیٹ پر کلک کریں۔",
+    "reset": "ویڈیو کو ری سیٹ کریں"
   },
   "scenario": {
-    "badge": "[ur] Client Scenario",
-    "outcome": "[ur] Outcome: "
+    "badge": "کلائنٹ منظرنامہ",
+    "outcome": "نتیجہ: "
   },
   "quiz": {
-    "mcq_title": "[ur] MCQ",
-    "submit": "[ur] Submit",
-    "thank_you": "[ur] Thank you for your response!",
-    "score": "[ur] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ur] Correct Answer : ",
-    "your_answer": "[ur] Your Answer : ",
-    "not_answered": "[ur] Not answered",
-    "done": "[ur] Done",
-    "try_again": "[ur] Try Again",
-    "practice_question": "[ur] Practice Question",
-    "submit_answer": "[ur] Submit Answer",
-    "correct": "[ur] Correct! ",
-    "incorrect": "[ur] Incorrect. ",
-    "default_correct_feedback": "[ur] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ur] Review the material and try again.",
-    "warning_watch_video": "[ur] Please watch the lesson video to complete this lesson."
+    "mcq_title": "ایم سی کیو",
+    "submit": "جمع کروائیں",
+    "thank_you": "آپ کے جواب کا شکریہ!",
+    "score": "آپ کا اسکور ہے: {{score}}/{{total}}۔",
+    "correct_answer": "درست جواب: ",
+    "your_answer": "آپ کا جواب: ",
+    "not_answered": "جواب نہیں دیا گیا",
+    "done": "ہو گیا",
+    "try_again": "دوبارہ کوشش کرو",
+    "practice_question": "پریکٹس سوال",
+    "submit_answer": "جواب جمع کروائیں",
+    "correct": "درست! ",
+    "incorrect": "غلط۔ ",
+    "default_correct_feedback": "شاباش۔ آپ نے اس سبق کے لیے پوائنٹس حاصل کیے ہیں۔",
+    "default_incorrect_feedback": "مواد کا جائزہ لیں اور دوبارہ کوشش کریں۔",
+    "warning_watch_video": "براہ کرم اس سبق کو مکمل کرنے کے لیے سبق کی ویڈیو دیکھیں۔"
   },
   "completion": {
-    "title": "[ur] Congratulations!",
-    "subtitle": "[ur] You completed the lesson and boosted your provider score.",
-    "earned": "[ur] You Earned:",
-    "points": "[ur] {{points}} Provider Points",
-    "continue": "[ur] Continue to Dashboard"
+    "title": "مبارک ہو!",
+    "subtitle": "آپ نے سبق مکمل کیا اور اپنے فراہم کنندہ کا اسکور بڑھایا۔",
+    "earned": "آپ نے کمائی ہے:",
+    "points": "{{پوائنٹس}} پرووائیڈر پوائنٹس",
+    "continue": "ڈیش بورڈ پر جاری رکھیں"
   },
   "error": {
-    "title": "[ur] Something went wrong",
-    "message": "[ur] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ur] View Error Details",
-    "return": "[ur] Return to Dashboard"
+    "title": "کچھ غلط ہو گیا",
+    "message": "ہم اس تکلیف کے لیے معذرت خواہ ہیں۔ اس سبق کو لوڈ کرنے کی کوشش میں ایک تکنیکی خرابی پیش آئی۔",
+    "details": "ایرر کی تفصیلات دیکھیں",
+    "return": "ڈیش بورڈ پر واپس جائیں"
   }
 }

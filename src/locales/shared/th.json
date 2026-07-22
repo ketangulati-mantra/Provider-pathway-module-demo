@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[th] +{{points}} Pts"
+    "points_earned": "+{{คะแนน}} คะแนน"
   },
   "progress": {
-    "lesson_progress": "[th] Lesson Progress",
-    "completed": "[th] {{percent}}% Completed"
+    "lesson_progress": "ความคืบหน้าของบทเรียน",
+    "completed": "{{percent}}% เสร็จสมบูรณ์"
   },
   "overview": {
-    "default_title": "[th] About this Lesson",
-    "points": "[th] {{points}} Points"
+    "default_title": "เกี่ยวกับบทเรียนนี้",
+    "points": "{{คะแนน}} คะแนน"
   },
   "video": {
-    "lesson_duration": "[th] Video Lesson • {{duration}}",
-    "streaming": "[th] Streaming Video...",
-    "simulation": "[th] Simulation is playing. Click reset to watch again.",
-    "reset": "[th] Reset Video"
+    "lesson_duration": "บทเรียนวิดีโอ • {{duration}}",
+    "streaming": "สตรีมมิ่งวิดีโอ...",
+    "simulation": "การจําลองกําลังเล่น คลิกรีเซ็ตเพื่อดูอีกครั้ง",
+    "reset": "รีเซ็ตวิดีโอ"
   },
   "scenario": {
-    "badge": "[th] Client Scenario",
-    "outcome": "[th] Outcome: "
+    "badge": "สถานการณ์ของลูกค้า",
+    "outcome": "ผลลัพธ์: "
   },
   "quiz": {
-    "mcq_title": "[th] MCQ",
-    "submit": "[th] Submit",
-    "thank_you": "[th] Thank you for your response!",
-    "score": "[th] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[th] Correct Answer : ",
-    "your_answer": "[th] Your Answer : ",
-    "not_answered": "[th] Not answered",
-    "done": "[th] Done",
-    "try_again": "[th] Try Again",
-    "practice_question": "[th] Practice Question",
-    "submit_answer": "[th] Submit Answer",
-    "correct": "[th] Correct! ",
-    "incorrect": "[th] Incorrect. ",
-    "default_correct_feedback": "[th] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[th] Review the material and try again.",
-    "warning_watch_video": "[th] Please watch the lesson video to complete this lesson."
+    "mcq_title": "เอ็มซีคิว",
+    "submit": "ส่ง",
+    "thank_you": "ขอบคุณสําหรับการตอบกลับของคุณ!",
+    "score": "คะแนนของคุณคือ : {{score}}/{{total}}",
+    "correct_answer": "คําตอบที่ถูกต้อง : ",
+    "your_answer": "คําตอบของคุณ : ",
+    "not_answered": "ไม่ได้รับคําตอบ",
+    "done": "เสร็จสิ้น",
+    "try_again": "ลองอีกครั้ง",
+    "practice_question": "คําถามฝึกหัด",
+    "submit_answer": "ส่งคําตอบ",
+    "correct": "ถูกต้อง! ",
+    "incorrect": "ไม่ถูกต้อง ",
+    "default_correct_feedback": "ทําได้ดี. คุณได้รับคะแนนจากบทเรียนนี้",
+    "default_incorrect_feedback": "ตรวจสอบเนื้อหาแล้วลองอีกครั้ง",
+    "warning_watch_video": "โปรดดูวีดิทัศน์บทเรียนเพื่อจบบทเรียนนี้"
   },
   "completion": {
-    "title": "[th] Congratulations!",
-    "subtitle": "[th] You completed the lesson and boosted your provider score.",
-    "earned": "[th] You Earned:",
-    "points": "[th] {{points}} Provider Points",
-    "continue": "[th] Continue to Dashboard"
+    "title": "ขอแสดงความยินดี!",
+    "subtitle": "คุณเรียนจบและเพิ่มคะแนนผู้ให้บริการของคุณ",
+    "earned": "คุณได้รับ:",
+    "points": "{{คะแนน}} คะแนนผู้ให้บริการ",
+    "continue": "ดําเนินการต่อไปยังแดชบอร์ด"
   },
   "error": {
-    "title": "[th] Something went wrong",
-    "message": "[th] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[th] View Error Details",
-    "return": "[th] Return to Dashboard"
+    "title": "มีบางอย่างผิดพลาด",
+    "message": "ขออภัยในความไม่สะดวกมา ณ ที่นี้ เกิดข้อผิดพลาดทางเทคนิคขณะพยายามโหลดบทเรียนนี้",
+    "details": "ดูรายละเอียดข้อผิดพลาด",
+    "return": "กลับไปที่แดชบอร์ด"
   }
 }

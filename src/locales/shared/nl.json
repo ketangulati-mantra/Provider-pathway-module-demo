@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[nl] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[nl] Lesson Progress",
-    "completed": "[nl] {{percent}}% Completed"
+    "lesson_progress": "Voortgang van de les",
+    "completed": "{{percent}}% voltooid"
   },
   "overview": {
-    "default_title": "[nl] About this Lesson",
-    "points": "[nl] {{points}} Points"
+    "default_title": "Over deze les",
+    "points": "{{points}} Punten"
   },
   "video": {
-    "lesson_duration": "[nl] Video Lesson • {{duration}}",
-    "streaming": "[nl] Streaming Video...",
-    "simulation": "[nl] Simulation is playing. Click reset to watch again.",
-    "reset": "[nl] Reset Video"
+    "lesson_duration": "Videoles • {{duration}}",
+    "streaming": "Streaming Video...",
+    "simulation": "Simulatie is spelen. Klik op resetten om opnieuw te kijken.",
+    "reset": "Video resetten"
   },
   "scenario": {
-    "badge": "[nl] Client Scenario",
-    "outcome": "[nl] Outcome: "
+    "badge": "Klantscenario",
+    "outcome": "Resultaat: "
   },
   "quiz": {
-    "mcq_title": "[nl] MCQ",
-    "submit": "[nl] Submit",
-    "thank_you": "[nl] Thank you for your response!",
-    "score": "[nl] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[nl] Correct Answer : ",
-    "your_answer": "[nl] Your Answer : ",
-    "not_answered": "[nl] Not answered",
-    "done": "[nl] Done",
-    "try_again": "[nl] Try Again",
-    "practice_question": "[nl] Practice Question",
-    "submit_answer": "[nl] Submit Answer",
-    "correct": "[nl] Correct! ",
-    "incorrect": "[nl] Incorrect. ",
-    "default_correct_feedback": "[nl] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[nl] Review the material and try again.",
-    "warning_watch_video": "[nl] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Indienen",
+    "thank_you": "Bedankt voor je reactie!",
+    "score": "Je score is: {{score}}/{{total}}.",
+    "correct_answer": "Correct antwoord: ",
+    "your_answer": "Uw antwoord: ",
+    "not_answered": "Niet beantwoord",
+    "done": "Klaar",
+    "try_again": "Probeer het nog eens",
+    "practice_question": "Oefenvraag",
+    "submit_answer": "Stuur antwoord in",
+    "correct": "Klopt! ",
+    "incorrect": "Onjuist. ",
+    "default_correct_feedback": "Goed gedaan. Je hebt punten verdiend voor deze les.",
+    "default_incorrect_feedback": "Bekijk het materiaal en probeer het opnieuw.",
+    "warning_watch_video": "Bekijk alsjeblieft de lesvideo om deze les af te ronden."
   },
   "completion": {
-    "title": "[nl] Congratulations!",
-    "subtitle": "[nl] You completed the lesson and boosted your provider score.",
-    "earned": "[nl] You Earned:",
-    "points": "[nl] {{points}} Provider Points",
-    "continue": "[nl] Continue to Dashboard"
+    "title": "Gefeliciteerd!",
+    "subtitle": "Je hebt de les afgerond en je score van de zorgverlener verhoogd.",
+    "earned": "Je hebt verdiend:",
+    "points": "{{points}} Aanbiederspunten",
+    "continue": "Ga verder naar het dashboard"
   },
   "error": {
-    "title": "[nl] Something went wrong",
-    "message": "[nl] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[nl] View Error Details",
-    "return": "[nl] Return to Dashboard"
+    "title": "Er ging iets mis",
+    "message": "Onze excuses voor het ongemak. Er deed zich een technische fout voor tijdens het laden van deze les.",
+    "details": "Foutgegevens bekijken",
+    "return": "Terug naar dashboard"
   }
 }

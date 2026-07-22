@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[ta] +{{points}} Pts"
+    "points_earned": "+{{புள்ளிகள்}} பி.டி.எஸ்"
   },
   "progress": {
-    "lesson_progress": "[ta] Lesson Progress",
-    "completed": "[ta] {{percent}}% Completed"
+    "lesson_progress": "பாட முன்னேற்றம்",
+    "completed": "{{percent}}% முடிந்தது"
   },
   "overview": {
-    "default_title": "[ta] About this Lesson",
-    "points": "[ta] {{points}} Points"
+    "default_title": "இந்த பாடம் பற்றி",
+    "points": "{{புள்ளிகள்}} புள்ளிகள்"
   },
   "video": {
-    "lesson_duration": "[ta] Video Lesson • {{duration}}",
-    "streaming": "[ta] Streaming Video...",
-    "simulation": "[ta] Simulation is playing. Click reset to watch again.",
-    "reset": "[ta] Reset Video"
+    "lesson_duration": "வீடியோ பாடம் • {{duration}}",
+    "streaming": "ஸ்ட்ரீமிங் வீடியோ...",
+    "simulation": "உருவகப்படுத்துதல் விளையாடுகிறது. மீண்டும் பார்க்க மீட்டமை என்பதைக் கிளிக் செய்யவும்.",
+    "reset": "வீடியோவை மீட்டமைக்கவும்"
   },
   "scenario": {
-    "badge": "[ta] Client Scenario",
-    "outcome": "[ta] Outcome: "
+    "badge": "வாடிக்கையாளர் காட்சி",
+    "outcome": "விளைவு: "
   },
   "quiz": {
-    "mcq_title": "[ta] MCQ",
-    "submit": "[ta] Submit",
-    "thank_you": "[ta] Thank you for your response!",
-    "score": "[ta] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[ta] Correct Answer : ",
-    "your_answer": "[ta] Your Answer : ",
-    "not_answered": "[ta] Not answered",
-    "done": "[ta] Done",
-    "try_again": "[ta] Try Again",
-    "practice_question": "[ta] Practice Question",
-    "submit_answer": "[ta] Submit Answer",
-    "correct": "[ta] Correct! ",
-    "incorrect": "[ta] Incorrect. ",
-    "default_correct_feedback": "[ta] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[ta] Review the material and try again.",
-    "warning_watch_video": "[ta] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "சமர்ப்பிக்கவும்",
+    "thank_you": "உங்கள் பதிலுக்கு நன்றி!",
+    "score": "உங்கள் மதிப்பெண் : {{score}}/{{total}}.",
+    "correct_answer": "சரியான விடை : ",
+    "your_answer": "உங்கள் பதில்: ",
+    "not_answered": "பதில் இல்லை",
+    "done": "முடிந்தது",
+    "try_again": "மீண்டும் முயற்சி செய்",
+    "practice_question": "பயிற்சி கேள்வி",
+    "submit_answer": "பதிலைச் சமர்ப்பிக்கவும்",
+    "correct": "சரியானது! ",
+    "incorrect": "தவறானது. ",
+    "default_correct_feedback": "நல்லது. இந்தப் பாடத்திற்கான புள்ளிகளைப் பெற்றுள்ளீர்கள்.",
+    "default_incorrect_feedback": "பொருளை மதிப்பாய்வு செய்து மீண்டும் முயற்சிக்கவும்.",
+    "warning_watch_video": "இந்தப் பாடத்தை முடிக்க பாட வீடியோவைப் பாருங்கள்."
   },
   "completion": {
-    "title": "[ta] Congratulations!",
-    "subtitle": "[ta] You completed the lesson and boosted your provider score.",
-    "earned": "[ta] You Earned:",
-    "points": "[ta] {{points}} Provider Points",
-    "continue": "[ta] Continue to Dashboard"
+    "title": "வாழ்த்துக்கள்!",
+    "subtitle": "நீங்கள் பாடத்தை முடித்து, உங்கள் வழங்குநரின் மதிப்பெண்ணை அதிகரித்துள்ளீர்கள்.",
+    "earned": "நீங்கள் சம்பாதித்தீர்கள்:",
+    "points": "{{புள்ளிகள்}} வழங்குநர் புள்ளிகள்",
+    "continue": "டாஷ்போர்டுக்குத் தொடரவும்"
   },
   "error": {
-    "title": "[ta] Something went wrong",
-    "message": "[ta] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[ta] View Error Details",
-    "return": "[ta] Return to Dashboard"
+    "title": "ஏதோ தவறு நடந்துவிட்டது",
+    "message": "அசௌகரியத்திற்கு மன்னிப்பு கேட்டுக்கொள்கிறோம். இந்தப் பாடத்தை ஏற்ற முயற்சிக்கும்போது தொழில்நுட்பப் பிழை ஏற்பட்டது.",
+    "details": "பிழை விவரங்களைக் காண்க",
+    "return": "டாஷ்போர்டுக்குத் திரும்பவும்"
   }
 }

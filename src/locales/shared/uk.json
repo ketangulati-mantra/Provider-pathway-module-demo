@@ -1,54 +1,54 @@
 {
   "header": {
-    "points_earned": "[uk] +{{points}} Pts"
+    "points_earned": "+{{points}} Pts"
   },
   "progress": {
-    "lesson_progress": "[uk] Lesson Progress",
-    "completed": "[uk] {{percent}}% Completed"
+    "lesson_progress": "Хід уроку",
+    "completed": "{{percent}}% виконано"
   },
   "overview": {
-    "default_title": "[uk] About this Lesson",
-    "points": "[uk] {{points}} Points"
+    "default_title": "Про цей урок",
+    "points": "{{points}} Очки"
   },
   "video": {
-    "lesson_duration": "[uk] Video Lesson • {{duration}}",
-    "streaming": "[uk] Streaming Video...",
-    "simulation": "[uk] Simulation is playing. Click reset to watch again.",
-    "reset": "[uk] Reset Video"
+    "lesson_duration": "Відеоурок • {{duration}}",
+    "streaming": "Потокове відео...",
+    "simulation": "Симуляція відтворюється. Натисніть «скинути», щоб переглянути ще раз.",
+    "reset": "Відео скидання"
   },
   "scenario": {
-    "badge": "[uk] Client Scenario",
-    "outcome": "[uk] Outcome: "
+    "badge": "Клієнтський сценарій",
+    "outcome": "Результат: "
   },
   "quiz": {
-    "mcq_title": "[uk] MCQ",
-    "submit": "[uk] Submit",
-    "thank_you": "[uk] Thank you for your response!",
-    "score": "[uk] Your Score is : {{score}}/{{total}}.",
-    "correct_answer": "[uk] Correct Answer : ",
-    "your_answer": "[uk] Your Answer : ",
-    "not_answered": "[uk] Not answered",
-    "done": "[uk] Done",
-    "try_again": "[uk] Try Again",
-    "practice_question": "[uk] Practice Question",
-    "submit_answer": "[uk] Submit Answer",
-    "correct": "[uk] Correct! ",
-    "incorrect": "[uk] Incorrect. ",
-    "default_correct_feedback": "[uk] Well done. You've earned points for this lesson.",
-    "default_incorrect_feedback": "[uk] Review the material and try again.",
-    "warning_watch_video": "[uk] Please watch the lesson video to complete this lesson."
+    "mcq_title": "MCQ",
+    "submit": "Подати",
+    "thank_you": "Дякую за вашу відповідь!",
+    "score": "Ваш бал: {{score}}/{{total}}.",
+    "correct_answer": "Правильна відповідь: ",
+    "your_answer": "Ваша відповідь: ",
+    "not_answered": "Не відповіли",
+    "done": "Готово",
+    "try_again": "Спробуйте ще раз",
+    "practice_question": "Практичне питання",
+    "submit_answer": "Надіслати відповідь",
+    "correct": "Вірно! ",
+    "incorrect": "Неправильно. ",
+    "default_correct_feedback": "Молодець. Ти заробив бали за цей урок.",
+    "default_incorrect_feedback": "Перегляньте матеріал і спробуйте ще раз.",
+    "warning_watch_video": "Будь ласка, перегляньте відео уроку, щоб завершити цей урок."
   },
   "completion": {
-    "title": "[uk] Congratulations!",
-    "subtitle": "[uk] You completed the lesson and boosted your provider score.",
-    "earned": "[uk] You Earned:",
-    "points": "[uk] {{points}} Provider Points",
-    "continue": "[uk] Continue to Dashboard"
+    "title": "Вітаю!",
+    "subtitle": "Ви завершили урок і підвищили свій бал провайдера.",
+    "earned": "Ви заслужили:",
+    "points": "{{points}} Бали постачальника",
+    "continue": "Продовжуйте до Dashboard"
   },
   "error": {
-    "title": "[uk] Something went wrong",
-    "message": "[uk] We apologize for the inconvenience. A technical error occurred while trying to load this lesson.",
-    "details": "[uk] View Error Details",
-    "return": "[uk] Return to Dashboard"
+    "title": "Щось пішло не так",
+    "message": "Просимо вибачення за незручності. Під час спроби завантажити цей урок сталася технічна помилка.",
+    "details": "Переглянути деталі помилок",
+    "return": "Повернутися до Dashboard"
   }
 }
