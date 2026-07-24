@@ -321,7 +321,7 @@ export const activities: Activity[] = [
     services: ['yoga'],
     title: 'Creating a Yoga Pathway for Your Client',
     rewardPoints: 5,
-    estimatedDuration: '2-3 min',
+    estimatedDuration: '5 min',
     route: '/task/yoga-pathway'
   },
   {
@@ -330,7 +330,7 @@ export const activities: Activity[] = [
     services: ['yoga'],
     title: 'Create a Personalized Yoga Routine for Different Client Needs',
     rewardPoints: 5,
-    estimatedDuration: '3-5 min',
+    estimatedDuration: '5 min',
     route: '/task/yoga-routine'
   },
   {
@@ -339,7 +339,7 @@ export const activities: Activity[] = [
     services: ['yoga'],
     title: 'Sharing In-Session Mindfulness or Breathing Exercises to Boost Engagement',
     rewardPoints: 5,
-    estimatedDuration: '2-3 min',
+    estimatedDuration: '5 min',
     route: '/task/yoga-mindfulness'
   },
   {
@@ -348,7 +348,7 @@ export const activities: Activity[] = [
     services: ['yoga'],
     title: 'Nudging Clients to Practice Daily',
     rewardPoints: 5,
-    estimatedDuration: '2-3 min',
+    estimatedDuration: '5 min',
     route: '/task/yoga-nudging'
   },
   {
@@ -357,7 +357,7 @@ export const activities: Activity[] = [
     services: ['yoga'],
     title: 'Refer Other Services like Fit, Diet, Physio etc.',
     rewardPoints: 5,
-    estimatedDuration: '2-3 min',
+    estimatedDuration: '5 min',
     route: '/task/yoga-refer-services'
   },
   {

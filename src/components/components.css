@@ -188,8 +188,9 @@
 }
 
 .overview-meta-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background: var(--bg-app);
   padding: 6px 12px;
@@ -198,6 +199,8 @@
   font-weight: 600;
   color: var(--text-main);
   border: 1px solid var(--border-color);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .overview-meta-badge.points {
@@ -1583,10 +1586,62 @@
   border: 1px solid #fde68a;
 }
 
+/* Completion Footer Banner Card */
+.academy-completion-footer-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #eef0f3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.completion-footer-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.completion-footer-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completion-footer-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-main);
+  margin: 0 0 4px;
+}
+
+.completion-footer-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
 /* ==========================================================================
    RESPONSIVE UTILITY CLASSES (Mobile overrides)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Prevent horizontal scrolling on mobile */
+  body, #root, .academy-layout {
+    overflow-x: hidden !important;
+  }
+
   .academy-main-container {
     padding: 16px 12px 40px !important;
   }
@@ -1606,7 +1661,7 @@
   }
   
   .academy-header-title {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
   }
   
   .academy-completion-card {
@@ -1623,10 +1678,48 @@
   }
 
   .academy-hero-card {
-    padding: 24px 16px !important;
+    padding: 20px 14px !important;
   }
   
   .hero-title {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Completion Card Footer Mobile Overrides */
+  .academy-completion-footer-card,
+  main > div[style*="display: flex"][style*="align-items: center"],
+  main > div[style*="display:flex"][style*="alignItems:'center'"] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    text-align: center !important;
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+
+  .completion-footer-icon-text,
+  .academy-completion-footer-card > div:first-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+
+  .academy-completion-footer-card button,
+  main > div[style*="display: flex"][style*="align-items: center"] button {
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  /* Grid column fallbacks for mobile */
+  div[style*="display: grid"],
+  div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Inline form & card container padding scaling */
+  div[style*="padding: '32px'"],
+  div[style*="padding: 32px"] {
+    padding: 16px !important;
   }
 }

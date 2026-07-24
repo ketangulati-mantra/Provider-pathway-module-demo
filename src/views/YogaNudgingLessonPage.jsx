@@ -8,8 +8,8 @@ import {
 } from '../components';
 import { CheckCircle2, Clock, Award, Target, MessageCircle, Users, PartyPopper, ShieldAlert } from 'lucide-react';
 
-const LESSON_ID     = 'yoga-nudging';
-const LESSON_TITLE  = 'Nudging Clients to Practice Daily';
+const LESSON_ID = 'yoga-nudging';
+const LESSON_TITLE = 'Nudging Clients to Practice Daily';
 const REWARD_POINTS = 5;
 
 const STEPS = [
@@ -19,7 +19,7 @@ const STEPS = [
     description: (
       <>
         During each session, recommend a realistic daily practice goal based on the client's schedule and experience level.
-        <br/><br/>
+        <br /><br />
         Examples include:
         <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
           <li>10–20 minutes of yoga</li>
@@ -27,7 +27,7 @@ const STEPS = [
           <li>A short morning stretching routine</li>
           <li>Evening relaxation practice</li>
         </ul>
-        <br/>
+        <br />
         Small, achievable goals improve long-term consistency.
       </>
     )
@@ -38,14 +38,14 @@ const STEPS = [
     description: (
       <>
         Use chat messages to gently remind clients to stay on track.
-        <br/><br/>
+        <br /><br />
         Examples:
         <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
           <li>"Have you completed today's yoga practice?"</li>
           <li>"A few mindful breaths can make a big difference today."</li>
           <li>"Keep your streak going—you're doing great!"</li>
         </ul>
-        <br/>
+        <br />
         Supportive reminders are more effective than pressure.
       </>
     )
@@ -56,7 +56,7 @@ const STEPS = [
     description: (
       <>
         Ask clients to send a quick update after completing their daily practice.
-        <br/><br/>
+        <br /><br />
         They can share:
         <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
           <li>A short message</li>
@@ -64,7 +64,7 @@ const STEPS = [
           <li>A progress update</li>
           <li>Questions or observations</li>
         </ul>
-        <br/>
+        <br />
         This helps reinforce commitment and keeps communication active.
       </>
     )
@@ -75,14 +75,14 @@ const STEPS = [
     description: (
       <>
         Recognize and appreciate client efforts whenever they practice regularly.
-        <br/><br/>
+        <br /><br />
         Examples:
         <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
           <li>Congratulate practice streaks</li>
           <li>Appreciate improvements</li>
           <li>Highlight positive changes in flexibility, energy, or stress levels</li>
         </ul>
-        <br/>
+        <br />
         Positive reinforcement increases motivation.
       </>
     )
@@ -93,7 +93,7 @@ const STEPS = [
     description: (
       <>
         If clients miss practice sessions, discuss what prevented them from practicing.
-        <br/><br/>
+        <br /><br />
         Together:
         <ul style={{ margin: '8px 0 0', paddingLeft: '20px', lineHeight: '1.6' }}>
           <li>Identify obstacles</li>
@@ -101,7 +101,7 @@ const STEPS = [
           <li>Suggest alternative timings</li>
           <li>Modify routines to fit their lifestyle</li>
         </ul>
-        <br/>
+        <br />
         The goal is to build a sustainable long-term habit rather than expecting perfection.
       </>
     )
@@ -110,10 +110,10 @@ const STEPS = [
 
 export default function YogaNudgingLessonPage({ onBack }) {
 
-  const { 
-    lessonProgress, 
-    showCelebrate, 
-    handleCloseCelebration, 
+  const {
+    lessonProgress,
+    showCelebrate,
+    handleCloseCelebration,
     handleActionComplete,
     actionDone
   } = useLessonCompletion(LESSON_ID, onBack, {

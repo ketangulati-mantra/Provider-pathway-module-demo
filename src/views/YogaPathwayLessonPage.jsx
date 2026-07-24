@@ -9,8 +9,8 @@ import {
 import { completeLesson, goToDashboard } from '../mantra';
 import { CheckCircle2, Clock, Award, MessageCircle, User, FileText, Smartphone, PlusCircle } from 'lucide-react';
 
-const LESSON_ID     = 'yoga-pathway';
-const LESSON_TITLE  = 'Creating a Yoga Pathway for Your Client';
+const LESSON_ID = 'yoga-pathway';
+const LESSON_TITLE = 'Creating a Yoga Pathway for Your Client';
 const REWARD_POINTS = 5;
 
 const STEPS = [
@@ -56,10 +56,10 @@ const STEPS = [
 
 export default function YogaPathwayLessonPage({ onBack }) {
 
-  const { 
-    lessonProgress, 
-    showCelebrate, 
-    handleCloseCelebration, 
+  const {
+    lessonProgress,
+    showCelebrate,
+    handleCloseCelebration,
     handleActionComplete,
     actionDone
   } = useLessonCompletion(LESSON_ID, onBack, {
@@ -182,60 +182,27 @@ export default function YogaPathwayLessonPage({ onBack }) {
         </div>
 
         {/* ── Completion card ─────────────────────────────────────── */}
-        <div style={{
-          background: '#ffffff',
-          borderRadius: '14px',
-          border: '1px solid #eef0f3',
-          boxShadow: '0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04)',
-          padding: '18px 24px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '14px',
-          marginTop: '12px'
-        }}>
-          <div style={{
-            width: 34, height: 34, borderRadius: '50%', flexShrink: 0,
-            background: 'var(--gradient-primary)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center'
-          }}>
-            <CheckCircle2 size={16} color="#fff" />
-          </div>
-          <div style={{ flex: 1 }}>
-            <p style={{
-              fontFamily: 'var(--font-heading)',
-              fontWeight: 700,
-              fontSize: '0.92rem',
-              color: 'var(--text-main)',
-              margin: '0 0 2px'
-            }}>
-              You're all set!
-            </p>
-            <p style={{
-              fontSize: '0.78rem',
-              color: 'var(--text-secondary)',
-              margin: 0,
-              lineHeight: '1.5'
-            }}>
-              You now know how to assign personalized yoga pathways to help your clients meet their goals.
-            </p>
+        <div className="academy-completion-footer-card">
+          <div className="completion-footer-icon-text">
+            <div className="completion-footer-icon">
+              <CheckCircle2 size={18} color="#fff" />
+            </div>
+            <div>
+              <p className="completion-footer-title">
+                You're all set!
+              </p>
+              <p className="completion-footer-desc">
+                You now know how to assign personalized yoga pathways to help your clients meet their goals.
+              </p>
+            </div>
           </div>
           <Button
             className="academy-btn-full"
             variant="primary"
             onClick={handleActionComplete}
             disabled={actionDone}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '5px',
-              padding: '8px 18px',
-              fontSize: '0.82rem',
-              whiteSpace: 'nowrap',
-              flexShrink: 0
-            }}
           >
-            <CheckCircle2 size={13} />
+            <CheckCircle2 size={14} />
             <span>{actionDone ? 'Complete' : 'Mark Lesson as Complete'}</span>
           </Button>
         </div>

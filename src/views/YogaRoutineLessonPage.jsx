@@ -90,7 +90,7 @@ const STEPS = [
     content: (
       <>
         <p style={{ margin: '0 0 12px' }}>Encourage clients to regularly share feedback to keep the routine optimal:</p>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '12px', marginBottom: '16px' }}>
           <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ Progress updates</div>
           <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ General feedback</div>
           <div style={{ background: '#f8fafc', padding: '12px', borderRadius: '8px', fontSize: '0.85rem', color: '#475569' }}>✓ Pain or discomfort</div>
@@ -164,18 +164,18 @@ export default function YogaRoutineLessonPage({ onBack }) {
                 }}
                 onClick={() => setActiveAccordion(isActive ? -1 : idx)}
               >
-                <div style={{ padding: '20px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: isActive ? '#f0f9ff' : '#fff' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <div style={{ padding: '16px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: isActive ? '#f0f9ff' : '#fff' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <div style={{ 
-                      width: '40px', height: '40px', borderRadius: '12px', 
+                      width: '36px', height: '36px', borderRadius: '10px', 
                       background: isActive ? 'var(--color-primary)' : '#f8fafc', 
                       color: isActive ? '#fff' : 'var(--color-primary)', 
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      transition: 'all 0.2s'
+                      transition: 'all 0.2s', flexShrink: 0
                     }}>
-                      <step.icon size={20} />
+                      <step.icon size={18} />
                     </div>
-                    <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', fontWeight: 700, margin: 0, color: isActive ? 'var(--color-primary)' : '#334155' }}>
+                    <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.05rem', fontWeight: 700, margin: 0, color: isActive ? 'var(--color-primary)' : '#334155' }}>
                       Step {idx + 1}: {step.title}
                     </h3>
                   </div>
@@ -183,7 +183,7 @@ export default function YogaRoutineLessonPage({ onBack }) {
                 </div>
                 
                 {isActive && (
-                  <div style={{ padding: '0 24px 24px 80px', background: '#fff' }}>
+                  <div style={{ padding: '0 20px 20px 20px', background: '#fff' }}>
                     <div style={{ color: '#334155', fontSize: '0.95rem', lineHeight: '1.6' }}>
                       {step.content}
                     </div>
@@ -195,24 +195,25 @@ export default function YogaRoutineLessonPage({ onBack }) {
         </div>
 
         {/* Completion card */}
-        <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #eef0f3', boxShadow: '0 4px 12px rgba(0,0,0,0.04)', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: '16px', marginTop: '16px' }}>
-          <div style={{ width: 40, height: 40, borderRadius: '50%', flexShrink: 0, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <CheckCircle2 size={20} color="#fff" />
-          </div>
-          <div style={{ flex: 1 }}>
-            <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--text-main)', margin: '0 0 4px' }}>
-              You're all set!
-            </p>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.5' }}>
-              You now know how to design personalized yoga routines tailored to each client's goals.
-            </p>
+        <div className="academy-completion-footer-card">
+          <div className="completion-footer-icon-text">
+            <div className="completion-footer-icon">
+              <CheckCircle2 size={20} color="#fff" />
+            </div>
+            <div>
+              <p className="completion-footer-title">
+                You're all set!
+              </p>
+              <p className="completion-footer-desc">
+                You now know how to design personalized yoga routines tailored to each client's goals.
+              </p>
+            </div>
           </div>
           <Button
             className="academy-btn-full"
             variant="primary"
             onClick={handleActionComplete}
             disabled={actionDone}
-            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', padding: '10px 20px', fontSize: '0.9rem', whiteSpace: 'nowrap', flexShrink: 0 }}
           >
             <CheckCircle2 size={16} />
             <span>{actionDone ? 'Complete' : 'Mark Lesson as Complete'}</span>

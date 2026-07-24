@@ -80,12 +80,12 @@ export const Header = ({
         <div style={{ width: 40 }} /> {/* balance back button */}
       </div>
 
-      <div className="academy-header-title-container">
-        <h1 className="academy-header-title">{title}</h1>
+      <div className="academy-header-title-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
+        <h1 className="academy-header-title" style={{ flex: 1, minWidth: 0 }}>{title}</h1>
         {points !== null && (
-          <span className="overview-meta-badge points" style={{ marginLeft: 'auto', padding: '4px 10px' }}>
-            <Award size={14} style={{ color: 'var(--color-accent-orange)' }} />
-            {t('header.points_earned', { points })}
+          <span className="overview-meta-badge points" style={{ marginLeft: 'auto', padding: '4px 10px', flexShrink: 0, whiteSpace: 'nowrap' }}>
+            <Award size={14} style={{ color: 'var(--color-accent-orange)', flexShrink: 0 }} />
+            <span>{t('header.points_earned', { points })}</span>
           </span>
         )}
       </div>
