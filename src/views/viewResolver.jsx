@@ -59,6 +59,7 @@ const ROUTE_VIEW_REGISTRY = {
   '/task/show-achievements': { default: ShowAchievementsLessonPage },
   '/task/getting-paid': { default: GettingPaidLessonPage },
   '/task/intern-program': { default: TherapyInternProgramLessonPage },
+  '/task/session-notes': { default: TherapyNotesLessonPage },
   '/task/therapy-notes': { default: TherapyNotesLessonPage },
   '/task/couple-therapy': { default: CoupleTherapyLessonPage },
   '/task/creating-pathway': { default: CreatingPathwayLessonPage, yoga: YogaPathwayLessonPage },

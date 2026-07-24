@@ -7,7 +7,7 @@ import {
 } from '../components';
 import { CheckCircle2, Clock, Award, FileText, ClipboardList, Save, Activity, FolderOpen, User, Calendar, Plus, AlignLeft } from 'lucide-react';
 
-const LESSON_ID = 'therapy-notes';
+const LESSON_ID = 'session-notes';
 const LESSON_TITLE = 'Session Notes';
 const REWARD_POINTS = 5;
 

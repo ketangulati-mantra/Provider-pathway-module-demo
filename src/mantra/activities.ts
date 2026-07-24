@@ -118,7 +118,7 @@ export const activities: Activity[] = [
     route: '/task/intern-program'
   },
   {
-    lessonId: 'therapy-notes',
+    lessonId: 'session-notes',
     activityId: '',
     services: ['therapy', 'psychiatry'],
     title: 'Session Notes',
