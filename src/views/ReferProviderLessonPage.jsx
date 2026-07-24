@@ -81,6 +81,7 @@ export default function ReferProviderLessonPage({ onBack }) {
     lessonProgress, 
     showCelebrate, 
     handleCloseCelebration, 
+    handleQuizComplete,
     handleActionComplete 
   } = useLessonCompletion(LESSON_ID, onBack, {
     hasVideo: false,
@@ -186,7 +187,7 @@ export default function ReferProviderLessonPage({ onBack }) {
             <QuizCard 
               id={LESSON_ID}
               questions={QUIZ_QUESTIONS}
-              onComplete={handleActionComplete}
+              onComplete={handleQuizComplete}
               isCompleted={lessonProgress === 100}
               isMulti={true}
             />
