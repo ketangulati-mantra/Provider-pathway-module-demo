@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLessonCompletion } from '../hooks/useLessonCompletion';
 import {
   Header,
   CompletionScreen,
-  StepTimeline,
-  InfoCallout,
-  Button,
-  QuizCard,
-  useToast
+  QuizCard
 } from '../components';
-import { completeLesson, goToDashboard } from '../mantra';
 import { 
-  Globe, Users, TrendingUp, Award, Share2, UserCheck, 
-  Mail, ShieldCheck, Brain, Stethoscope, Salad, Heart, 
-  Dumbbell, UserPlus, Activity, PlusSquare, Trophy, Link
+  Award, Clock, ChevronDown, ChevronUp, Lightbulb, Link, UserCheck, Mail, ShieldCheck,
+  Brain, Stethoscope, Salad, Heart, Dumbbell, UserPlus, Activity, PlusSquare, Share2
 } from 'lucide-react';
 
 const LESSON_ID = 'refer-provider';
 const LESSON_TITLE = 'Refer a Provider & Earn Rewards';
 const REWARD_POINTS = 20;
-
-const BENEFITS = [
-  { icon: Globe, title: 'Grow the Network', description: 'Help expand access to mental health professionals.' },
-  { icon: Users, title: 'More Specialists', description: 'Bring therapists, psychologists, coaches, dietitians and wellness experts onto the platform.' },
-  { icon: TrendingUp, title: 'Increase Platform Growth', description: 'A stronger network creates better opportunities for everyone.' },
-  { icon: Award, title: 'Earn Rewards', description: 'Receive Mantra Points after successful verification.' }
-];
 
 const CATEGORIES = [
   { icon: Brain, title: 'Therapists & Counselors' },
@@ -35,43 +22,61 @@ const CATEGORIES = [
   { icon: Dumbbell, title: 'Fitness Coaches' },
   { icon: UserPlus, title: 'Doctors' },
   { icon: Activity, title: 'Physiotherapists' },
-  { icon: PlusSquare, title: 'Other Allied Health Professionals' }
+  { icon: PlusSquare, title: 'Allied Health' }
 ];
 
-const TIMELINE = [
-  { icon: Link, title: 'Invite a Provider', description: 'Share the official onboarding link.' },
-  { icon: UserCheck, title: 'Provider Registers', description: 'The provider completes registration using your referral.' },
-  { icon: Mail, title: 'Send Details', description: 'Email provider@mantra.care from your registered email including: Provider Name and Registered Email.' },
-  { icon: ShieldCheck, title: 'Verification', description: 'Our team verifies the referral.' },
-  { icon: Award, title: 'Earn Points', description: '20 Mantra Points are credited after successful verification.' }
+const STEPS = [
+  {
+    icon: Link,
+    title: 'Invite a Provider',
+    content: 'Share the official MantraCare provider onboarding link with qualified healthcare or wellness professionals.'
+  },
+  {
+    icon: UserCheck,
+    title: 'Provider Registers',
+    content: 'Ensure the provider completes their registration on MantraCare using your referral link.'
+  },
+  {
+    icon: Mail,
+    title: 'Send Details by Email',
+    content: 'Email provider@mantra.care from your registered email with: Referred Provider Name and Registered Email Address.'
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Verification',
+    content: 'Our provider operations team verifies the new provider registration.'
+  },
+  {
+    icon: Award,
+    title: 'Earn 20 Points',
+    content: '20 Mantra Points are automatically credited to your provider profile after successful verification.'
+  }
 ];
 
 const QUIZ_QUESTIONS = [
   {
     question: 'When are the 20 Mantra Points awarded for a successful provider referral?',
     options: [
-      { text: 'Immediately after you send the referral email', isCorrect: false },
-      { text: 'After the referred provider completes their first 10 client sessions', isCorrect: false },
-      { text: 'After the referred provider has successfully registered and the referral has been verified', isCorrect: true },
-      { text: 'As soon as the referred provider clicks the registration link', isCorrect: false }
+      { text: 'Immediately after sending the referral email', isCorrect: false },
+      { text: 'After the referred provider completes 10 sessions', isCorrect: false },
+      { text: 'After the referred provider completes registration and the referral is verified', isCorrect: true },
+      { text: 'As soon as the provider clicks the link', isCorrect: false }
     ],
     explanation: 'Points are awarded only after successful registration, verification by the Mantra team, and correct submission of referral details.'
   },
   {
-    question: 'Which information should you include in your referral email so the Mantra team can correctly track your referral?',
+    question: 'Which information should you include in your referral email?',
     options: [
-      { text: 'A screenshot of the provider\'s LinkedIn profile and professional credentials', isCorrect: false },
-      { text: 'Your current Mantra Points balance and Premium status', isCorrect: false },
-      { text: 'A list of clients the referred provider plans to bring to the platform', isCorrect: false },
-      { text: 'The referred provider\'s full name and the email address they used to register', isCorrect: true }
+      { text: 'A screenshot of their LinkedIn profile', isCorrect: false },
+      { text: 'Your current points balance', isCorrect: false },
+      { text: 'The referred provider\'s full name and registered email address', isCorrect: true },
+      { text: 'A list of potential clients', isCorrect: false }
     ],
     explanation: 'You must provide the referred provider\'s full name and registered email address so our team can accurately match and verify your referral.'
   }
 ];
 
 export default function ReferProviderLessonPage({ onBack }) {
-
-
   const { 
     lessonProgress, 
     showCelebrate, 
@@ -79,121 +84,127 @@ export default function ReferProviderLessonPage({ onBack }) {
     handleActionComplete 
   } = useLessonCompletion(LESSON_ID, onBack, {
     hasVideo: false,
-    hasQuiz: false,
-    hasAction: true
+    hasQuiz: true,
+    hasAction: false
   });
 
-  const { showToast } = useToast();
+  const [activeStep, setActiveStep] = useState(0);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: 'var(--bg-app)' }} className="animate-fade-in">
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', background: '#f8fafc' }} className="animate-fade-in">
       <Header title={LESSON_TITLE} onBack={onBack} progress={lessonProgress} points={REWARD_POINTS} />
 
       <main className="academy-main-container" style={{
-        flex: 1, padding: '40px 24px 80px', maxWidth: '900px', margin: '0 auto', width: '100%',
-        display: 'flex', flexDirection: 'column', gap: '48px'
+        flex: 1, padding: '24px', maxWidth: '1000px', margin: '0 auto', width: '100%',
+        display: 'flex', flexDirection: 'column', gap: '24px'
       }}>
 
-        <header style={{ textAlign: 'center' }}>
-          <div style={{ 
-            display: 'inline-block', padding: '6px 12px', background: '#f3e8ff', 
-            color: '#7e22ce', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 600,
-            marginBottom: '16px', display: 'inline-flex', alignItems: 'center', gap: '6px'
-          }}>
-            <Share2 size={14} /> Referral Program
-          </div>
-          <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', fontWeight: 800, margin: '0 0 16px', color: '#0f172a' }}>
+        {/* Hero */}
+        <div style={{ textAlign: 'center', marginBottom: '8px' }}>
+          <span style={{ display: 'inline-block', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-primary)', background: '#f0f9ff', borderRadius: '4px', padding: '4px 10px', marginBottom: '12px' }}>
+            REFERRAL PROGRAM
+          </span>
+          <h1 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '2rem', color: 'var(--text-main)', margin: '0 0 12px' }}>
             {LESSON_TITLE}
           </h1>
-          <p style={{ fontSize: '1.1rem', color: '#64748b', maxWidth: '650px', margin: '0 auto', lineHeight: '1.6' }}>
-            Help grow the Mantra provider network while earning Mantra Points for successful referrals.
+          <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', margin: '0 auto 16px', lineHeight: '1.5', maxWidth: '650px' }}>
+            Help grow the Mantra provider network by inviting fellow therapists, doctors, dietitians, or coaches and earn 20 Points per verified referral.
           </p>
+          <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+            <span className="overview-meta-badge"><Clock size={12} /><span>3 min task</span></span>
+            <span className="overview-meta-badge points"><Award size={12} /><span>+{REWARD_POINTS} Points</span></span>
+          </div>
+        </div>
+
+        {/* 2-Column Split Layout */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px', alignItems: 'flex-start' }}>
           
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '8px',
-            background: '#fffbeb', color: '#b45309', padding: '10px 16px',
-            borderRadius: '12px', fontSize: '0.95rem', fontWeight: 600, marginTop: '24px',
-            border: '1px solid #fde68a'
-          }}>
-            <Trophy size={18} fill="currentColor" /> 20 Points for every verified provider referral
-          </div>
-        </header>
-
-        {/* Why Refer Providers? */}
-        <section>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-            Why Refer Providers?
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-            {BENEFITS.map((item, idx) => (
-              <div key={idx} style={{
-                display: 'flex', flexDirection: 'column', gap: '12px', padding: '20px',
-                background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
-              }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '10px', background: '#faf5ff', color: '#9333ea', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <item.icon size={20} />
-                </div>
-                <div>
-                  <h3 style={{ margin: '0 0 4px', fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>{item.title}</h3>
-                  <p style={{ margin: 0, fontSize: '0.9rem', color: '#64748b', lineHeight: '1.5' }}>{item.description}</p>
-                </div>
+          {/* LEFT: Accordion Steps & Categories */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            
+            {/* Categories */}
+            <div style={{ background: '#ffffff', borderRadius: '16px', border: '1px solid #eef0f3', padding: '16px 20px', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '0.95rem', color: '#0f172a', margin: '0 0 10px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Share2 size={16} color="var(--color-primary)" /> Who Can You Refer?
+              </h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {CATEGORIES.map((cat, i) => (
+                  <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', fontWeight: 600, color: '#334155', background: '#f1f5f9', padding: '5px 12px', borderRadius: '20px' }}>
+                    <cat.icon size={13} color="var(--color-primary)" />
+                    {cat.title}
+                  </span>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
 
-        {/* Who Can You Refer? */}
-        <section>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-            Who Can You Refer?
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
-            {CATEGORIES.map((cat, idx) => (
-              <div key={idx} style={{
-                display: 'flex', alignItems: 'center', gap: '12px', padding: '16px',
-                background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.02)'
-              }}>
-                <div style={{ color: '#0ea5e9' }}>
-                  <cat.icon size={24} />
-                </div>
-                <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#334155' }}>
-                  {cat.title}
-                </span>
+            {/* Accordion Steps */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.15rem', color: '#0f172a', margin: '4px 0' }}>
+                How to refer
+              </h2>
+              {STEPS.map((s, idx) => {
+                const isOpen = activeStep === idx;
+                const Icon = s.icon;
+                return (
+                  <div 
+                    key={idx}
+                    style={{ 
+                      background: '#fff', borderRadius: '14px', border: isOpen ? '1px solid var(--color-primary)' : '1px solid #eef0f3', 
+                      boxShadow: isOpen ? '0 4px 12px rgba(0,0,0,0.05)' : 'none', overflow: 'hidden', transition: 'all 0.2s', cursor: 'pointer'
+                    }}
+                    onClick={() => setActiveStep(isOpen ? -1 : idx)}
+                  >
+                    <div style={{ padding: '14px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: isOpen ? '#f0f9ff' : '#fff' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{ 
+                          width: '32px', height: '32px', borderRadius: '8px', background: isOpen ? 'var(--color-primary)' : '#f1f5f9',
+                          color: isOpen ? '#fff' : 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                        }}>
+                          <Icon size={16} />
+                        </div>
+                        <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '0.98rem', fontWeight: 700, margin: 0, color: isOpen ? 'var(--color-primary)' : '#334155' }}>
+                          Step {idx + 1}: {s.title}
+                        </h3>
+                      </div>
+                      {isOpen ? <ChevronUp size={18} color="var(--color-primary)" /> : <ChevronDown size={18} color="#9ca3af" />}
+                    </div>
+                    
+                    {isOpen && (
+                      <div style={{ padding: '14px 18px 18px', borderTop: '1px solid #eef0f3', background: '#fff' }}>
+                        <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', margin: 0, lineHeight: '1.5' }}>{s.content}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+          </div>
+
+          {/* RIGHT: Quiz & Callout */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <QuizCard 
+              id={LESSON_ID}
+              questions={QUIZ_QUESTIONS}
+              onComplete={handleActionComplete}
+              isCompleted={lessonProgress === 100}
+              isMulti={true}
+            />
+
+            <div style={{ background: '#eff6ff', borderRadius: '16px', border: '1px solid #bfdbfe', padding: '18px', display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+              <div style={{ color: '#2563eb', flexShrink: 0, marginTop: '2px' }}>
+                <Lightbulb size={22} />
               </div>
-            ))}
+              <div>
+                <h4 style={{ margin: '0 0 4px', fontSize: '0.95rem', fontWeight: 700, color: '#1e40af' }}>Referral Email Tip</h4>
+                <p style={{ margin: 0, fontSize: '0.85rem', color: '#1e3a8a', lineHeight: '1.5' }}>
+                  Always email <strong>provider@mantra.care</strong> with the full name and registered email of the provider you referred so we can attribute your +20 Points reward accurately.
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
 
-        {/* How It Works */}
-        <section>
-          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, margin: '0 0 24px', color: '#0f172a' }}>
-            How It Works
-          </h2>
-          <div style={{ background: '#ffffff', borderRadius: '16px', padding: '32px', border: '1px solid #e2e8f0', boxShadow: '0 4px 20px rgba(0,0,0,0.02)' }}>
-            <StepTimeline steps={TIMELINE} />
-          </div>
-        </section>
-
-        {/* Important Note */}
-        <section>
-          <InfoCallout 
-            type="info" 
-            title="Referral Rewards"
-            text="Points are awarded only after: Successful registration, Verification by the Mantra team, and Referral details are submitted correctly."
-          />
-        </section>
-
-        {/* Knowledge Check */}
-        <section>
-          <QuizCard 
-            id={LESSON_ID}
-            questions={QUIZ_QUESTIONS}
-            onComplete={handleActionComplete}
-            isCompleted={lessonProgress === 100}
-            isMulti={true}
-          />
-        </section>
+        </div>
 
       </main>
 
