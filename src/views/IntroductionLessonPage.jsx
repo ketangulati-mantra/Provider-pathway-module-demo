@@ -39,7 +39,7 @@ const QUIZ_QUESTIONS = [
       { text: 'Booking international flights and hotels', isCorrect: false },
       { text: 'Playing mobile games and entertainment', isCorrect: false }
     ],
-    explanation: 'The Mantra app is designed for providers to seamlessly manage client sessions, keep therapy notes, and process payments.'
+    explanation: 'The Mantra app is designed for providers to seamlessly manage client sessions, keep session notes, and process payments.'
   }
 ];
 

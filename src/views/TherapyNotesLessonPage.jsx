@@ -7,8 +7,8 @@ import {
 } from '../components';
 import { CheckCircle2, Clock, Award, FileText, ClipboardList, Save, Activity, FolderOpen, User, Calendar, Plus, AlignLeft } from 'lucide-react';
 
-const LESSON_ID     = 'therapy-notes';
-const LESSON_TITLE  = 'Therapy Notes';
+const LESSON_ID = 'therapy-notes';
+const LESSON_TITLE = 'Session Notes';
 const REWARD_POINTS = 5;
 
 const FEATURES = [
@@ -25,7 +25,7 @@ const FEATURES = [
   {
     icon: Save,
     title: 'Save Securely',
-    description: 'All therapy notes are securely stored and remain available for future sessions and treatment continuity.'
+    description: 'All session notes are securely stored and remain available for future sessions and treatment continuity.'
   },
   {
     icon: Activity,
@@ -35,10 +35,10 @@ const FEATURES = [
 ];
 
 export default function TherapyNotesLessonPage({ onBack }) {
-  const { actionDone, lessonProgress, 
-    showCelebrate, 
-    handleCloseCelebration, 
-    handleActionComplete 
+  const { actionDone, lessonProgress,
+    showCelebrate,
+    handleCloseCelebration,
+    handleActionComplete
   } = useLessonCompletion(LESSON_ID, onBack, {
     hasVideo: false,
     hasQuiz: false,
@@ -105,7 +105,7 @@ export default function TherapyNotesLessonPage({ onBack }) {
 
         {activeTab === 'how-it-works' && (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px', alignItems: 'center' }}>
-            
+
             {/* LEFT: Instructions */}
             <div style={{ background: '#ffffff', borderRadius: '20px', padding: '32px', border: '1px solid #eef0f3', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
@@ -113,7 +113,7 @@ export default function TherapyNotesLessonPage({ onBack }) {
                   <FolderOpen size={20} />
                 </div>
                 <h2 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '1.3rem', color: 'var(--text-main)', margin: 0 }}>
-                  Accessing Therapy Notes
+                  Accessing Session Notes
                 </h2>
               </div>
               <ol style={{ margin: 0, paddingLeft: '24px', fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.8', display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -125,56 +125,13 @@ export default function TherapyNotesLessonPage({ onBack }) {
               </ol>
             </div>
 
-            {/* RIGHT: Notes UI Mockup */}
-            <div style={{ background: '#f8fafc', borderRadius: '20px', padding: '24px', border: '1px solid #e2e8f0', display: 'flex', flexDirection: 'column', gap: '20px', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.02)' }}>
-              
-              {/* Header */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '16px', borderBottom: '1px solid #e2e8f0' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <div style={{ width: 44, height: 44, borderRadius: '12px', background: '#cbd5e1', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>
-                    <User size={24} />
-                  </div>
-                  <div>
-                    <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, color: '#334155' }}>Sarah Jenkins</h3>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#64748b', marginTop: '2px' }}>
-                      <Calendar size={12} /> Oct 24, 2024 - 10:00 AM
-                    </div>
-                  </div>
-                </div>
-                <div style={{ background: 'var(--color-primary)', color: '#fff', padding: '6px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <Plus size={14} /> Add Note
-                </div>
-              </div>
-
-              {/* Note Editor Mock */}
-              <div style={{ background: '#fff', borderRadius: '16px', border: '1px solid #e2e8f0', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 700, color: '#334155' }}>Session Notes (SOAP Format)</h4>
-                  <span style={{ fontSize: '0.75rem', color: '#94a3b8', background: '#f1f5f9', padding: '4px 8px', borderRadius: '4px', fontWeight: 600 }}>Draft</span>
-                </div>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#64748b' }}>Subjective</label>
-                    <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '12px', fontSize: '0.85rem', color: '#94a3b8', minHeight: '60px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                      <AlignLeft size={16} /> <span style={{ fontStyle: 'italic' }}>Client reports feeling overwhelmed with work...</span>
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                    <label style={{ fontSize: '0.8rem', fontWeight: 600, color: '#64748b' }}>Objective</label>
-                    <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '12px', fontSize: '0.85rem', color: '#94a3b8', minHeight: '60px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                      <AlignLeft size={16} /> <span style={{ fontStyle: 'italic' }}>Client appears tense, speaks rapidly...</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '4px' }}>
-                  <div style={{ background: '#10b981', color: '#fff', padding: '8px 16px', borderRadius: '8px', fontSize: '0.85rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
-                    <Save size={16} /> Save Securely
-                  </div>
-                </div>
-              </div>
-
+            {/* RIGHT: Notes UI Image */}
+            <div style={{ background: '#f8fafc', borderRadius: '20px', padding: '16px', border: '1px solid #e2e8f0', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 2px 10px rgba(0,0,0,0.02)' }}>
+              <img 
+                src="https://res.cloudinary.com/hxbamdqf/image/upload/v1784890504/Screenshot_2026-07-24_162330_qedzqb.png" 
+                alt="Session Note UI Mockup" 
+                style={{ width: '100%', height: 'auto', borderRadius: '12px' }} 
+              />
             </div>
 
           </div>

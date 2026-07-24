@@ -1,7 +1,6 @@
 import { MANTRA_CONFIG } from './config';
 import { activities } from './activities';
-
-// console.log("CONFIG WEBHOOK:", MANTRA_CONFIG.webhookUrl);
+import { getCurrentService } from './services';
 
 /**
  * Returns URL parameters required by the pathway webhook.
@@ -11,7 +10,8 @@ const getWebhookContext = () => {
 
   return {
     upaId: params.get('upa_id'),
-    uid: params.get('uid')
+    uid: params.get('uid'),
+    service: getCurrentService()
   };
 };
 
@@ -26,10 +26,7 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
     return false;
   }
 
-  const { upaId, uid } = getWebhookContext();
-  // alert("===== WEBHOOK CONTEXT =====");
-  // alert(upaId);
-  // alert(uid);
+  const { upaId, uid, service } = getWebhookContext();
 
   if (!upaId) {
     console.error('[Mantra API] Missing upa_id in URL.');
@@ -37,12 +34,13 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
   }
 
   if (MANTRA_CONFIG.devMode) {
-    /* console.log('[Mantra API] Completing activity', {
+    console.log('[Mantra API] Completing activity', {
       lessonId,
       upaId,
       uid,
+      service,
       endpoint: MANTRA_CONFIG.webhookUrl
-    }); */
+    });
   }
 
   try {
@@ -54,7 +52,8 @@ export const completeLesson = async (lessonId: string): Promise<boolean> => {
       body: JSON.stringify({
         intent: 'complete_activity',
         upa_id: Number(upaId),
-        uid: uid || undefined
+        uid: uid || undefined,
+        service
       })
     });
 

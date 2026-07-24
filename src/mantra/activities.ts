@@ -1,6 +1,8 @@
+import { getCurrentService, normalizeService } from './services';
+
 /**
  * Registered Lesson Activities Config
- * Single source of truth for all lesson pathways, point systems, routes, and identifiers.
+ * Single source of truth for all lesson pathways, point systems, routes, and service availability.
  */
 export interface Activity {
   lessonId: string;
@@ -9,16 +11,17 @@ export interface Activity {
   rewardPoints: number;
   estimatedDuration: string;
   route: string;
+  services: string[]; // e.g. ["therapy"], ["yoga"], or ["*"] for all services
+  service?: string;   // Optional legacy string field for display/compatibility
   completionEndpoint?: string;
   redirectAfterCompletion?: boolean;
-  service?: string;
 }
 
 export const activities: Activity[] = [
   {
     lessonId: 'introduction',
-    activityId: '', // Filled in during backend integration
-    service: 'Therapist',
+    activityId: '',
+    services: ['*'],
     title: 'Introduction to Mantra Platform',
     rewardPoints: 5,
     estimatedDuration: '4 min',
@@ -27,7 +30,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'mobile-app',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Download & Review MantraPartner App',
     rewardPoints: 5,
     estimatedDuration: '1 min',
@@ -36,7 +39,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'using-mantra',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Using Mantra for Your Clients',
     rewardPoints: 10,
     estimatedDuration: '3 min',
@@ -45,7 +48,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'getting-clients',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Getting Clients from Mantra',
     rewardPoints: 5,
     estimatedDuration: '4 min',
@@ -54,7 +57,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'profile-verification',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Complete Profile Verification',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -63,7 +66,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'premium-provider',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'What is a Premium Provider?',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -72,7 +75,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'market-yourself',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Market Yourself & Grow Faster',
     rewardPoints: 5,
     estimatedDuration: '5 min',
@@ -81,7 +84,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'share-linkedin',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Share on LinkedIn & Earn Points',
     rewardPoints: 5,
     estimatedDuration: '5 min',
@@ -90,7 +93,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'show-achievements',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Show Your Achievements & Earn Rewards!',
     rewardPoints: 5,
     estimatedDuration: '5 min',
@@ -99,7 +102,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'getting-paid',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Getting Paid on MantraCare',
     rewardPoints: 5,
     estimatedDuration: '4 min',
@@ -108,7 +111,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'intern-program',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Mantra Foundation Therapy Intern Program',
     rewardPoints: 5,
     estimatedDuration: '3 min',
@@ -117,8 +120,8 @@ export const activities: Activity[] = [
   {
     lessonId: 'therapy-notes',
     activityId: '',
-    service: 'Therapist',
-    title: 'Therapy Notes',
+    services: ['therapy', 'psychiatry'],
+    title: 'Session Notes',
     rewardPoints: 5,
     estimatedDuration: '2 min',
     route: '/task/therapy-notes'
@@ -126,7 +129,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'couple-therapy',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Couple Therapy on the Mantra App',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -135,7 +138,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'creating-pathway',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Creating a Pathway for Your Client',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -144,7 +147,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'canned-responses',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Mantra Auto-Responses (Canned Responses)',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -153,7 +156,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'mantra-assessments',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'psychiatry'],
     title: 'Sharing Mantra Assessments',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -162,7 +165,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'support-hotline',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'listener', 'psychiatry'],
     title: 'Support Our Mental Health Hotline',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -171,7 +174,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'corporate-eap',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Corporate EAP Program Support',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -180,7 +183,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'community-management',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Community Management - 10 Credits',
     rewardPoints: 10,
     estimatedDuration: '5 min',
@@ -189,7 +192,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'content-creation',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'listener', 'psychiatry'],
     title: 'Content Creation for Mental Health - 20 Credits',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -198,7 +201,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'campus-awareness',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'listener', 'psychiatry'],
     title: 'Campus Mental Health Awareness',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -207,7 +210,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'fundraising',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Fund Raising for Mantra Foundation',
     rewardPoints: 5,
     estimatedDuration: '2 min',
@@ -216,7 +219,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'recruit-interns',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'listener', 'psychiatry'],
     title: 'Help Recruit New Therapy Interns & Listeners',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -225,7 +228,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'refer-services',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy', 'psychiatry', 'diet', 'physiotherapy', 'dermatology', 'coaching', 'fitness'],
     title: 'Refer Other Services & Earn',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -234,7 +237,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'converting-clients',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Converting Trial Clients',
     rewardPoints: 10,
     estimatedDuration: '2 min',
@@ -243,7 +246,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'insurance',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Insurance for Therapy (US, UK & Canada)',
     rewardPoints: 10,
     estimatedDuration: '3 min',
@@ -252,7 +255,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'earn-points',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Earn Points for Every Session',
     rewardPoints: 5,
     estimatedDuration: '3 min',
@@ -261,7 +264,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'refer-provider',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Refer a Provider & Earn Rewards',
     rewardPoints: 20,
     estimatedDuration: '3 min',
@@ -270,7 +273,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'sales-partner',
     activityId: '',
-    service: 'Therapist',
+    services: ['*'],
     title: 'Becoming a Mantra Sales Partner',
     rewardPoints: 10,
     estimatedDuration: '5 min',
@@ -279,7 +282,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'download-certificate',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Download your therapy intern provider pathway certificate',
     rewardPoints: 0,
     estimatedDuration: '1 min',
@@ -288,7 +291,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'provider-certificate',
     activityId: '',
-    service: 'Therapist',
+    services: ['therapy'],
     title: 'Download your Therapy Provider Pathway Certificate',
     rewardPoints: 0,
     estimatedDuration: '1 min',
@@ -297,7 +300,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'top-listener-recognition',
     activityId: '',
-    service: 'Listener',
+    services: ['listener'],
     title: 'Top Listener of the Month & Recognition',
     rewardPoints: 10,
     estimatedDuration: '5 min',
@@ -306,7 +309,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'listener-certificate',
     activityId: '',
-    service: 'Listener',
+    services: ['listener'],
     title: 'Download Your Listener Provider Pathway Certificate',
     rewardPoints: 0,
     estimatedDuration: '1 min',
@@ -315,7 +318,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-pathway',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Creating a Yoga Pathway for Your Client',
     rewardPoints: 5,
     estimatedDuration: '2-3 min',
@@ -324,7 +327,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-routine',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Create a Personalized Yoga Routine for Different Client Needs',
     rewardPoints: 5,
     estimatedDuration: '3-5 min',
@@ -333,7 +336,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-mindfulness',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Sharing In-Session Mindfulness or Breathing Exercises to Boost Engagement',
     rewardPoints: 5,
     estimatedDuration: '2-3 min',
@@ -342,7 +345,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-nudging',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Nudging Clients to Practice Daily',
     rewardPoints: 5,
     estimatedDuration: '2-3 min',
@@ -351,7 +354,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-refer-services',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Refer Other Services like Fit, Diet, Physio etc.',
     rewardPoints: 5,
     estimatedDuration: '2-3 min',
@@ -360,7 +363,7 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-market-profile',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Market Your Profile – Yoga Experts',
     rewardPoints: 5,
     estimatedDuration: '5 min',
@@ -369,10 +372,28 @@ export const activities: Activity[] = [
   {
     lessonId: 'yoga-certificate',
     activityId: '',
-    service: 'Yoga',
+    services: ['yoga'],
     title: 'Download Your Yoga Provider Pathway Certificate',
     rewardPoints: 20,
     estimatedDuration: '2 min',
     route: '/task/yoga-certificate'
   }
 ];
+
+/**
+ * Filter all registered activities by service context.
+ * If service is 'all' or '*', returns all activities.
+ * Otherwise returns activities matching wildcards ('*') or specific service inclusion.
+ */
+export const getAvailableActivities = (targetService?: string): Activity[] => {
+  const service = normalizeService(targetService || getCurrentService());
+
+  if (service === 'all' || service === '*') {
+    return [...activities];
+  }
+
+  return activities.filter(activity =>
+    activity.services.includes('*') ||
+    activity.services.map(s => normalizeService(s)).includes(service)
+  );
+};
