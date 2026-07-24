@@ -124,7 +124,7 @@ export const activities: Activity[] = [
     title: 'Session Notes',
     rewardPoints: 5,
     estimatedDuration: '2 min',
-    route: '/task/therapy-notes'
+    route: '/task/session-notes'
   },
   {
     lessonId: 'couple-therapy',
